@@ -8,11 +8,12 @@ const Header = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   const services = [
-    { label: "Tree Trimming", href: "#services" },
-    { label: "Tree Removal", href: "#services" },
-    { label: "Stump Grinding", href: "#services" },
-    { label: "Tree Planting", href: "#services" },
-    { label: "Emergency Services", href: "#services" },
+    { label: "Tree Removal", href: "/services/tree-removal" },
+    { label: "Tree Pruning & Trimming", href: "/services/tree-pruning-trimming" },
+    { label: "Tree Planting", href: "/services/tree-planting" },
+    { label: "Soil Amendments & Care", href: "/services/soil-amendments" },
+    { label: "Emergency Services", href: "/services/emergency" },
+    { label: "Legacy Tree Program", href: "/services/legacy-tree-program" },
   ];
 
   return (
@@ -39,9 +40,10 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <a href="#tree-planting" className="text-foreground/80 hover:text-primary font-medium transition-colors">Tree Planting</a>
-          <a href="#why-us" className="text-foreground/80 hover:text-primary font-medium transition-colors">About</a>
-          <a href="#contact" className="text-foreground/80 hover:text-primary font-medium transition-colors">Contact</a>
+          <a href="/services/tree-planting" className="text-foreground/80 hover:text-primary font-medium transition-colors">Tree Planting</a>
+          <a href="/about" className="text-foreground/80 hover:text-primary font-medium transition-colors">About</a>
+          <a href="/contact" className="text-foreground/80 hover:text-primary font-medium transition-colors">Contact</a>
+          <a href="/blog" className="text-foreground/80 hover:text-primary font-medium transition-colors">Blog</a>
         </nav>
 
         {/* Right side */}
@@ -73,9 +75,10 @@ const Header = () => {
                 ))}
               </div>
             )}
-            <a href="#tree-planting" className="block py-2 text-foreground font-medium">Tree Planting</a>
-            <a href="#why-us" className="block py-2 text-foreground font-medium">About</a>
-            <a href="#contact" className="block py-2 text-foreground font-medium">Contact</a>
+            <a href="/services/tree-planting" className="block py-2 text-foreground font-medium">Tree Planting</a>
+            <a href="/about" className="block py-2 text-foreground font-medium">About</a>
+            <a href="/contact" className="block py-2 text-foreground font-medium">Contact</a>
+            <a href="/blog" className="block py-2 text-foreground font-medium">Blog</a>
             <a href="tel:5121234873" className="flex items-center gap-2 py-2 text-primary font-semibold">
               <Phone className="w-4 h-4" /> 512-123-TREE
             </a>
