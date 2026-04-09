@@ -1,36 +1,42 @@
-import { Scissors, TreePine, CircleDot, Sprout, AlertTriangle, Leaf } from "lucide-react";
+import { Scissors, TreePine, Sprout, Leaf, AlertTriangle, Crown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    icon: Scissors,
-    title: "Tree Trimming",
-    description: "Expert pruning and trimming to promote healthy growth, improve structure, and enhance your property's appearance.",
-  },
-  {
     icon: TreePine,
     title: "Tree Removal",
+    slug: "tree-removal",
     description: "Safe, efficient removal of dead, hazardous, or unwanted trees with full cleanup and haul-away included.",
   },
   {
-    icon: CircleDot,
-    title: "Stump Grinding",
-    description: "Complete stump removal below grade, ready for replanting or seamless lawn restoration.",
+    icon: Scissors,
+    title: "Tree Pruning & Trimming",
+    slug: "tree-pruning-trimming",
+    description: "Expert pruning and trimming to promote healthy growth, improve structure, and enhance your property's appearance.",
   },
   {
     icon: Sprout,
     title: "Tree Planting",
+    slug: "tree-planting",
     description: "Species selection guidance and professional planting to add beauty and value to your landscape.",
+  },
+  {
+    icon: Leaf,
+    title: "Soil Amendments & Care",
+    slug: "soil-amendments",
+    description: "Custom soil treatments, fertilization programs, and root zone care to give your trees the foundation they need.",
   },
   {
     icon: AlertTriangle,
     title: "Emergency Services",
+    slug: "emergency",
     description: "24/7 storm damage response and emergency tree removal to keep your property safe.",
   },
   {
-    icon: Leaf,
-    title: "Tree Health Care",
-    description: "Disease diagnosis, treatment plans, and preventive care to keep your trees thriving year-round.",
+    icon: Crown,
+    title: "Legacy Tree Program",
+    slug: "legacy-tree-program",
+    description: "Preserve and protect your property's most valuable heritage trees with our comprehensive long-term care program.",
   },
 ];
 
@@ -58,8 +64,8 @@ const ServicesSection = () => {
               </div>
               <h3 className="text-xl font-heading font-semibold text-foreground mb-3">{service.title}</h3>
               <p className="text-muted-foreground mb-5 leading-relaxed">{service.description}</p>
-              <Button variant="link" className="text-primary p-0 h-auto font-semibold">
-                Learn More →
+              <Button variant="link" className="text-primary p-0 h-auto font-semibold" asChild>
+                <a href={`/services/${service.slug}`}>Learn More →</a>
               </Button>
             </div>
           ))}
