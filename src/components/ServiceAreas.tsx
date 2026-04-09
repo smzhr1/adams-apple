@@ -1,11 +1,11 @@
 import { MapPin } from "lucide-react";
 
 const areas = [
-  { name: "Austin", desc: "Our home base — full-service tree care across the metro." },
-  { name: "Round Rock", desc: "Trusted tree services for Round Rock neighborhoods." },
-  { name: "Cedar Park", desc: "Professional arborist care in Cedar Park & Leander." },
-  { name: "Georgetown", desc: "Serving Georgetown's historic and new-growth areas." },
-  { name: "Bastrop", desc: "Tree removal & care for Bastrop County properties." },
+  { name: "Austin", slug: "austin", desc: "Our home base — full-service tree care across the metro." },
+  { name: "Georgetown", slug: "georgetown", desc: "Serving Georgetown's historic and new-growth areas." },
+  { name: "Round Rock", slug: "round-rock", desc: "Trusted tree services for Round Rock neighborhoods." },
+  { name: "Cedar Park", slug: "cedar-park", desc: "Professional arborist care in Cedar Park & Leander." },
+  { name: "Bastrop", slug: "bastrop", desc: "Tree removal & care for Bastrop County properties." },
 ];
 
 const ServiceAreas = () => {
@@ -25,7 +25,7 @@ const ServiceAreas = () => {
           {areas.map((area) => (
             <a
               key={area.name}
-              href={`#${area.name.toLowerCase().replace(" ", "-")}`}
+              href={`/areas/${area.slug}`}
               className="group bg-card rounded-2xl p-6 border border-border hover:border-primary/30 hover:shadow-md transition-all text-center"
             >
               <MapPin className="w-8 h-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
