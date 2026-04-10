@@ -38,8 +38,11 @@ const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || mobileOpen
           ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm"
-          : "bg-transparent border-b border-transparent"
+          : "border-b border-transparent"
       }`}
+      style={!scrolled && !mobileOpen ? {
+        background: "linear-gradient(to right, hsl(0 0% 100% / 0.95) 0%, hsl(0 0% 100% / 0.7) 30%, hsl(0 0% 100% / 0) 60%)"
+      } : undefined}
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
