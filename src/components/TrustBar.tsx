@@ -9,8 +9,8 @@ const stats = [
 
 const TrustBar = () => {
   return (
-    <section className="bg-card border-y border-border">
-      <div className="container mx-auto px-4 py-8">
+    <section className="bg-card border-b border-border">
+      <div className="container mx-auto px-4 py-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((stat) => (
             <div key={stat.label} className="flex items-center gap-4 justify-center animate-count-up">
