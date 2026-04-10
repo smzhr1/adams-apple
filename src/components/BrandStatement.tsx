@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const BrandStatement = () => {
   return (
-    <section className="py-16 bg-background">
+    <section className="py-16 bg-muted">
       <div className="container mx-auto px-4 max-w-3xl text-center">
         <p className="text-foreground leading-relaxed mb-8" style={{ fontSize: 'var(--text-md)' }}>
           Adam's Apple Tree Service is your trusted local source for expert tree care in the Austin area. 

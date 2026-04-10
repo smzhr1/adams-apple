@@ -20,14 +20,14 @@ const items = [
 
 const DifferentiatorStrip = () => {
   return (
-    <section className="py-16 bg-primary">
+    <section className="py-16 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           {items.map((item) => (
             <div key={item.title} className="text-center">
               <item.icon className="w-10 h-10 text-accent mx-auto mb-4" />
-              <h3 className="font-heading font-bold text-primary-foreground mb-2" style={{ fontSize: 'var(--text-lg)' }}>{item.title}</h3>
-              <p className="text-primary-foreground/80 leading-relaxed" style={{ fontSize: 'var(--text-base)' }}>{item.desc}</p>
+              <h3 className="font-heading font-bold text-secondary-foreground mb-2" style={{ fontSize: 'var(--text-lg)' }}>{item.title}</h3>
+              <p className="text-secondary-foreground/80 leading-relaxed" style={{ fontSize: 'var(--text-base)' }}>{item.desc}</p>
             </div>
           ))}
         </div>

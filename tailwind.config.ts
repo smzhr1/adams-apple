@@ -84,12 +84,17 @@ export default {
           from: { opacity: "0", transform: "scale(0.8)" },
           to: { opacity: "1", transform: "scale(1)" },
         },
+        "hero-zoom": {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(1.06)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out forwards",
         "count-up": "count-up 0.4s ease-out forwards",
+        "hero-zoom": "hero-zoom 20s ease-in-out infinite alternate",
       },
     },
   },

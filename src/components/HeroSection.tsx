@@ -16,7 +16,7 @@ const HeroSection = () => {
         <img
           src={heroImage}
           alt="Professional arborist performing tree care in Austin, TX"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover animate-hero-zoom"
           width={1920}
           height={1080}
         />
