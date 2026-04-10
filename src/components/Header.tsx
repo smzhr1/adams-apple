@@ -42,8 +42,8 @@ const Header = () => {
       }`}
       style={{
         background: scrolled || mobileOpen
-          ? "linear-gradient(135deg, hsl(0 0% 100% / 0.72), hsl(0 0% 100% / 0.58))"
-          : "linear-gradient(to right, hsl(0 0% 100% / 0.72) 0%, hsl(0 0% 100% / 0.45) 50%, hsl(0 0% 100% / 0) 100%)",
+          ? "hsl(0 0% 100% / 0.12)"
+          : "linear-gradient(to right, hsl(0 0% 100% / 0.12) 0%, hsl(0 0% 100% / 0.06) 50%, hsl(0 0% 100% / 0) 100%)",
         backdropFilter: "blur(20px) saturate(180%)",
         WebkitBackdropFilter: "blur(20px) saturate(180%)",
       }}
@@ -58,7 +58,9 @@ const Header = () => {
         <nav className="hidden lg:flex items-center gap-6">
           {/* Services Mega Menu */}
           <div className="relative group">
-            <button className="flex items-center gap-1 text-foreground/80 hover:text-primary font-semibold transition-colors text-[15px]">
+            <button className={`flex items-center gap-1 font-semibold transition-colors text-[15px] ${
+              scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground drop-shadow-md hover:text-accent"
+            }`}>
               Services <ChevronDown className="w-4 h-4" />
             </button>
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -87,7 +89,9 @@ const Header = () => {
 
           {/* Service Areas Dropdown */}
           <div className="relative group">
-            <button className="flex items-center gap-1 text-foreground/80 hover:text-primary font-semibold transition-colors text-[15px]">
+            <button className={`flex items-center gap-1 font-semibold transition-colors text-[15px] ${
+              scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground drop-shadow-md hover:text-accent"
+            }`}>
               Service Areas <ChevronDown className="w-4 h-4" />
             </button>
             <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -106,21 +110,21 @@ const Header = () => {
             </div>
           </div>
 
-          <a href="/about" className="text-foreground/80 hover:text-primary font-semibold transition-colors text-[15px]">About</a>
-          <a href="/contact" className="text-foreground/80 hover:text-primary font-semibold transition-colors text-[15px]">Contact</a>
-          <a href="/blog" className="text-foreground/80 hover:text-primary font-semibold transition-colors text-[15px]">Blog</a>
+          <a href="/about" className={`font-semibold transition-colors text-[15px] ${scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground drop-shadow-md hover:text-accent"}`}>About</a>
+          <a href="/contact" className={`font-semibold transition-colors text-[15px] ${scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground drop-shadow-md hover:text-accent"}`}>Contact</a>
+          <a href="/blog" className={`font-semibold transition-colors text-[15px] ${scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground drop-shadow-md hover:text-accent"}`}>Blog</a>
         </nav>
 
         {/* Right side */}
         <div className="flex items-center gap-3">
-          <a href="tel:5121234873" className="hidden md:flex items-center gap-2 text-primary font-bold text-[15px]">
+          <a href="tel:5121234873" className={`hidden md:flex items-center gap-2 font-bold text-[15px] ${scrolled ? "text-primary" : "text-accent drop-shadow-md"}`}>
             <Phone className="w-4 h-4" />
             512-123-TREE
           </a>
           <Button variant="cta" size="lg" className="hidden sm:inline-flex uppercase tracking-wider text-[15px] font-bold" asChild>
             <a href="#estimate">Get Free Estimate</a>
           </Button>
-          <button className={`lg:hidden p-2 ${scrolled || mobileOpen ? "text-foreground" : "text-foreground"}`} onClick={() => setMobileOpen(!mobileOpen)}>
+          <button className={`lg:hidden p-2 ${scrolled || mobileOpen ? "text-foreground" : "text-primary-foreground drop-shadow-md"}`} onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
