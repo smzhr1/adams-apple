@@ -42,7 +42,7 @@ const OurValues = () => {
   return (
     <section className="py-20 bg-muted relative overflow-hidden">
       {/* Left tree stem */}
-      <svg className="absolute left-6 md:left-12 top-0 h-full w-16 opacity-[0.05] pointer-events-none" viewBox="0 0 60 1000" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute left-6 md:left-12 top-0 h-full w-16 opacity-[0.15] pointer-events-none" viewBox="0 0 60 1000" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M30 0 V1000" stroke="hsl(var(--primary))" strokeWidth="3" />
         <path d="M30 80 Q10 70 5 55" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
         <ellipse cx="4" cy="50" rx="8" ry="5" fill="hsl(var(--primary))" opacity="0.7" />
@@ -63,7 +63,7 @@ const OurValues = () => {
       </svg>
 
       {/* Right tree stem */}
-      <svg className="absolute right-6 md:right-12 top-0 h-full w-16 opacity-[0.05] pointer-events-none" viewBox="0 0 60 1000" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute right-6 md:right-12 top-0 h-full w-16 opacity-[0.15] pointer-events-none" viewBox="0 0 60 1000" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M30 0 V1000" stroke="hsl(var(--primary))" strokeWidth="3" />
         <path d="M30 120 Q50 110 56 95" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
         <ellipse cx="57" cy="90" rx="8" ry="5" fill="hsl(var(--primary))" opacity="0.7" />
