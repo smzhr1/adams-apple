@@ -4,71 +4,64 @@ import heroImage from "@/assets/hero-arborist.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-primary overflow-hidden">
-      <div className="container mx-auto px-4 py-16 md:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left */}
-          <div className="space-y-6 text-primary-foreground animate-fade-in">
-            <p className="text-secondary font-semibold tracking-wide uppercase text-sm">
-              Certified Arborists Serving Central Texas
-            </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
-              Your Trusted Local Tree Experts in Austin, TX
-            </h1>
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      {/* Full background image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroImage}
+          alt="Professional arborist performing tree trimming in Austin, TX"
+          className="w-full h-full object-cover"
+          width={1920}
+          height={1080}
+        />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(110,44%,20%)]/90 via-[hsl(110,44%,25%)]/75 to-transparent" />
+      </div>
 
-            <div className="space-y-3 text-primary-foreground/90">
-              <div className="flex items-center gap-3">
-                <Shield className="w-5 h-5 text-accent flex-shrink-0" />
-                <span>Fully Licensed &amp; Insured</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Award className="w-5 h-5 text-accent flex-shrink-0" />
-                <span>ISA Certified Arborists</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Star className="w-5 h-5 text-accent flex-shrink-0" />
-                <span>Top Rated 5-Star Service</span>
-              </div>
-            </div>
+      {/* Content */}
+      <div className="container mx-auto px-4 relative z-10 py-20">
+        <div className="max-w-2xl space-y-8 animate-fade-in">
+          <p className="text-accent font-bold uppercase tracking-[0.2em] text-[15px]">
+            Certified Arborists · Austin, TX
+          </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button variant="cta" size="xl" asChild>
-                <a href="#estimate">Get Free Estimate</a>
-              </Button>
-              <Button variant="heroOutline" size="xl" asChild>
-                <a href="tel:5121234873" className="flex items-center gap-2">
-                  <Phone className="w-5 h-5" /> Or Call 512-123-TREE
-                </a>
-              </Button>
-            </div>
+          <h1 className="text-primary-foreground leading-[1.05]">
+            Expert Tree Care<br />
+            <span className="text-accent">You Can Trust</span>
+          </h1>
+
+          <p className="text-primary-foreground/80 text-lg max-w-lg leading-relaxed">
+            Austin's premier ISA-certified arborist team — protecting your trees
+            and property with 50+ years of combined experience.
+          </p>
+
+          <div className="flex flex-wrap gap-x-6 gap-y-3 text-primary-foreground/90 text-[15px]">
+            <span className="flex items-center gap-2">
+              <Shield className="w-5 h-5 text-accent" /> Licensed &amp; Insured
+            </span>
+            <span className="flex items-center gap-2">
+              <Award className="w-5 h-5 text-accent" /> ISA Certified
+            </span>
+            <span className="flex items-center gap-2">
+              <Star className="w-5 h-5 text-accent" /> 5-Star Rated
+            </span>
           </div>
 
-          {/* Right */}
-          <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src={heroImage}
-                alt="Professional arborist performing tree trimming in Austin, TX"
-                className="w-full h-[400px] md:h-[500px] object-cover"
-                width={1280}
-                height={960}
-              />
-            </div>
-            {/* Badges */}
-            <div className="absolute -bottom-4 left-4 bg-card rounded-xl shadow-lg px-4 py-3 flex items-center gap-2">
-              <Award className="w-6 h-6 text-primary" />
-              <div>
-                <p className="font-semibold text-foreground text-sm">ISA Certified</p>
-                <p className="text-muted-foreground text-xs">Arborist Team</p>
-              </div>
-            </div>
-            <div className="absolute -top-4 right-4 bg-accent text-accent-foreground rounded-xl shadow-lg px-4 py-3">
-              <p className="font-bold text-sm">50+ Years</p>
-              <p className="text-xs">Combined Experience</p>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 pt-2">
+            <Button variant="cta" size="xl" className="uppercase tracking-wider text-[15px] font-bold" asChild>
+              <a href="#estimate">Get Free Estimate</a>
+            </Button>
+            <Button variant="heroOutline" size="xl" asChild>
+              <a href="tel:5121234873" className="flex items-center gap-2">
+                <Phone className="w-5 h-5" /> 512-123-TREE
+              </a>
+            </Button>
           </div>
         </div>
       </div>
+
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };

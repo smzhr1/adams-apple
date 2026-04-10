@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,33 +6,41 @@
 
 @layer base {
   :root {
-    --background: 110 12% 96%;
-    --foreground: 150 20% 15%;
+    /* Pure White background */
+    --background: 0 0% 100%;
+    /* Bark - body text */
+    --foreground: 30 33% 11%;
 
-    --card: 110 15% 98%;
-    --card-foreground: 150 20% 15%;
+    /* Spring Tint for cards */
+    --card: 110 50% 95%;
+    --card-foreground: 30 33% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 150 20% 15%;
+    --popover-foreground: 30 33% 11%;
 
-    --primary: 150 34% 37%;
+    /* Brand Green */
+    --primary: 110 44% 47%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 150 30% 62%;
+    /* Forest */
+    --secondary: 110 52% 35%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 110 12% 92%;
-    --muted-foreground: 150 10% 45%;
+    /* Spring Tint for muted */
+    --muted: 110 50% 95%;
+    --muted-foreground: 30 20% 40%;
 
-    --accent: 33 76% 63%;
-    --accent-foreground: 33 80% 20%;
+    /* Sun Gold */
+    --accent: 48 100% 48%;
+    --accent-foreground: 30 33% 11%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 110 12% 88%;
-    --input: 110 12% 88%;
-    --ring: 150 34% 37%;
+    /* Forest borders */
+    --border: 110 20% 85%;
+    --input: 110 20% 85%;
+    --ring: 110 44% 47%;
 
     --radius: 0.75rem;
 
@@ -47,25 +55,25 @@
   }
 
   .dark {
-    --background: 150 20% 8%;
-    --foreground: 110 12% 96%;
-    --card: 150 20% 10%;
-    --card-foreground: 110 12% 96%;
-    --popover: 150 20% 10%;
-    --popover-foreground: 110 12% 96%;
-    --primary: 150 34% 45%;
+    --background: 30 33% 8%;
+    --foreground: 110 50% 95%;
+    --card: 30 25% 12%;
+    --card-foreground: 110 50% 95%;
+    --popover: 30 25% 12%;
+    --popover-foreground: 110 50% 95%;
+    --primary: 110 44% 47%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 150 30% 55%;
+    --secondary: 110 52% 35%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 150 15% 18%;
+    --muted: 30 15% 18%;
     --muted-foreground: 110 10% 60%;
-    --accent: 33 76% 63%;
-    --accent-foreground: 33 80% 95%;
+    --accent: 48 100% 48%;
+    --accent-foreground: 30 33% 11%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
-    --border: 150 15% 20%;
-    --input: 150 15% 20%;
-    --ring: 150 34% 45%;
+    --border: 30 15% 20%;
+    --input: 30 15% 20%;
+    --ring: 110 44% 47%;
   }
 }
 
@@ -76,9 +84,29 @@
 
   body {
     @apply bg-background text-foreground font-body;
+    font-size: 17px;
+    line-height: 1.7;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1 {
+    @apply font-heading font-bold;
+    font-size: 56px;
+    line-height: 1.1;
+  }
+
+  h2 {
+    @apply font-heading font-bold;
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  h3 {
+    @apply font-body font-extrabold;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  h4, h5, h6 {
     @apply font-heading;
   }
 }
