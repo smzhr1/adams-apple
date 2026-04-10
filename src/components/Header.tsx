@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Phone, Menu, X, ChevronDown, TreePine, Scissors, Sprout, Leaf, AlertTriangle, Crown, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo.png";
 
 const services = [
   { icon: TreePine, label: "Tree Removal", href: "/services/tree-removal", desc: "Safe removal of dead or hazardous trees" },
