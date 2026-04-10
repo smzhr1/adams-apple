@@ -1,5 +1,4 @@
-import { Scissors, TreePine, Sprout, Leaf, AlertTriangle, Crown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { TreePine, Scissors, Sprout, Leaf, AlertTriangle, FileText } from "lucide-react";
 import imgRemoval from "@/assets/service-tree-removal.jpg";
 import imgPruning from "@/assets/service-pruning.jpg";
 import imgPlanting from "@/assets/service-planting.jpg";
@@ -13,42 +12,48 @@ const services = [
     title: "Tree Removal",
     slug: "tree-removal",
     image: imgRemoval,
-    description: "Safe, efficient removal of dead, hazardous, or unwanted trees with full cleanup and haul-away included.",
+    description: "Safe and efficient tree removals will remove hazardous, dead, or unwanted trees on your property.",
+    cta: "Visit Tree Removal page or get an idea of price using our Tree Removal GUESStimator tool",
   },
   {
     icon: Scissors,
-    title: "Tree Pruning & Trimming",
+    title: "Tree Pruning & Tree Trimming",
     slug: "tree-pruning-trimming",
     image: imgPruning,
-    description: "Expert pruning and trimming to promote healthy growth, improve structure, and enhance your property's appearance.",
+    description: "Expert tree pruning and trimming to remove dead, diseased, and damaged branches or to enhance the structure of your trees. This makes your trees safer and more aesthetically pleasing.",
+    cta: "Learn More",
   },
   {
     icon: Sprout,
     title: "Tree Planting",
     slug: "tree-planting",
     image: imgPlanting,
-    description: "Species selection guidance and professional planting to add beauty and value to your landscape.",
+    description: "We will select, deliver, and plant trees as large as 45-gallons. Our services can include maintenance plans to ensure proper watering regimens, root ball development, and to mitigate early signs and symptoms of stress-causing diseases.",
+    cta: "Learn More",
   },
   {
     icon: Leaf,
-    title: "Soil Amendments & Care",
+    title: "Soil Amendments and Care",
     slug: "soil-amendments",
     image: imgSoil,
-    description: "Custom soil treatments, fertilization programs, and root zone care to give your trees the foundation they need.",
+    description: "We care deeply for the soil that is holding your trees. We can apply organic material and ensure the highest care for your trees by improving soil composition and introducing additional organic matter.",
+    cta: "Learn More",
   },
   {
     icon: AlertTriangle,
     title: "Emergency Services",
     slug: "emergency",
     image: imgEmergency,
-    description: "24/7 storm damage response and emergency tree removal to keep your property safe.",
+    description: "Life happens — call us and we will handle fallen branches or trees, including any issues with your trees, as quickly as possible.",
+    cta: "Learn More",
   },
   {
-    icon: Crown,
-    title: "Legacy Tree Program",
-    slug: "legacy-tree-program",
+    icon: FileText,
+    title: "Professional Services",
+    slug: "professional-services",
     image: imgLegacy,
-    description: "Preserve and protect your property's most valuable heritage trees with our comprehensive long-term care program.",
+    description: "Our Certified Arborists can provide professional reports for insurance companies, city requirements, or even file a permit on your behalf.",
+    cta: "Learn More",
   },
 ];
 
@@ -57,11 +62,16 @@ const ServicesSection = () => {
     <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
+          <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
+            Tree Services We Provide
+          </p>
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-            Your Trees Deserve Expert Care
+            Austin Tree Service Designed for You
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            From routine trimming to emergency removals, our ISA-certified arborists handle every aspect of tree care with precision and professionalism.
+            For more details about a specific service, please visit one of the many service pages available. 
+            If you would like a quick response, please call or text us at{" "}
+            <a href="tel:5129128733" className="text-primary font-semibold hover:underline">512-912-8733</a>.
           </p>
         </div>
 
@@ -89,7 +99,7 @@ const ServicesSection = () => {
               <div className="p-6">
                 <h3 className="text-xl font-heading font-semibold text-foreground mb-2">{service.title}</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed text-[15px]">{service.description}</p>
-                <span className="text-primary font-semibold text-sm">Learn More →</span>
+                <span className="text-primary font-semibold text-sm">{service.cta} →</span>
               </div>
             </a>
           ))}

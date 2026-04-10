@@ -1,14 +1,14 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import AccreditationStrip from "@/components/AccreditationStrip";
-import TrustBar from "@/components/TrustBar";
+import BrandStatement from "@/components/BrandStatement";
 import ServicesSection from "@/components/ServicesSection";
-import WhyChooseUs from "@/components/WhyChooseUs";
+import DifferentiatorStrip from "@/components/DifferentiatorStrip";
+import OurValues from "@/components/OurValues";
 import MeetTheTeam from "@/components/MeetTheTeam";
-import TransformationGallery from "@/components/TransformationGallery";
 import ReviewsSection from "@/components/ReviewsSection";
-import EstimateCalculator from "@/components/EstimateCalculator";
+import LegacyTreeProgram from "@/components/LegacyTreeProgram";
 import ServiceAreas from "@/components/ServiceAreas";
+import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
@@ -17,15 +17,15 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <HeroSection />
-      <AccreditationStrip />
-      <TrustBar />
+      <BrandStatement />
       <ServicesSection />
-      <WhyChooseUs />
+      <DifferentiatorStrip />
+      <OurValues />
       <MeetTheTeam />
-      <TransformationGallery />
       <ReviewsSection />
-      <EstimateCalculator />
+      <LegacyTreeProgram />
       <ServiceAreas />
+      <FAQSection />
       <CTASection />
       <Footer />
     </div>
