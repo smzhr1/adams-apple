@@ -19,7 +19,7 @@
     --popover-foreground: 30 33% 11%;
 
     /* Brand Green */
-    --primary: 110 44% 47%;
+    --primary: 110 41% 61%;
     --primary-foreground: 0 0% 100%;
 
     /* Forest */
@@ -40,7 +40,7 @@
     /* Forest borders */
     --border: 110 20% 85%;
     --input: 110 20% 85%;
-    --ring: 110 44% 47%;
+    --ring: 110 41% 61%;
 
     --radius: 0.75rem;
 
@@ -61,7 +61,7 @@
     --card-foreground: 110 50% 95%;
     --popover: 30 25% 12%;
     --popover-foreground: 110 50% 95%;
-    --primary: 110 44% 47%;
+    --primary: 110 41% 61%;
     --primary-foreground: 0 0% 100%;
     --secondary: 110 52% 35%;
     --secondary-foreground: 0 0% 100%;
@@ -73,7 +73,7 @@
     --destructive-foreground: 0 0% 100%;
     --border: 30 15% 20%;
     --input: 30 15% 20%;
-    --ring: 110 44% 47%;
+    --ring: 110 41% 61%;
   }
 }
 
