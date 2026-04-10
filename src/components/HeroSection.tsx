@@ -32,7 +32,7 @@ const HeroSection = () => {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(110,44%,20%)]/90 via-[hsl(110,44%,25%)]/75 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(110,20%,12%)]/80 via-[hsl(110,15%,15%)]/55 to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10 py-20">
@@ -67,28 +67,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Trust badges overlay at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 bg-foreground/80 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2">
-            {badges.map((badge) => (
-              <div key={badge.alt} className="flex items-center gap-2">
-                <img
-                  src={badge.src}
-                  alt={badge.alt}
-                  loading="lazy"
-                  width={512}
-                  height={512}
-                  className="h-8 w-8 object-contain"
-                />
-                <span className="text-primary-foreground text-xs font-bold tracking-wide uppercase">
-                  {badge.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
     </section>
   );
 };
