@@ -80,7 +80,7 @@ const ServicesSection = () => {
             <a
               key={service.title}
               href={`/services/${service.slug}`}
-              className="group bg-primary rounded-2xl overflow-hidden border border-primary hover:shadow-lg transition-all duration-300"
+              className="group bg-[hsl(110,41%,42%)] rounded-2xl overflow-hidden border border-[hsl(110,41%,38%)] hover:shadow-lg transition-all duration-300"
             >
               <div className="relative h-48 overflow-hidden">
                 <img
