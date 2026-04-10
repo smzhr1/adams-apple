@@ -35,14 +35,18 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
         scrolled || mobileOpen
-          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm"
-          : "border-b border-transparent"
+          ? "border-border/50 shadow-sm"
+          : "border-transparent"
       }`}
-      style={!scrolled && !mobileOpen ? {
-        background: "linear-gradient(to right, hsl(0 0% 100% / 1) 0%, hsl(0 0% 100% / 1) 50%, hsl(0 0% 100% / 0.4) 75%, hsl(0 0% 100% / 0) 100%)"
-      } : undefined}
+      style={{
+        background: scrolled || mobileOpen
+          ? "linear-gradient(135deg, hsl(0 0% 100% / 0.72), hsl(0 0% 100% / 0.58))"
+          : "linear-gradient(to right, hsl(0 0% 100% / 0.72) 0%, hsl(0 0% 100% / 0.45) 50%, hsl(0 0% 100% / 0) 100%)",
+        backdropFilter: "blur(20px) saturate(180%)",
+        WebkitBackdropFilter: "blur(20px) saturate(180%)",
+      }}
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
