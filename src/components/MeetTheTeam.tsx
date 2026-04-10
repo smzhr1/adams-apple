@@ -36,7 +36,7 @@ const MeetTheTeam = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">Our Team</p>
-          <h2 className="font-heading font-bold text-foreground">Why Choose Adam's Apple Tree Service?</h2>
+          <h2 className="font-heading font-bold text-foreground" style={{ fontSize: 'var(--text-3xl)' }}>Why Choose Adam's Apple Tree Service?</h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto leading-relaxed">
             At Adam's Apple Tree Service, we are more than just tree care professionals; we are dedicated 
             partners in your journey to create and maintain a beautiful, safe, and thriving landscape. With 

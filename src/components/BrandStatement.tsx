@@ -4,7 +4,7 @@ const BrandStatement = () => {
   return (
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4 max-w-3xl text-center">
-        <p className="text-foreground text-lg leading-relaxed mb-8">
+        <p className="text-foreground leading-relaxed mb-8" style={{ fontSize: 'var(--text-md)' }}>
           Adam's Apple Tree Service is your trusted local source for expert tree care in the Austin area. 
           With over 15 years of experience serving the diverse landscapes of Central Texas, we understand 
           the unique needs of our region's trees. From the iconic live oaks that shade our streets to the 

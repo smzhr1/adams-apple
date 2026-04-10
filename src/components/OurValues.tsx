@@ -45,7 +45,7 @@ const OurValues = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">Our Values</p>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground max-w-3xl mx-auto">
+          <h2 className="font-heading font-bold text-foreground max-w-3xl mx-auto">
             Superb Communication, Safe Work Practices, and Affordable Rates
           </h2>
         </div>
@@ -59,7 +59,7 @@ const OurValues = () => {
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-3 mb-2">
                   <v.icon className="w-5 h-5 text-primary shrink-0" />
-                  <h3 className="text-xl md:text-2xl font-heading font-bold text-foreground">{v.title}</h3>
+                  <h3 className="font-heading font-bold text-foreground" style={{ fontSize: 'var(--text-lg)' }}>{v.title}</h3>
                 </div>
                 <p className="text-muted-foreground text-[15px] md:text-base leading-relaxed max-w-2xl">{v.body}</p>
               </div>

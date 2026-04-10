@@ -14,10 +14,10 @@ const LegacyTreeProgram = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4 max-w-3xl text-center">
         <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">Something Special</p>
-        <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
+        <h2 className="font-heading font-bold text-foreground mb-6">
           Establishing Roots for Your Memories
         </h2>
-        <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+        <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: 'var(--text-md)' }}>
           At Adam's Apple Tree Service, we spend our days caring for trees. Now, we want to help you 
           start one. Introducing our Legacy Planting Program — a simple, sustainable way to mark life's 
           significant transitions.

@@ -39,7 +39,7 @@ const ReviewsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">Testimonials</p>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-2">
+          <h2 className="font-heading font-bold text-foreground mb-2">
             What Austin Homeowners Are Saying
           </h2>
         </div>

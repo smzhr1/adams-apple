@@ -30,10 +30,10 @@ const WhyChooseUs = () => {
 
           {/* Content */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+            <h2 className="font-heading font-bold text-foreground mb-4">
               Why Austin Homeowners Choose Us
             </h2>
-            <p className="text-muted-foreground text-lg mb-8">
+            <p className="text-muted-foreground mb-8" style={{ fontSize: 'var(--text-md)' }}>
               We combine certified expertise, modern equipment, and genuine care to deliver tree services you can trust.
             </p>
 
@@ -44,8 +44,8 @@ const WhyChooseUs = () => {
                     <r.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-body font-bold text-foreground text-base mb-0.5">{r.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{r.desc}</p>
+                    <h3 className="font-body font-bold text-foreground mb-0.5" style={{ fontSize: 'var(--text-base)' }}>{r.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed" style={{ fontSize: 'var(--text-sm)' }}>{r.desc}</p>
                   </div>
                 </div>
               ))}
