@@ -26,8 +26,8 @@ const DifferentiatorStrip = () => {
           {items.map((item) => (
             <div key={item.title} className="text-center">
               <item.icon className="w-10 h-10 text-accent mx-auto mb-4" />
-              <h3 className="text-xl font-heading font-bold text-primary-foreground mb-2">{item.title}</h3>
-              <p className="text-primary-foreground/80 leading-relaxed text-[15px]">{item.desc}</p>
+              <h3 className="font-heading font-bold text-primary-foreground mb-2" style={{ fontSize: 'var(--text-lg)' }}>{item.title}</h3>
+              <p className="text-primary-foreground/80 leading-relaxed" style={{ fontSize: 'var(--text-base)' }}>{item.desc}</p>
             </div>
           ))}
         </div>

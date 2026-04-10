@@ -33,12 +33,12 @@ const HeroSection = () => {
             </a>
           </p>
 
-          <h1 className="text-primary-foreground leading-[1.05]">
+          <h1 className="text-primary-foreground leading-[1.05]" style={{ fontSize: 'var(--text-hero)' }}>
             Your Favorite Austin<br />
             <span className="text-accent">Tree Service</span>
           </h1>
 
-          <p className="text-primary-foreground/80 text-lg max-w-lg leading-relaxed">
+          <p className="text-primary-foreground/80 max-w-lg" style={{ fontSize: 'var(--text-lg)', lineHeight: 1.6 }}>
             Adam's Apple Tree Service is your local Austin tree care experts
             specializing in the maintenance and longevity of trees.
           </p>

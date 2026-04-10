@@ -28,7 +28,7 @@ const EstimateCalculator = () => {
                 <Calculator className="w-6 h-6 text-accent" />
               </div>
               <div>
-                <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground">
+                <h2 className="font-heading font-bold text-foreground" style={{ fontSize: 'var(--text-2xl)' }}>
                   Tree Service Estimator
                 </h2>
                 <p className="text-muted-foreground text-sm">Get a rough cost estimate instantly</p>

@@ -65,10 +65,10 @@ const ServicesSection = () => {
           <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
             Tree Services We Provide
           </p>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+          <h2 className="font-heading font-bold text-foreground mb-4">
             Austin Tree Service Designed for You
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-muted-foreground max-w-2xl mx-auto" style={{ fontSize: 'var(--text-md)' }}>
             For more details about a specific service, please visit one of the many service pages available. 
             If you would like a quick response, please call or text us at{" "}
             <a href="tel:5129128733" className="text-primary font-semibold hover:underline">512-912-8733</a>.
@@ -94,9 +94,9 @@ const ServicesSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-heading font-semibold text-primary-foreground mb-2">{service.title}</h3>
-                <p className="text-primary-foreground/80 mb-4 leading-relaxed text-[15px]">{service.description}</p>
-                <span className="text-primary-foreground font-semibold text-sm">{service.cta} →</span>
+                <h3 className="font-heading font-semibold text-primary-foreground mb-2" style={{ fontSize: 'var(--text-lg)' }}>{service.title}</h3>
+                <p className="text-primary-foreground/80 mb-4 leading-relaxed" style={{ fontSize: 'var(--text-base)' }}>{service.description}</p>
+                <span className="text-primary-foreground font-semibold" style={{ fontSize: 'var(--text-sm)' }}>{service.cta} →</span>
               </div>
             </a>
           ))}

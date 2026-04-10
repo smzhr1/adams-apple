@@ -21,7 +21,7 @@ const TransformationGallery = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">See the Difference</p>
-          <h2 className="font-heading font-bold text-foreground">Before &amp; After</h2>
+          <h2 className="font-heading font-bold text-foreground" style={{ fontSize: 'var(--text-3xl)' }}>Before &amp; After</h2>
           <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
             Real results from real Austin properties. Swipe or hover to reveal the transformation.
           </p>

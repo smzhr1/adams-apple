@@ -20,10 +20,10 @@ const ServiceAreas = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">Where We Work</p>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+          <h2 className="font-heading font-bold text-foreground mb-4">
             Proudly Serving Austin, TX and Surrounding Communities
           </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
+          <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed" style={{ fontSize: 'var(--text-md)' }}>
             Rooted in over 15 years of experience serving Austin and the surrounding communities, 
             Adam's Apple Tree Service is more than just a tree service company. We're your dedicated 
             partners in maintaining the health, beauty, and safety of your outdoor spaces. As a locally 
