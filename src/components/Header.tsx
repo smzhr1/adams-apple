@@ -62,7 +62,7 @@ const Header = () => {
             <button className="flex items-center gap-1 text-white/90 hover:text-white font-semibold transition-colors text-[15px]">
               Service Areas <ChevronDown className="w-4 h-4" />
             </button>
-            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               <div className="bg-background rounded-2xl shadow-2xl border border-border p-6 min-w-[480px]">
                 <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4">Areas We Serve</p>
                 <div className="grid grid-cols-2 gap-4">
