@@ -2,21 +2,33 @@ import { Star } from "lucide-react";
 
 const reviews = [
   {
-    name: "Review Placeholder",
-    location: "Austin Neighborhood",
-    text: "Placeholder for verified Google/Yelp review. Replace with actual client testimonial.",
+    name: "Robert",
+    location: "South Manchaca",
+    text: "These folks want to earn your business, and they seem willing to go the extra mile to keep you as a return customer.",
     rating: 5,
   },
   {
-    name: "Review Placeholder",
-    location: "Austin Neighborhood",
-    text: "Placeholder for verified Google/Yelp review. Replace with actual client testimonial.",
+    name: "Sara",
+    location: "Great Hills",
+    text: "At no point along the way did I feel like they were pressuring me to expand my scope beyond what I asked them to do.",
     rating: 5,
   },
   {
-    name: "Review Placeholder",
-    location: "Austin Neighborhood",
-    text: "Placeholder for verified Google/Yelp review. Replace with actual client testimonial.",
+    name: "Alex",
+    location: "Austin, TX",
+    text: "I used them to manage all tree related work on our 200+ homes under my portfolio. Could not be happier with the service they provide.",
+    rating: 5,
+  },
+  {
+    name: "Andy",
+    location: "Austin, TX",
+    text: "I took bids from more than 10 tree service firms and not only was yours among the lowest, but you did exactly what I wanted and didn't try to upsell me on anything.",
+    rating: 5,
+  },
+  {
+    name: "Shelby",
+    location: "Austin, TX",
+    text: "They did such a great job that my neighbor ended up hiring them to trim her tree as well. I've been through a few different tree removal/trimming companies and Adam's Apple is by far the best.",
     rating: 5,
   },
 ];
