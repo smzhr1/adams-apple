@@ -12,13 +12,10 @@ const services = [
   { icon: FileText, label: "Professional Services", href: "/services/professional-services", desc: "Reports, permits & insurance docs" },
 ];
 
-const serviceAreas = {
-  "South Austin": ["Barton Hills", "Bouldin Creek", "South Congress", "South Lamar", "Travis Heights", "Zilker"],
-  "West Austin": ["Westlake", "Tarrytown", "Rollingwood", "Westlake Hills"],
-  "Central Austin": ["Downtown", "Hyde Park", "Clarksville"],
-  "East Austin": ["Mueller", "Govalle", "East Riverside"],
-  "North Austin": ["Allandale", "Crestview", "North Loop"],
-};
+const serviceAreas = [
+  "Austin", "Westlake", "Cedar Park", "Round Rock", "Pflugerville",
+  "Bee Cave", "Lakeway", "Dripping Springs", "Leander", "Tarrytown",
+];
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -89,7 +86,6 @@ const Header = () => {
 
           <a href="/about" className="text-white/90 hover:text-white font-semibold transition-colors text-[15px]">About</a>
           <a href="/gallery" className="text-white/90 hover:text-white font-semibold transition-colors text-[15px]">Gallery</a>
-          <a href="/contact" className="text-white/90 hover:text-white font-semibold transition-colors text-[15px]">Contact</a>
           <a href="/blog" className="text-white/90 hover:text-white font-semibold transition-colors text-[15px]">Blog</a>
           <a href="/faqs" className="text-white/90 hover:text-white font-semibold transition-colors text-[15px]">FAQs</a>
         </nav>
@@ -147,7 +143,6 @@ const Header = () => {
 
             <a href="/about" className="block py-3 text-white font-bold">About</a>
             <a href="/gallery" className="block py-3 text-white font-bold">Gallery</a>
-            <a href="/contact" className="block py-3 text-white font-bold">Contact</a>
             <a href="/blog" className="block py-3 text-white font-bold">Blog</a>
             <a href="/faqs" className="block py-3 text-white font-bold">FAQs</a>
             <a href="tel:5129128733" className="flex items-center gap-2 py-3 text-white font-bold">

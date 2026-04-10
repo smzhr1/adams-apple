@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="space-y-4">
-            <img src={logo} alt="Adam's Apple Tree Service" className="h-[72px] w-auto brightness-0 invert" />
+            <img src={logo} alt="Adam's Apple Tree Service" className="h-[72px] w-auto" />
             <div className="space-y-2 text-background/70 text-sm">
               <a href="tel:5129128733" className="flex items-center gap-2 hover:text-accent transition-colors">
                 <Phone className="w-4 h-4 text-accent" /> 512-912-8733
@@ -49,14 +49,20 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Trust */}
+          {/* Service Areas */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-4 text-accent">Trust</h4>
+            <h4 className="font-heading font-semibold text-lg mb-4 text-accent">Service Areas</h4>
             <ul className="space-y-2 text-background/70 text-sm">
-              <li>✅ ISA Certified Arborists on Staff</li>
-              <li>🛡 Fully Licensed & Insured</li>
-              <li>📋 ANSI A300 Compliant</li>
-              <li>🏠 Locally Owned & Proudly Serving Austin Area</li>
+              <li><a href="/areas/austin" className="hover:text-accent transition-colors">Austin</a></li>
+              <li><a href="/areas/westlake" className="hover:text-accent transition-colors">Westlake</a></li>
+              <li><a href="/areas/cedar-park" className="hover:text-accent transition-colors">Cedar Park</a></li>
+              <li><a href="/areas/round-rock" className="hover:text-accent transition-colors">Round Rock</a></li>
+              <li><a href="/areas/pflugerville" className="hover:text-accent transition-colors">Pflugerville</a></li>
+              <li><a href="/areas/bee-cave" className="hover:text-accent transition-colors">Bee Cave</a></li>
+              <li><a href="/areas/lakeway" className="hover:text-accent transition-colors">Lakeway</a></li>
+              <li><a href="/areas/dripping-springs" className="hover:text-accent transition-colors">Dripping Springs</a></li>
+              <li><a href="/areas/leander" className="hover:text-accent transition-colors">Leander</a></li>
+              <li><a href="/areas/tarrytown" className="hover:text-accent transition-colors">Tarrytown</a></li>
             </ul>
           </div>
         </div>
