@@ -38,8 +38,11 @@ const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || mobileOpen
           ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm"
-          : "bg-transparent border-b border-transparent"
+          : "border-b border-transparent"
       }`}
+      style={!scrolled && !mobileOpen ? {
+        background: "linear-gradient(to right, hsl(0 0% 100% / 0.95) 0%, hsl(0 0% 100% / 0.7) 30%, hsl(0 0% 100% / 0) 60%)"
+      } : undefined}
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
@@ -52,7 +55,7 @@ const Header = () => {
           {/* Services Mega Menu */}
           <div className="relative group">
             <button className={`flex items-center gap-1 font-semibold transition-colors text-[15px] ${
-              scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground/90 hover:text-accent"
+              scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground hover:text-accent drop-shadow-sm"
             }`}>
               Services <ChevronDown className="w-4 h-4" />
             </button>
@@ -83,7 +86,7 @@ const Header = () => {
           {/* Service Areas Dropdown */}
           <div className="relative group">
             <button className={`flex items-center gap-1 font-semibold transition-colors text-[15px] ${
-              scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground/90 hover:text-accent"
+              scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground hover:text-accent drop-shadow-sm"
             }`}>
               Service Areas <ChevronDown className="w-4 h-4" />
             </button>
@@ -104,13 +107,13 @@ const Header = () => {
           </div>
 
           <a href="/about" className={`font-semibold transition-colors text-[15px] ${
-            scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground/90 hover:text-accent"
+            scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground hover:text-accent drop-shadow-sm"
           }`}>About</a>
           <a href="/contact" className={`font-semibold transition-colors text-[15px] ${
-            scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground/90 hover:text-accent"
+            scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground hover:text-accent drop-shadow-sm"
           }`}>Contact</a>
           <a href="/blog" className={`font-semibold transition-colors text-[15px] ${
-            scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground/90 hover:text-accent"
+            scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground hover:text-accent drop-shadow-sm"
           }`}>Blog</a>
         </nav>
 
