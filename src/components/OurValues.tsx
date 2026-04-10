@@ -42,7 +42,7 @@ const OurValues = () => {
   return (
     <section className="py-20 bg-muted relative overflow-hidden">
       {/* Left tree trunk */}
-      <svg className="absolute left-4 md:left-16 top-0 h-full w-24 opacity-[0.08] pointer-events-none" viewBox="0 0 100 1200" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute left-4 md:left-16 top-0 h-full w-24 opacity-50 pointer-events-none" viewBox="0 0 100 1200" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* Main trunk - slightly tapered, organic curve */}
         <path d="M52 0 C54 200, 48 400, 50 600 C52 800, 46 1000, 50 1200" stroke="hsl(var(--primary))" strokeWidth="8" fill="none" />
         <path d="M44 0 C42 200, 48 400, 46 600 C44 800, 50 1000, 46 1200" stroke="hsl(var(--primary))" strokeWidth="6" fill="none" opacity="0.4" />
@@ -73,7 +73,7 @@ const OurValues = () => {
       </svg>
 
       {/* Right tree trunk (mirrored) */}
-      <svg className="absolute right-4 md:right-16 top-0 h-full w-24 opacity-[0.08] pointer-events-none" viewBox="0 0 100 1200" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transform: 'scaleX(-1)' }}>
+      <svg className="absolute right-4 md:right-16 top-0 h-full w-24 opacity-50 pointer-events-none" viewBox="0 0 100 1200" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transform: 'scaleX(-1)' }}>
         <path d="M52 0 C54 200, 48 400, 50 600 C52 800, 46 1000, 50 1200" stroke="hsl(var(--primary))" strokeWidth="8" fill="none" />
         <path d="M44 0 C42 200, 48 400, 46 600 C44 800, 50 1000, 46 1200" stroke="hsl(var(--primary))" strokeWidth="6" fill="none" opacity="0.4" />
         <path d="M50 120 C60 105, 75 90, 90 75" stroke="hsl(var(--primary))" strokeWidth="3" fill="none" />
