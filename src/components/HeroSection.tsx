@@ -1,6 +1,6 @@
 import { Phone, Calendar, Users, Star, TreePine } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-arborist.jpg";
+import heroImage from "@/assets/hero-arborist.webp";
 
 const stats = [
   { icon: Calendar, value: "15+", label: "Years in Business" },
