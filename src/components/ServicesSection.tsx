@@ -80,7 +80,7 @@ const ServicesSection = () => {
             <a
               key={service.title}
               href={`/services/${service.slug}`}
-              className="group bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+              className="group bg-primary rounded-2xl overflow-hidden border border-primary hover:shadow-lg transition-all duration-300"
             >
               <div className="relative h-48 overflow-hidden">
                 <img
@@ -91,15 +91,12 @@ const ServicesSection = () => {
                   width={800}
                   height={600}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
-                <div className="absolute bottom-3 left-3 w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                  <service.icon className="w-5 h-5 text-primary-foreground" />
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-heading font-semibold text-foreground mb-2">{service.title}</h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed text-[15px]">{service.description}</p>
-                <span className="text-primary font-semibold text-sm">{service.cta} →</span>
+                <h3 className="text-xl font-heading font-semibold text-primary-foreground mb-2">{service.title}</h3>
+                <p className="text-primary-foreground/80 mb-4 leading-relaxed text-[15px]">{service.description}</p>
+                <span className="text-primary-foreground font-semibold text-sm">{service.cta} →</span>
               </div>
             </a>
           ))}
