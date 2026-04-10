@@ -1,4 +1,4 @@
-import { TreePine, Scissors, Sprout, Leaf, AlertTriangle, FileText } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import imgRemoval from "@/assets/service-tree-removal.jpg";
 import imgPruning from "@/assets/service-pruning.jpg";
 import imgPlanting from "@/assets/service-planting.jpg";
@@ -8,52 +8,40 @@ import imgLegacy from "@/assets/service-legacy.jpg";
 
 const services = [
   {
-    icon: TreePine,
     title: "Tree Removal",
     slug: "tree-removal",
     image: imgRemoval,
     description: "Safe and efficient tree removals will remove hazardous, dead, or unwanted trees on your property.",
-    cta: "Visit Tree Removal page or get an idea of price using our Tree Removal GUESStimator tool",
   },
   {
-    icon: Scissors,
     title: "Tree Pruning & Tree Trimming",
     slug: "tree-pruning-trimming",
     image: imgPruning,
-    description: "Expert tree pruning and trimming to remove dead, diseased, and damaged branches or to enhance the structure of your trees. This makes your trees safer and more aesthetically pleasing.",
-    cta: "Learn More",
+    description: "Expert tree pruning and trimming to remove dead, diseased, and damaged branches or to enhance the structure of your trees.",
   },
   {
-    icon: Sprout,
     title: "Tree Planting",
     slug: "tree-planting",
     image: imgPlanting,
-    description: "We will select, deliver, and plant trees as large as 45-gallons. Our services can include maintenance plans to ensure proper watering regimens, root ball development, and to mitigate early signs and symptoms of stress-causing diseases.",
-    cta: "Learn More",
+    description: "We will select, deliver, and plant trees as large as 45-gallons with maintenance plans to ensure proper care.",
   },
   {
-    icon: Leaf,
     title: "Soil Amendments and Care",
     slug: "soil-amendments",
     image: imgSoil,
-    description: "We care deeply for the soil that is holding your trees. We can apply organic material and ensure the highest care for your trees by improving soil composition and introducing additional organic matter.",
-    cta: "Learn More",
+    description: "We care deeply for the soil holding your trees — improving composition and introducing additional organic matter.",
   },
   {
-    icon: AlertTriangle,
     title: "Emergency Services",
     slug: "emergency",
     image: imgEmergency,
-    description: "Life happens — call us and we will handle fallen branches or trees, including any issues with your trees, as quickly as possible.",
-    cta: "Learn More",
+    description: "Life happens — call us and we will handle fallen branches or trees as quickly as possible.",
   },
   {
-    icon: FileText,
     title: "Professional Services",
     slug: "professional-services",
     image: imgLegacy,
-    description: "Our Certified Arborists can provide professional reports for insurance companies, city requirements, or even file a permit on your behalf.",
-    cta: "Learn More",
+    description: "Our Certified Arborists can provide professional reports for insurance companies, city requirements, or permits.",
   },
 ];
 
@@ -91,12 +79,16 @@ const ServicesSection = () => {
                   width={800}
                   height={600}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(110,41%,42%)]/60 to-transparent" />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col">
                 <h3 className="font-heading font-semibold text-primary-foreground mb-2" style={{ fontSize: 'var(--text-lg)' }}>{service.title}</h3>
-                <p className="text-primary-foreground/80 mb-4 leading-relaxed" style={{ fontSize: 'var(--text-base)' }}>{service.description}</p>
-                <span className="text-primary-foreground font-semibold" style={{ fontSize: 'var(--text-sm)' }}>{service.cta} →</span>
+                <p className="text-primary-foreground/80 mb-4 leading-relaxed flex-1" style={{ fontSize: 'var(--text-base)' }}>{service.description}</p>
+                <div className="flex justify-end">
+                  <span className="inline-flex items-center gap-1.5 bg-accent text-accent-foreground font-semibold rounded-full px-4 py-1.5 text-[13px] group-hover:bg-accent/90 transition-colors">
+                    Learn More <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
               </div>
             </a>
           ))}

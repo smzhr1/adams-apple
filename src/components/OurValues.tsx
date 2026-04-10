@@ -1,41 +1,40 @@
-import { Users, TreePine, Shield, DollarSign, Sparkles, ThumbsUp } from "lucide-react";
+import imgClient from "@/assets/value-client-focused.jpg";
+import imgExpertise from "@/assets/value-expertise.jpg";
+import imgSafety from "@/assets/value-safety.jpg";
+import imgAffordable from "@/assets/value-affordable.jpg";
+import imgClean from "@/assets/value-clean.jpg";
+import imgSatisfaction from "@/assets/value-satisfaction.jpg";
 
 const values = [
   {
-    icon: Users,
-    num: "01",
     title: "Client-Focused Results",
     body: "We listen first, then build a customized plan that aligns with your vision — from estimate to cleanup.",
+    image: imgClient,
   },
   {
-    icon: TreePine,
-    num: "02",
     title: "Unmatched Expertise",
     body: "15+ years tending Austin's urban forest. Passionate tree advocates, not just skilled technicians.",
+    image: imgExpertise,
   },
   {
-    icon: Shield,
-    num: "03",
     title: "Safety First",
     body: "Every project follows ANSI A300 standards. Fully insured. Your property and our crew, always protected.",
+    image: imgSafety,
   },
   {
-    icon: DollarSign,
-    num: "04",
     title: "Affordability and Quality",
     body: "Quality work that doesn't break the bank. Free estimates and 30-minute site visits, always.",
+    image: imgAffordable,
   },
   {
-    icon: Sparkles,
-    num: "05",
     title: "Immaculate Job Sites",
     body: "We don't leave until your landscape is in pristine condition. Clean site, every time.",
+    image: imgClean,
   },
   {
-    icon: ThumbsUp,
-    num: "06",
     title: "Satisfaction Guarantee",
     body: "We stand behind every job. Not fully satisfied? We'll make it right.",
+    image: imgSatisfaction,
   },
 ];
 
@@ -50,22 +49,34 @@ const OurValues = () => {
           </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto divide-y divide-border">
-          {values.map((v) => (
-            <div key={v.title} className="flex items-start gap-6 md:gap-10 py-10 group">
-              <span className="text-4xl md:text-5xl font-heading font-bold text-accent/30 group-hover:text-accent transition-colors duration-300 shrink-0 w-14 md:w-20 text-right leading-none pt-1">
-                {v.num}
-              </span>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-3 mb-2">
-                  <v.icon className="w-5 h-5 text-primary shrink-0" />
-                  <h3 className="font-heading font-bold text-foreground" style={{ fontSize: 'var(--text-lg)' }}>{v.title}</h3>
+        <div className="space-y-16 max-w-5xl mx-auto">
+          {values.map((v, idx) => {
+            const isReversed = idx % 2 === 1;
+            return (
+              <div
+                key={v.title}
+                className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 md:gap-12`}
+              >
+                <div className="w-full md:w-1/2">
+                  <div className="rounded-2xl overflow-hidden shadow-lg">
+                    <img
+                      src={v.image}
+                      alt={v.title}
+                      loading="lazy"
+                      width={800}
+                      height={600}
+                      className="w-full h-64 md:h-72 object-cover"
+                    />
+                  </div>
                 </div>
-                <p className="text-muted-foreground text-[15px] md:text-base leading-relaxed max-w-2xl">{v.body}</p>
+                <div className="w-full md:w-1/2">
+                  <span className="text-primary font-bold text-sm uppercase tracking-[0.15em]">0{idx + 1}</span>
+                  <h3 className="font-heading font-bold text-foreground mt-1 mb-3" style={{ fontSize: 'var(--text-xl)' }}>{v.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed" style={{ fontSize: 'var(--text-md)' }}>{v.body}</p>
+                </div>
               </div>
-              <div className="hidden md:block w-2.5 h-2.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors duration-300 mt-3 shrink-0" />
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

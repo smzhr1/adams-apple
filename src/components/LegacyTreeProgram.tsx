@@ -1,48 +1,40 @@
-import { Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const occasions = [
-  "A new baby or adoption",
-  "A first-home purchase",
-  "Honoring a loved one or pet",
-  "An anniversary or retirement",
-  "Any of life's precious moments",
-];
+import legacyImg from "@/assets/legacy-tree.jpg";
 
 const LegacyTreeProgram = () => {
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4 max-w-3xl text-center">
-        <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">Something Special</p>
-        <h2 className="font-heading font-bold text-foreground mb-6">
-          Establishing Roots for Your Memories
-        </h2>
-        <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: 'var(--text-md)' }}>
-          At Adam's Apple Tree Service, we spend our days caring for trees. Now, we want to help you 
-          start one. Introducing our Legacy Planting Program — a simple, sustainable way to mark life's 
-          significant transitions.
-        </p>
+    <section className="py-20 bg-muted">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+          {/* Image */}
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={legacyImg}
+              alt="Young sapling planted as part of the Legacy Tree Program"
+              loading="lazy"
+              width={800}
+              height={600}
+              className="w-full h-72 md:h-80 object-cover"
+            />
+          </div>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
-          {occasions.map((item) => (
-            <span key={item} className="inline-flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2 text-sm text-foreground">
-              <Heart className="w-4 h-4 text-primary" /> {item}
-            </span>
-          ))}
-        </div>
-
-        <div className="bg-card rounded-2xl p-6 border border-border mb-8 inline-block">
-          <p className="text-foreground text-[15px]">
-            We provide a 1–5 gallon native Texas sapling and professional installation.<br />
-            <span className="font-bold">Current clients: Free.</span>{" "}
-            <span className="font-bold">New clients: $50 + tax.</span>
-          </p>
-        </div>
-
-        <div>
-          <Button variant="cta" size="lg" className="uppercase tracking-wider text-[15px] font-bold" asChild>
-            <a href="/services/legacy-tree-program">Learn About the Legacy Tree Program →</a>
-          </Button>
+          {/* Content */}
+          <div>
+            <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">Something Special</p>
+            <h2 className="font-heading font-bold text-foreground mb-4">
+              Establishing Roots for Your Memories
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: 'var(--text-md)' }}>
+              A simple, sustainable way to mark life's significant transitions — a new baby, a first home, 
+              honoring a loved one, or any of life's precious moments.
+            </p>
+            <p className="text-foreground font-semibold mb-6" style={{ fontSize: 'var(--text-base)' }}>
+              Current clients: Free · New clients: $50 + tax
+            </p>
+            <Button variant="cta" size="lg" className="uppercase tracking-wider text-[15px] font-bold" asChild>
+              <a href="/services/legacy-tree-program">Learn More →</a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
