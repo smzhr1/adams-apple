@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Phone, Menu, X, ChevronDown, TreePine, Scissors, Sprout, Leaf, AlertTriangle, Crown, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.jpg";
@@ -24,9 +24,23 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileAreasOpen, setMobileAreasOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled || mobileOpen
+          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm"
+          : "bg-transparent border-b border-transparent"
+      }`}
+    >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <a href="/" className="flex-shrink-0">
@@ -37,7 +51,9 @@ const Header = () => {
         <nav className="hidden lg:flex items-center gap-6">
           {/* Services Mega Menu */}
           <div className="relative group">
-            <button className="flex items-center gap-1 text-foreground/80 hover:text-primary font-semibold transition-colors text-[15px]">
+            <button className={`flex items-center gap-1 font-semibold transition-colors text-[15px] ${
+              scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground/90 hover:text-accent"
+            }`}>
               Services <ChevronDown className="w-4 h-4" />
             </button>
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -66,7 +82,9 @@ const Header = () => {
 
           {/* Service Areas Dropdown */}
           <div className="relative group">
-            <button className="flex items-center gap-1 text-foreground/80 hover:text-primary font-semibold transition-colors text-[15px]">
+            <button className={`flex items-center gap-1 font-semibold transition-colors text-[15px] ${
+              scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground/90 hover:text-accent"
+            }`}>
               Service Areas <ChevronDown className="w-4 h-4" />
             </button>
             <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -85,21 +103,29 @@ const Header = () => {
             </div>
           </div>
 
-          <a href="/about" className="text-foreground/80 hover:text-primary font-semibold transition-colors text-[15px]">About</a>
-          <a href="/contact" className="text-foreground/80 hover:text-primary font-semibold transition-colors text-[15px]">Contact</a>
-          <a href="/blog" className="text-foreground/80 hover:text-primary font-semibold transition-colors text-[15px]">Blog</a>
+          <a href="/about" className={`font-semibold transition-colors text-[15px] ${
+            scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground/90 hover:text-accent"
+          }`}>About</a>
+          <a href="/contact" className={`font-semibold transition-colors text-[15px] ${
+            scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground/90 hover:text-accent"
+          }`}>Contact</a>
+          <a href="/blog" className={`font-semibold transition-colors text-[15px] ${
+            scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground/90 hover:text-accent"
+          }`}>Blog</a>
         </nav>
 
         {/* Right side */}
         <div className="flex items-center gap-3">
-          <a href="tel:5121234873" className="hidden md:flex items-center gap-2 text-primary font-bold text-[15px]">
+          <a href="tel:5121234873" className={`hidden md:flex items-center gap-2 font-bold text-[15px] ${
+            scrolled ? "text-primary" : "text-accent"
+          }`}>
             <Phone className="w-4 h-4" />
             512-123-TREE
           </a>
           <Button variant="cta" size="lg" className="hidden sm:inline-flex uppercase tracking-wider text-[15px] font-bold" asChild>
             <a href="#estimate">Get Free Estimate</a>
           </Button>
-          <button className="lg:hidden p-2 text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
+          <button className={`lg:hidden p-2 ${scrolled ? "text-foreground" : "text-primary-foreground"}`} onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -109,7 +135,6 @@ const Header = () => {
       {mobileOpen && (
         <div className="lg:hidden bg-background border-t border-border">
           <div className="container mx-auto px-4 py-4 space-y-1">
-            {/* Services */}
             <button onClick={() => setMobileServicesOpen(!mobileServicesOpen)} className="flex items-center justify-between w-full py-3 text-foreground font-bold">
               Services <ChevronDown className={`w-4 h-4 transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`} />
             </button>
@@ -123,7 +148,6 @@ const Header = () => {
               </div>
             )}
 
-            {/* Service Areas */}
             <button onClick={() => setMobileAreasOpen(!mobileAreasOpen)} className="flex items-center justify-between w-full py-3 text-foreground font-bold">
               Service Areas <ChevronDown className={`w-4 h-4 transition-transform ${mobileAreasOpen ? "rotate-180" : ""}`} />
             </button>
