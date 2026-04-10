@@ -41,7 +41,7 @@ const Header = () => {
           : "border-b border-transparent"
       }`}
       style={!scrolled && !mobileOpen ? {
-        background: "linear-gradient(to right, hsl(0 0% 100% / 0.95) 0%, hsl(0 0% 100% / 0.7) 30%, hsl(0 0% 100% / 0) 60%)"
+        background: "linear-gradient(to right, hsl(0 0% 100% / 1) 0%, hsl(0 0% 100% / 1) 50%, hsl(0 0% 100% / 0.4) 75%, hsl(0 0% 100% / 0) 100%)"
       } : undefined}
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
