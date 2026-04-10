@@ -55,7 +55,7 @@ const Header = () => {
           {/* Services Mega Menu */}
           <div className="relative group">
             <button className={`flex items-center gap-1 font-semibold transition-colors text-[15px] ${
-              scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground/90 hover:text-accent"
+              scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground hover:text-accent drop-shadow-sm"
             }`}>
               Services <ChevronDown className="w-4 h-4" />
             </button>
@@ -86,7 +86,7 @@ const Header = () => {
           {/* Service Areas Dropdown */}
           <div className="relative group">
             <button className={`flex items-center gap-1 font-semibold transition-colors text-[15px] ${
-              scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground/90 hover:text-accent"
+              scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground hover:text-accent drop-shadow-sm"
             }`}>
               Service Areas <ChevronDown className="w-4 h-4" />
             </button>
