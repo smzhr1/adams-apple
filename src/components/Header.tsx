@@ -42,8 +42,8 @@ const Header = () => {
       }`}
       style={{
         background: scrolled || mobileOpen
-          ? "linear-gradient(135deg, hsl(0 0% 100% / 0.72), hsl(0 0% 100% / 0.58))"
-          : "linear-gradient(to right, hsl(0 0% 100% / 0.72) 0%, hsl(0 0% 100% / 0.45) 50%, hsl(0 0% 100% / 0) 100%)",
+          ? "hsl(0 0% 100% / 0.12)"
+          : "linear-gradient(to right, hsl(0 0% 100% / 0.12) 0%, hsl(0 0% 100% / 0.06) 50%, hsl(0 0% 100% / 0) 100%)",
         backdropFilter: "blur(20px) saturate(180%)",
         WebkitBackdropFilter: "blur(20px) saturate(180%)",
       }}
