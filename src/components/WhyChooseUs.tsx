@@ -1,4 +1,5 @@
 import { Shield, Award, Truck, MapPin, Clock, Leaf } from "lucide-react";
+import whyImage from "@/assets/why-choose-us.jpg";
 
 const reasons = [
   { icon: Award, title: "ISA Certified Arborists", desc: "Our team holds industry-leading certifications ensuring best practices." },
@@ -11,29 +12,45 @@ const reasons = [
 
 const WhyChooseUs = () => {
   return (
-    <section id="why-us" className="py-20 bg-background">
+    <section id="why-us" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-            Why Austin Homeowners Choose Us
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            We combine certified expertise, modern equipment, and genuine care to deliver tree services you can trust.
-          </p>
-        </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Image */}
+          <div className="relative rounded-2xl overflow-hidden shadow-xl">
+            <img
+              src={whyImage}
+              alt="Adam's Apple Tree Service professional team"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+              width={800}
+              height={900}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
+          </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reasons.map((r) => (
-            <div key={r.title} className="flex gap-4">
-              <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center flex-shrink-0">
-                <r.icon className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-heading font-semibold text-foreground text-lg mb-1">{r.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{r.desc}</p>
-              </div>
+          {/* Content */}
+          <div>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+              Why Austin Homeowners Choose Us
+            </h2>
+            <p className="text-muted-foreground text-lg mb-8">
+              We combine certified expertise, modern equipment, and genuine care to deliver tree services you can trust.
+            </p>
+
+            <div className="grid sm:grid-cols-2 gap-6">
+              {reasons.map((r) => (
+                <div key={r.title} className="flex gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <r.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-body font-bold text-foreground text-base mb-0.5">{r.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{r.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

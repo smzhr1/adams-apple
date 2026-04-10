@@ -16,9 +16,9 @@ const Index = () => {
       <HeroSection />
       <TrustBar />
       <ServicesSection />
-      <EstimateCalculator />
       <WhyChooseUs />
       <ReviewsSection />
+      <EstimateCalculator />
       <ServiceAreas />
       <CTASection />
       <Footer />
