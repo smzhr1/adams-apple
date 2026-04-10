@@ -107,13 +107,13 @@ const Header = () => {
           </div>
 
           <a href="/about" className={`font-semibold transition-colors text-[15px] ${
-            scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground/90 hover:text-accent"
+            scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground hover:text-accent drop-shadow-sm"
           }`}>About</a>
           <a href="/contact" className={`font-semibold transition-colors text-[15px] ${
-            scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground/90 hover:text-accent"
+            scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground hover:text-accent drop-shadow-sm"
           }`}>Contact</a>
           <a href="/blog" className={`font-semibold transition-colors text-[15px] ${
-            scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground/90 hover:text-accent"
+            scrolled ? "text-foreground/80 hover:text-primary" : "text-primary-foreground hover:text-accent drop-shadow-sm"
           }`}>Blog</a>
         </nav>
 
