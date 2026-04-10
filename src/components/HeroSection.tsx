@@ -33,7 +33,7 @@ const HeroSection = () => {
           height={1080}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(110,20%,12%)]/80 via-[hsl(110,15%,15%)]/55 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#d4e0d1] to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10 py-20">
