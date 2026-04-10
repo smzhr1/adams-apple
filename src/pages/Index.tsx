@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import AccreditationStrip from "@/components/AccreditationStrip";
+
 import BrandStatement from "@/components/BrandStatement";
 import ServicesSection from "@/components/ServicesSection";
 import DifferentiatorStrip from "@/components/DifferentiatorStrip";

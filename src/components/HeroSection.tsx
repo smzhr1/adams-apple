@@ -1,13 +1,24 @@
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-arborist.jpg";
+import trustGoogle from "@/assets/trust-google.png";
+import trustIsaTexas from "@/assets/trust-isa-texas.png";
+import trustCertifiedArborist from "@/assets/trust-certified-arborist.png";
+import trustTraq from "@/assets/trust-traq.png";
+import trustTexasAg from "@/assets/trust-texas-ag.png";
+import trustLicensed from "@/assets/trust-licensed.png";
+import trustUrbanForestry from "@/assets/trust-urban-forestry.png";
+import trustBbb from "@/assets/trust-bbb.png";
 
-const trustItems = [
-  "🌳 15+ Years Serving Austin",
-  "🛡 Fully Licensed & Insured",
-  "✅ ISA Certified Arborists on Staff",
-  "📋 ANSI A300 Standards",
-  "🏠 Locally Owned & Operated",
+const badges = [
+  { src: trustGoogle, alt: "5 Stars Google", label: "5★ GOOGLE" },
+  { src: trustIsaTexas, alt: "ISA Texas Member", label: "ISA MEMBER" },
+  { src: trustCertifiedArborist, alt: "Certified Arborist", label: "CERTIFIED ARBORIST" },
+  { src: trustTraq, alt: "TRAQ Certified", label: "TRAQ CERTIFIED" },
+  { src: trustTexasAg, alt: "Texas Dept. of Agriculture", label: "TX DEPT. OF AG" },
+  { src: trustLicensed, alt: "Licensed & Insured", label: "LICENSED & INSURED" },
+  { src: trustUrbanForestry, alt: "Urban Forestry", label: "URBAN FORESTRY" },
+  { src: trustBbb, alt: "BBB Accredited", label: "BBB ACCREDITED" },
 ];
 
 const HeroSection = () => {
@@ -56,12 +67,24 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Trust bar overlay at bottom */}
+      {/* Trust badges overlay at bottom */}
       <div className="absolute bottom-0 left-0 right-0 bg-foreground/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-3">
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-primary-foreground text-sm font-semibold">
-            {trustItems.map((item) => (
-              <span key={item}>{item}</span>
+          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2">
+            {badges.map((badge) => (
+              <div key={badge.alt} className="flex items-center gap-2">
+                <img
+                  src={badge.src}
+                  alt={badge.alt}
+                  loading="lazy"
+                  width={512}
+                  height={512}
+                  className="h-8 w-8 object-contain"
+                />
+                <span className="text-primary-foreground text-xs font-bold tracking-wide uppercase">
+                  {badge.label}
+                </span>
+              </div>
             ))}
           </div>
         </div>
