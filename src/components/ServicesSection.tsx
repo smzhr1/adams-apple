@@ -86,7 +86,7 @@ const ServicesSection = () => {
                 <p className="text-primary-foreground/80 mb-4 leading-relaxed flex-1" style={{ fontSize: 'var(--text-base)' }}>{service.description}</p>
                 <div className="flex items-center justify-between mt-auto gap-2">
                   {service.slug === "tree-removal" && (
-                    <a href="#estimate" className="inline-flex items-center gap-1.5 bg-primary-foreground text-primary font-semibold rounded-full px-4 py-1.5 text-[13px] hover:bg-primary-foreground/90 transition-colors">
+                    <a href="#estimate" className="inline-flex items-center gap-1.5 bg-primary-foreground text-[hsl(110,41%,42%)] font-semibold rounded-full px-4 py-1.5 text-[13px] hover:bg-primary-foreground/90 transition-colors">
                       Get a Free Instant Estimate
                     </a>
                   )}
