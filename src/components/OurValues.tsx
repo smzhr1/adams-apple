@@ -41,11 +41,47 @@ const values = [
 const OurValues = () => {
   return (
     <section className="py-20 bg-muted relative overflow-hidden">
-      {/* Subtle tree pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M40 10 L50 30 L45 30 L55 50 L48 50 L58 70 L22 70 L32 50 L25 50 L35 30 L30 30 Z' fill='%23336633' /%3E%3Crect x='37' y='70' width='6' height='10' fill='%23664422' /%3E%3C/svg%3E")`,
-        backgroundSize: '120px 120px',
-      }} />
+      {/* Left tree stem */}
+      <svg className="absolute left-6 md:left-12 top-0 h-full w-16 opacity-[0.05] pointer-events-none" viewBox="0 0 60 1000" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 0 V1000" stroke="hsl(var(--primary))" strokeWidth="3" />
+        <path d="M30 80 Q10 70 5 55" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
+        <ellipse cx="4" cy="50" rx="8" ry="5" fill="hsl(var(--primary))" opacity="0.7" />
+        <path d="M30 160 Q50 150 55 135" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
+        <ellipse cx="56" cy="130" rx="8" ry="5" fill="hsl(var(--primary))" opacity="0.7" />
+        <path d="M30 280 Q8 265 3 250" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
+        <ellipse cx="2" cy="245" rx="9" ry="5" fill="hsl(var(--primary))" opacity="0.6" />
+        <path d="M30 400 Q52 390 58 370" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
+        <ellipse cx="58" cy="365" rx="8" ry="5" fill="hsl(var(--primary))" opacity="0.7" />
+        <path d="M30 520 Q6 505 2 490" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
+        <ellipse cx="1" cy="485" rx="9" ry="6" fill="hsl(var(--primary))" opacity="0.6" />
+        <path d="M30 650 Q48 640 54 620" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
+        <ellipse cx="55" cy="615" rx="8" ry="5" fill="hsl(var(--primary))" opacity="0.7" />
+        <path d="M30 780 Q10 770 4 755" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
+        <ellipse cx="3" cy="750" rx="8" ry="5" fill="hsl(var(--primary))" opacity="0.6" />
+        <path d="M30 900 Q50 890 56 870" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
+        <ellipse cx="57" cy="865" rx="8" ry="5" fill="hsl(var(--primary))" opacity="0.7" />
+      </svg>
+
+      {/* Right tree stem */}
+      <svg className="absolute right-6 md:right-12 top-0 h-full w-16 opacity-[0.05] pointer-events-none" viewBox="0 0 60 1000" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 0 V1000" stroke="hsl(var(--primary))" strokeWidth="3" />
+        <path d="M30 120 Q50 110 56 95" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
+        <ellipse cx="57" cy="90" rx="8" ry="5" fill="hsl(var(--primary))" opacity="0.7" />
+        <path d="M30 240 Q8 225 3 210" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
+        <ellipse cx="2" cy="205" rx="9" ry="5" fill="hsl(var(--primary))" opacity="0.6" />
+        <path d="M30 360 Q52 345 57 330" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
+        <ellipse cx="58" cy="325" rx="8" ry="5" fill="hsl(var(--primary))" opacity="0.7" />
+        <path d="M30 480 Q6 465 2 450" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
+        <ellipse cx="1" cy="445" rx="9" ry="6" fill="hsl(var(--primary))" opacity="0.6" />
+        <path d="M30 600 Q48 585 55 570" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
+        <ellipse cx="56" cy="565" rx="8" ry="5" fill="hsl(var(--primary))" opacity="0.7" />
+        <path d="M30 720 Q10 705 5 690" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
+        <ellipse cx="4" cy="685" rx="8" ry="5" fill="hsl(var(--primary))" opacity="0.6" />
+        <path d="M30 850 Q50 835 56 820" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
+        <ellipse cx="57" cy="815" rx="8" ry="5" fill="hsl(var(--primary))" opacity="0.7" />
+        <path d="M30 960 Q8 945 3 930" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" />
+        <ellipse cx="2" cy="925" rx="9" ry="5" fill="hsl(var(--primary))" opacity="0.6" />
+      </svg>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
