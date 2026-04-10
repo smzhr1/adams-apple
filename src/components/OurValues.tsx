@@ -40,8 +40,14 @@ const values = [
 
 const OurValues = () => {
   return (
-    <section className="py-20 bg-muted">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-muted relative overflow-hidden">
+      {/* Subtle tree pattern overlay */}
+      <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M40 10 L50 30 L45 30 L55 50 L48 50 L58 70 L22 70 L32 50 L25 50 L35 30 L30 30 Z' fill='%23336633' /%3E%3Crect x='37' y='70' width='6' height='10' fill='%23664422' /%3E%3C/svg%3E")`,
+        backgroundSize: '120px 120px',
+      }} />
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">Our Values</p>
           <h2 className="font-heading font-bold text-foreground max-w-3xl mx-auto">

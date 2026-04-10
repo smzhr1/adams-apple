@@ -26,13 +26,6 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4 relative z-10 py-20">
         <div className="max-w-2xl space-y-8 animate-fade-in">
-          <p className="text-accent font-bold uppercase tracking-[0.15em] text-[15px]">
-            Call or text for a free estimate |{" "}
-            <a href="tel:5129128733" className="underline underline-offset-2 hover:text-primary-foreground transition-colors">
-              512-912-8733
-            </a>
-          </p>
-
           <h1 className="text-primary-foreground leading-[1.05]" style={{ fontSize: 'var(--text-hero)' }}>
             Your Favorite Austin<br />
             <span className="text-accent">Tree Service</span>

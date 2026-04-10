@@ -84,8 +84,13 @@ const ServicesSection = () => {
               <div className="p-6 flex flex-col flex-1">
                 <h3 className="font-heading font-semibold text-primary-foreground mb-2" style={{ fontSize: 'var(--text-lg)' }}>{service.title}</h3>
                 <p className="text-primary-foreground/80 mb-4 leading-relaxed flex-1" style={{ fontSize: 'var(--text-base)' }}>{service.description}</p>
-                <div className="flex justify-end mt-auto">
-                  <span className="inline-flex items-center gap-1.5 bg-accent text-accent-foreground font-semibold rounded-full px-4 py-1.5 text-[13px] group-hover:bg-accent/90 transition-colors">
+                <div className="flex items-center justify-between mt-auto gap-2">
+                  {service.slug === "tree-removal" && (
+                    <a href="#estimate" className="inline-flex items-center gap-1.5 bg-primary-foreground text-primary font-semibold rounded-full px-4 py-1.5 text-[13px] hover:bg-primary-foreground/90 transition-colors">
+                      Get a Free Instant Estimate
+                    </a>
+                  )}
+                  <span className="inline-flex items-center gap-1.5 bg-accent text-accent-foreground font-semibold rounded-full px-4 py-1.5 text-[13px] group-hover:bg-accent/90 transition-colors ml-auto">
                     Learn More <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </div>
