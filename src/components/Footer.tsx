@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="space-y-4">
-            <img src={logo} alt="Adam's Apple Tree Service" className="h-12 w-auto brightness-0 invert" />
+            <img src={logo} alt="Adam's Apple Tree Service" className="h-[72px] w-auto brightness-0 invert" />
             <div className="space-y-2 text-background/70 text-sm">
               <a href="tel:5129128733" className="flex items-center gap-2 hover:text-accent transition-colors">
                 <Phone className="w-4 h-4 text-accent" /> 512-912-8733

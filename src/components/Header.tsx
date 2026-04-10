@@ -20,7 +20,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         <a href="/" className="flex-shrink-0">
-          <img src={logo} alt="Adam's Apple Tree Service" className="h-12 md:h-14 w-auto" />
+          <img src={logo} alt="Adam's Apple Tree Service" className="h-[72px] md:h-[84px] w-auto" />
         </a>
 
         {/* Desktop Nav */}
