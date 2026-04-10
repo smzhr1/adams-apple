@@ -1,24 +1,12 @@
-import { Phone } from "lucide-react";
+import { Phone, Calendar, Users, Star, TreePine } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-arborist.jpg";
-import trustGoogle from "@/assets/trust-google.png";
-import trustIsaTexas from "@/assets/trust-isa-texas.png";
-import trustCertifiedArborist from "@/assets/trust-certified-arborist.png";
-import trustTraq from "@/assets/trust-traq.png";
-import trustTexasAg from "@/assets/trust-texas-ag.png";
-import trustLicensed from "@/assets/trust-licensed.png";
-import trustUrbanForestry from "@/assets/trust-urban-forestry.png";
-import trustBbb from "@/assets/trust-bbb.png";
 
-const badges = [
-  { src: trustGoogle, alt: "5 Stars Google", label: "5★ GOOGLE" },
-  { src: trustIsaTexas, alt: "ISA Texas Member", label: "ISA MEMBER" },
-  { src: trustCertifiedArborist, alt: "Certified Arborist", label: "CERTIFIED ARBORIST" },
-  { src: trustTraq, alt: "TRAQ Certified", label: "TRAQ CERTIFIED" },
-  { src: trustTexasAg, alt: "Texas Dept. of Agriculture", label: "TX DEPT. OF AG" },
-  { src: trustLicensed, alt: "Licensed & Insured", label: "LICENSED & INSURED" },
-  { src: trustUrbanForestry, alt: "Urban Forestry", label: "URBAN FORESTRY" },
-  { src: trustBbb, alt: "BBB Accredited", label: "BBB ACCREDITED" },
+const stats = [
+  { icon: Calendar, value: "15+", label: "Years in Business" },
+  { icon: Users, value: "2,500+", label: "Happy Customers" },
+  { icon: Star, value: "5.0", label: "Google Rating" },
+  { icon: TreePine, value: "10,000+", label: "Trees Serviced" },
 ];
 
 const HeroSection = () => {
@@ -65,9 +53,21 @@ const HeroSection = () => {
               </a>
             </Button>
           </div>
+
+          {/* Stats bar */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
+            {stats.map((stat) => (
+              <div key={stat.label} className="flex items-center gap-3">
+                <stat.icon className="w-6 h-6 text-accent flex-shrink-0" />
+                <div>
+                  <p className="text-xl md:text-2xl font-heading font-bold text-primary-foreground leading-none">{stat.value}</p>
+                  <p className="text-primary-foreground/60 text-xs">{stat.label}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-
     </section>
   );
 };
