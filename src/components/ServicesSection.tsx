@@ -84,7 +84,7 @@ const ServicesSection = () => {
               <div className="p-6 flex flex-col flex-1">
                 <h3 className="font-heading font-semibold text-primary-foreground mb-2" style={{ fontSize: 'var(--text-lg)' }}>{service.title}</h3>
                 <p className="text-primary-foreground/80 mb-4 leading-relaxed flex-1" style={{ fontSize: 'var(--text-base)' }}>{service.description}</p>
-                <div className={`flex mt-auto gap-2 ${service.slug === "tree-removal" ? "flex-col items-stretch sm:flex-row sm:items-center" : "flex-col items-center md:flex-row md:justify-end"}`}>
+                <div className={`flex mt-auto gap-2 ${service.slug === "tree-removal" ? "flex-col items-center sm:flex-row sm:items-center" : "flex-col items-center md:flex-row md:justify-end"}`}>
                   {service.slug === "tree-removal" && (
                     <a href="#estimate" className="inline-flex items-center justify-center gap-1.5 bg-primary-foreground text-[hsl(110,41%,42%)] font-semibold rounded-full px-4 py-1.5 text-[13px] hover:bg-primary-foreground/90 transition-colors">
                       Get a Free Instant Estimate
