@@ -1,13 +1,5 @@
 import { MapPin } from "lucide-react";
 
-const austinAreas = {
-  "South Austin": ["Barton Hills", "Bouldin Creek", "South Congress", "South Lamar", "Travis Heights", "Zilker"],
-  "West Austin": ["Westlake", "Tarrytown", "Rollingwood", "Westlake Hills"],
-  "Central Austin": ["Downtown", "Hyde Park", "Clarksville"],
-  "East Austin": ["Mueller", "Govalle", "East Riverside"],
-  "North Austin": ["Allandale", "Crestview", "North Loop"],
-};
-
 const greaterAustin = [
   "Bee Cave", "Barton Creek", "Cedar Valley", "Cedar Park", "Round Rock", "Pflugerville",
   "Leander", "Circle C Ranch", "Bluff Springs", "Lakeway", "Steiner Ranch", "Oak Hill",
@@ -32,26 +24,6 @@ const ServiceAreas = () => {
           </p>
         </div>
 
-        {/* Austin neighborhoods */}
-        <div className="mb-10">
-          <h3 className="text-2xl font-heading font-bold text-foreground mb-6 flex items-center gap-2">
-            <MapPin className="w-6 h-6 text-primary" /> Austin
-          </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {Object.entries(austinAreas).map(([region, neighborhoods]) => (
-              <div key={region}>
-                <h4 className="font-bold text-foreground text-sm mb-2">{region}</h4>
-                <ul className="space-y-1">
-                  {neighborhoods.map((n) => (
-                    <li key={n} className="text-muted-foreground text-sm">{n}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Greater Austin */}
         <div className="mb-10">
           <h3 className="text-2xl font-heading font-bold text-foreground mb-4 flex items-center gap-2">
             <MapPin className="w-6 h-6 text-primary" /> Greater Austin Area
