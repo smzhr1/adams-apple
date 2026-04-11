@@ -26,7 +26,7 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-4 relative z-10 py-20">
         <div className="max-w-2xl space-y-8 animate-fade-in">
-          <h1 className="text-primary-foreground leading-[1.05] text-3xl md:text-5xl lg:text-[length:var(--text-hero)]">
+          <h1 className="text-primary-foreground leading-[1.05] text-[38px] md:text-5xl lg:text-[length:var(--text-hero)]">
             Your Favorite Austin<br />
             <span className="text-accent">Tree Service</span>
           </h1>
