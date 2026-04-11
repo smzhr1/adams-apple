@@ -25,7 +25,7 @@ const AccreditationStrip = () => {
         <p className="text-center text-muted-foreground uppercase tracking-[0.2em] text-sm font-bold mb-8">
           Trusted & Accredited
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div className="grid grid-cols-3 md:flex md:flex-wrap justify-center items-center gap-8 md:gap-12">
           {badges.map((badge) => (
             <div key={badge.alt} className="flex flex-col items-center gap-2">
               <img
