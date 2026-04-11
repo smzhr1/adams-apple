@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <img src={logo} alt="Adam's Apple Tree Service" className="h-[72px] w-auto" />
-            <div className="space-y-2 text-background/70 text-sm">
+            <div className="space-y-2 text-primary-foreground/80 text-sm">
               <a href="tel:5129128733" className="flex items-center gap-2 hover:text-accent transition-colors">
                 <Phone className="w-4 h-4 text-accent" /> 512-912-8733
               </a>
