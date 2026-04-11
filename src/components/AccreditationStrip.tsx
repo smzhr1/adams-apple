@@ -26,8 +26,15 @@ const AccreditationStrip = () => {
           Trusted & Accredited
         </p>
         <div className="grid grid-cols-3 md:flex md:flex-wrap justify-center items-center gap-8 md:gap-12">
-          {badges.map((badge) => (
-            <div key={badge.alt} className="flex flex-col items-center gap-2">
+          {badges.map((badge, index) => (
+            <div
+              key={badge.alt}
+              className={`flex flex-col items-center gap-2 ${
+                index === 6 ? "md:col-auto col-start-1 col-end-2 justify-self-end mr-4" : ""
+              }${
+                index === 7 ? "md:col-auto col-start-2 col-end-3 justify-self-start ml-4" : ""
+              }`}
+            >
               <img
                 src={badge.src}
                 alt={badge.alt}
