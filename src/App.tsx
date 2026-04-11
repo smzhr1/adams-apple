@@ -10,7 +10,7 @@ import Blog from "./pages/Blog.tsx";
 import ServicePage from "./pages/ServicePage.tsx";
 import AreaPage from "./pages/AreaPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
-
+import FloatingEstimateButton from "./components/FloatingEstimateButton.tsx";
 const queryClient = new QueryClient();
 
 const App = () => (
