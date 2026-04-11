@@ -101,7 +101,7 @@ const Header = () => {
             {mobileServicesOpen && (
               <div className="pl-4 space-y-1 pb-2">
                 {services.map((s) => (
-                  <a key={s.label} href={s.href} className="flex items-center gap-2 py-2 text-white/80 text-[15px] font-bold">
+                  <a key={s.label} href={s.href} className="flex items-center gap-2 py-2 text-white/80 text-base font-bold">
                     <s.icon className="w-4 h-4 text-white/70" /> {s.label}
                   </a>
                 ))}
@@ -114,7 +114,7 @@ const Header = () => {
             {mobileAreasOpen && (
               <div className="pl-4 space-y-1 pb-2">
                 {serviceAreas.map((area) => (
-                  <a key={area} href={`/areas/${area.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center gap-2 py-1.5 text-white/80 text-[15px] font-bold">
+                  <a key={area} href={`/areas/${area.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center gap-2 py-1.5 text-white/80 text-base font-bold">
                     <MapPin className="w-3.5 h-3.5 text-white/70" /> {area}
                   </a>
                 ))}
