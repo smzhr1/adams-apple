@@ -25,16 +25,9 @@ const AccreditationStrip = () => {
         <p className="text-center text-muted-foreground uppercase tracking-[0.2em] text-sm font-bold mb-8">
           Trusted & Accredited
         </p>
-        <div className="grid grid-cols-3 md:flex md:flex-wrap justify-center items-center gap-8 md:gap-12">
-          {badges.map((badge, index) => (
-            <div
-              key={badge.alt}
-              className={`flex flex-col items-center gap-2 ${
-                index === 6 ? "md:col-auto col-start-1 col-end-2 justify-self-end mr-4" : ""
-              }${
-                index === 7 ? "md:col-auto col-start-2 col-end-3 justify-self-start ml-4" : ""
-              }`}
-            >
+        <div className="grid grid-cols-3 md:flex md:flex-wrap justify-center justify-items-center items-start gap-y-6 gap-x-4 md:gap-8 md:gap-12">
+          {badges.slice(0, 6).map((badge) => (
+            <div key={badge.alt} className="flex flex-col items-center gap-2">
               <img
                 src={badge.src}
                 alt={badge.alt}
@@ -48,6 +41,23 @@ const AccreditationStrip = () => {
               </span>
             </div>
           ))}
+          <div className="col-span-3 flex justify-center gap-8 md:contents">
+            {badges.slice(6).map((badge) => (
+              <div key={badge.alt} className="flex flex-col items-center gap-2">
+                <img
+                  src={badge.src}
+                  alt={badge.alt}
+                  loading="lazy"
+                  width={512}
+                  height={512}
+                  className="h-16 w-16 md:h-20 md:w-20 object-contain"
+                />
+                <span className="text-foreground text-xs font-semibold tracking-wide text-center">
+                  {badge.label}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
