@@ -79,7 +79,6 @@ const ServicesSection = () => {
                   width={800}
                   height={600}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(110,41%,42%)]/60 to-transparent" />
               </div>
               <div className="p-6 flex flex-col flex-1">
                 <h3 className="font-heading font-semibold text-primary-foreground mb-2" style={{ fontSize: 'var(--text-lg)' }}>{service.title}</h3>
