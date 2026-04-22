@@ -16,6 +16,7 @@ export type ServiceContent = {
   heroTagline: string;
   heroSubhead: string;
   heroImage: string;
+  heroImages?: string[];
   offerings: { title: string; body: string; image: string; cta?: { label: string; href: string } }[];
   showGuesstimator?: boolean;
   guesstimatorHeadline?: string;
