@@ -44,14 +44,35 @@ const ServicePage = () => {
       <Header />
       <main>
         {/* HERO */}
-        <section className="relative bg-secondary overflow-hidden">
-          <div className="container mx-auto px-4 py-16 md:py-24">
+        <section className="relative bg-primary overflow-hidden pt-24 md:pt-28">
+          {/* Decorative organic pattern */}
+          <div
+            className="absolute inset-0 opacity-[0.12] pointer-events-none"
+            aria-hidden="true"
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><g fill='none' stroke='white' stroke-width='1.2' stroke-linecap='round'><path d='M20 80 Q50 40 80 80 T140 80'/><path d='M30 110 Q60 80 90 110 T150 110'/><path d='M10 50 Q40 20 70 50 T130 50'/><circle cx='40' cy='80' r='2'/><circle cx='110' cy='80' r='2'/><circle cx='75' cy='110' r='2'/></g></svg>\")",
+              backgroundSize: "320px 320px",
+            }}
+          />
+          {/* Soft radial highlight */}
+          <div
+            className="absolute -top-32 -right-32 w-[480px] h-[480px] rounded-full pointer-events-none"
+            aria-hidden="true"
+            style={{
+              background:
+                "radial-gradient(circle, hsl(var(--accent) / 0.18) 0%, transparent 70%)",
+            }}
+          />
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-background/40 pointer-events-none" />
+
+          <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
               <div>
-                <p className="text-accent font-bold uppercase tracking-[0.2em] text-sm mb-4">
+                <p className="inline-block bg-primary-foreground/15 backdrop-blur-sm border border-primary-foreground/25 text-primary-foreground font-bold uppercase tracking-[0.2em] text-xs px-3 py-1.5 rounded-full mb-5">
                   {service.heroEyebrow}
                 </p>
-                <h1 className="font-heading font-bold text-secondary-foreground mb-4">
+                <h1 className="font-heading font-bold text-primary-foreground mb-4">
                   {service.heroHeadline}
                 </h1>
                 <p
@@ -61,7 +82,7 @@ const ServicePage = () => {
                   {service.heroTagline}
                 </p>
                 <p
-                  className="text-secondary-foreground/85 mb-8 leading-relaxed"
+                  className="text-primary-foreground/90 mb-8 leading-relaxed"
                   style={{ fontSize: "var(--text-md)" }}
                 >
                   {service.heroSubhead}
@@ -77,14 +98,39 @@ const ServicePage = () => {
                   </Button>
                 </div>
               </div>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] lg:aspect-[5/4]">
-                <img
-                  src={service.heroImage}
-                  alt={service.title}
-                  className="w-full h-full object-cover"
-                  width={1200}
-                  height={900}
+              <div className="relative">
+                {/* Decorative offset frame */}
+                <div
+                  className="absolute -inset-3 md:-inset-4 rounded-3xl border-2 border-accent/60 -z-10"
+                  aria-hidden="true"
                 />
+                <div
+                  className="absolute -bottom-5 -left-5 w-24 h-24 rounded-2xl bg-accent/30 -z-10"
+                  aria-hidden="true"
+                />
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[5/4]">
+                  <img
+                    src={service.heroImage}
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                    width={1200}
+                    height={960}
+                  />
+                </div>
+                {/* Floating trust badge */}
+                <div className="hidden md:flex absolute -bottom-6 -right-4 bg-background rounded-xl shadow-xl px-5 py-3 items-center gap-3 max-w-[220px]">
+                  <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center flex-shrink-0">
+                    <Check className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-heading font-bold text-foreground text-sm leading-tight">
+                      ISA Certified
+                    </p>
+                    <p className="text-muted-foreground text-xs leading-tight">
+                      Arborists on staff
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
