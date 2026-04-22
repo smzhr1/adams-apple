@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import AccreditationStrip from "@/components/AccreditationStrip";
 import ServiceAreas from "@/components/ServiceAreas";
 import CTASection from "@/components/CTASection";
-import EstimateCalculator from "@/components/EstimateCalculator";
+import GuesstimatorPreview from "@/components/GuesstimatorPreview";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -143,26 +143,7 @@ const ServicePage = () => {
         </section>
 
         {/* TREE REMOVAL GUESSTIMATOR */}
-        {service.showGuesstimator && (
-          <section id="guesstimator" className="py-20 bg-secondary scroll-mt-24">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-10 max-w-2xl mx-auto">
-                <p className="text-accent font-bold uppercase tracking-[0.2em] text-sm mb-3">
-                  Instant Ballpark
-                </p>
-                <h2 className="font-heading font-bold text-secondary-foreground mb-4">
-                  {service.guesstimatorHeadline}
-                </h2>
-                <p className="text-secondary-foreground/85 leading-relaxed">
-                  {service.guesstimatorSubhead}
-                </p>
-              </div>
-              <div className="-mt-2">
-                <EstimateCalculator />
-              </div>
-            </div>
-          </section>
-        )}
+        {service.showGuesstimator && <GuesstimatorPreview />}
 
         {/* WHY CHOOSE US */}
         <section className="py-20 bg-background">
