@@ -13,14 +13,16 @@ export type ServiceContent = {
   title: string;
   heroEyebrow: string;
   heroHeadline: string;
+  heroTagline: string;
   heroSubhead: string;
   heroImage: string;
-  process: {
-    image: string;
-    steps: { title: string; body: string }[];
-  };
+  offerings: { title: string; body: string; image: string }[];
+  showGuesstimator?: boolean;
+  guesstimatorHeadline?: string;
+  guesstimatorSubhead?: string;
   whyChoose: {
     headline: string;
+    intro: string;
     points: { title: string; body: string }[];
   };
   included: {
@@ -46,45 +48,52 @@ export const services: Record<string, ServiceContent> = {
     slug: "tree-removal",
     title: "Tree Removal",
     heroEyebrow: "Austin Tree Services",
-    heroHeadline: "Safe, Clean Tree Removal in Austin",
+    heroHeadline: "Tree Removal",
+    heroTagline: "Tree removal done right at an affordable price.",
     heroSubhead:
-      "From hazardous limbs to full take-downs, our ISA-certified arborists remove trees safely with full cleanup and haul-off included. No deposit. No surprises. Just honest, expert work.",
+      "Adam's Apple Tree Service is the best tree removal service in Austin, TX and surrounding communities. We offer a wide range of services to meet your needs. Our team is experienced and professional, and we use the latest equipment to ensure that your job is done safely and efficiently.",
     heroImage: heroArborist,
-    process: {
-      image: whyChoose,
-      steps: [
-        {
-          title: "On-Site Evaluation",
-          body: "A certified arborist visits your property to assess the tree's condition, surroundings, and removal requirements. If the tree doesn't have to come down — we'll tell you. If it does, we explain exactly what we will do and how.",
-        },
-        {
-          title: "Safe Removal & Equipment",
-          body: "Our crews are trained for complex skill sets — whether the tree is over open land or tightly spaced between buildings. We use rigging, lifts, and ground protection methods as needed to remove trees safely.",
-        },
-        {
-          title: "Haul-Off & Cleanup",
-          body: "We remove logs, limbs, and debris and leave your property neat and tidy. The wood is hauled off so it's no longer your problem. The Scout patrols the site to confirm everything is clean before payment is collected.",
-        },
-      ],
-    },
+    offerings: [
+      {
+        title: "Tree Removal",
+        image: imgRemoval,
+        body: "We provide a full range of tree removal services for residential and commercial properties. We can remove trees of any size, from small saplings to large mature trees. We also offer stump grinding and debris removal services.",
+      },
+      {
+        title: "Land Clearing",
+        image: imgPlanting,
+        body: "Adam's Apple Tree Service offers land clearing services for residential and commercial properties. We can clear lots of any size, from small backyards to large commercial sites. We also offer brush removal and debris hauling services.",
+      },
+      {
+        title: "Stump Grinding & Stump Removal",
+        image: imgSoil,
+        body: "Stumps are an eyesore and can be a tripping hazard. We offer stump grinding and stump removal services to get rid of those unsightly stumps for good. Our stump grinders can handle stumps of any size, and we can grind them down below ground level so they're virtually invisible. If you'd rather have your stump removed completely, we can do that too — leaving your yard looking clean and ready for whatever's next.",
+      },
+    ],
+    showGuesstimator: true,
+    guesstimatorHeadline: "Tree Removal Guesstimator",
+    guesstimatorSubhead:
+      "Curious what your removal might cost? Move the sliders for a ballpark range in seconds — then book a free on-site visit for an exact written quote.",
     whyChoose: {
-      headline: "Why Customers Choose Adam's Apple for Tree Removal",
+      headline: "How is Adam's Apple Different From Other Tree Services?",
+      intro:
+        "At Adam's Apple, we take pride in providing top-notch tree care services to our customers. We are committed to using the highest quality materials and equipment to ensure that your trees receive the best possible care.",
       points: [
         {
-          title: "Certified Arborist Oversight",
-          body: "Two ISA-certified arborists on staff (Neil TX-4612A & Geoff TX-5212A). Every removal is reviewed before a chainsaw starts.",
+          title: "Certified Arborists On Every Job",
+          body: "Our team of certified arborists has years of experience in the industry. They are knowledgeable about the latest tree care techniques and are dedicated to providing exceptional customer service.",
         },
         {
-          title: "We Explain Your Options Clearly",
-          body: "We won't recommend removal if a tree can be saved. When removal is the right call, we walk you through it in plain language.",
+          title: "Tailored to Your Tree",
+          body: "We understand that every tree is unique, and we tailor our services to meet the specific needs of each tree. We assess the condition of your tree and develop a customized care plan that will help it thrive.",
         },
         {
-          title: "24/7 Emergency Tree Removal",
-          body: "Storm damage doesn't wait. Our crews respond quickly to fallen or hazardous trees to keep your family and property safe.",
+          title: "Latest Equipment, Safer Work",
+          body: "We use the latest equipment to ensure your job is done safely and efficiently — from rigging gear for tight spaces to powerful stump grinders that leave your yard clean.",
         },
         {
-          title: "No Payment Until You Approve",
-          body: "You don't pay a dime until the work is complete and you've walked the site with us. That's the way it should be.",
+          title: "Satisfaction Guaranteed",
+          body: "We are committed to your satisfaction and will go above and beyond to ensure that you are happy with our work. You don't pay until the job is done and you've signed off.",
         },
       ],
     },
@@ -103,24 +112,24 @@ export const services: Record<string, ServiceContent> = {
     },
     faqs: [
       {
-        q: "How do I know if my tree needs to be removed?",
-        a: "Signs include heavy lean, root damage, large dead sections, or fungal conks at the base. We inspect for free and give you a straight answer — sometimes the right call is to save the tree, not remove it.",
+        q: "How much does tree removal cost?",
+        a: "The cost of tree removal depends on several factors, including the size of the tree, its location, and the complexity of the job. We offer free estimates, so please contact us for a quote — or try our Tree Removal Guesstimator above for a quick ballpark.",
       },
       {
-        q: "Do I need a permit to remove a tree in Austin?",
-        a: "Austin requires a permit for protected trees (generally 19\" diameter and up, with stricter rules for heritage species like live oak and pecan over 24\"). We'll tell you if a permit is required and can help with the application.",
+        q: "Do I need a permit to remove a tree?",
+        a: "In most cases, yes. The City of Austin requires permits for protected trees (generally 19\" diameter and up, with stricter rules for heritage species like live oak and pecan over 24\"). Contact your local municipality, or let us know — we'll tell you if a permit is required and can help with the application.",
+      },
+      {
+        q: "What happens to the wood after the tree is removed?",
+        a: "We can haul away the wood for you, or we can leave it for you to use as firewood — your choice. Either way, your property is left clean.",
       },
       {
         q: "Do you remove the stump too?",
         a: "Standard removal cuts the stump as low as possible. Full stump grinding is a separate add-on — we can grind 6–12 inches below grade so the area can be re-sodded or replanted.",
       },
       {
-        q: "Is your crew insured?",
+        q: "Is your crew licensed and insured?",
         a: "Yes. We carry full general liability and workers' comp. Ask for a certificate of insurance and we'll send it before work begins.",
-      },
-      {
-        q: "How much does tree removal cost?",
-        a: "It depends on size, species, location, and access. Most residential removals fall between $500 and $3,500. We provide a firm written quote after the on-site visit — no vague ranges.",
       },
     ],
     related: allRelated.filter((r) => r.slug !== "tree-removal").slice(0, 4),

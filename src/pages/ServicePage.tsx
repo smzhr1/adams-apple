@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import AccreditationStrip from "@/components/AccreditationStrip";
 import ServiceAreas from "@/components/ServiceAreas";
 import CTASection from "@/components/CTASection";
+import EstimateCalculator from "@/components/EstimateCalculator";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -50,9 +51,15 @@ const ServicePage = () => {
                 <p className="text-accent font-bold uppercase tracking-[0.2em] text-sm mb-4">
                   {service.heroEyebrow}
                 </p>
-                <h1 className="font-heading font-bold text-secondary-foreground mb-6">
+                <h1 className="font-heading font-bold text-secondary-foreground mb-4">
                   {service.heroHeadline}
                 </h1>
+                <p
+                  className="text-accent font-semibold mb-6"
+                  style={{ fontSize: "var(--text-lg)" }}
+                >
+                  {service.heroTagline}
+                </p>
                 <p
                   className="text-secondary-foreground/85 mb-8 leading-relaxed"
                   style={{ fontSize: "var(--text-md)" }}
@@ -85,84 +92,104 @@ const ServicePage = () => {
 
         <AccreditationStrip />
 
-        {/* PROCESS */}
+        {/* OFFERINGS — what's included under this service */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="rounded-2xl overflow-hidden aspect-[4/3] shadow-lg order-2 lg:order-1">
-                <img
-                  src={service.process.image}
-                  alt={`How our ${service.title.toLowerCase()} process works`}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div className="order-1 lg:order-2">
-                <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
-                  Our Process
-                </p>
-                <h2 className="font-heading font-bold text-foreground mb-8">
-                  How Our {service.title} Service Works
-                </h2>
-                <ol className="space-y-6">
-                  {service.process.steps.map((step, idx) => (
-                    <li key={step.title} className="flex gap-4">
-                      <span className="flex-shrink-0 w-10 h-10 rounded-full bg-accent text-accent-foreground font-bold flex items-center justify-center">
-                        {idx + 1}
-                      </span>
-                      <div>
-                        <h3
-                          className="font-heading font-bold text-foreground mb-1"
-                          style={{ fontSize: "var(--text-lg)" }}
-                        >
-                          {step.title}
-                        </h3>
-                        <p className="text-muted-foreground leading-relaxed">
-                          {step.body}
-                        </p>
-                      </div>
-                    </li>
-                  ))}
-                </ol>
-                <Button variant="cta" size="lg" className="mt-8" asChild>
-                  <a href="/#estimate">Get a Free Estimate</a>
-                </Button>
-              </div>
+            <div className="text-center mb-14 max-w-3xl mx-auto">
+              <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
+                What We Offer
+              </p>
+              <h2 className="font-heading font-bold text-foreground">
+                {service.title} Services for Your Property
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {service.offerings.map((offering) => (
+                <article
+                  key={offering.title}
+                  className="bg-card border border-border rounded-2xl overflow-hidden flex flex-col"
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={offering.image}
+                      alt={offering.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-6 flex flex-col flex-1">
+                    <h3
+                      className="font-heading font-bold text-foreground mb-3"
+                      style={{ fontSize: "var(--text-lg)" }}
+                    >
+                      {offering.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {offering.body}
+                    </p>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>
 
+        {/* TREE REMOVAL GUESSTIMATOR — unique to this page */}
+        {service.showGuesstimator && (
+          <section className="py-20 bg-secondary">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-10 max-w-2xl mx-auto">
+                <p className="text-accent font-bold uppercase tracking-[0.2em] text-sm mb-3">
+                  Instant Ballpark
+                </p>
+                <h2 className="font-heading font-bold text-secondary-foreground mb-4">
+                  {service.guesstimatorHeadline}
+                </h2>
+                <p className="text-secondary-foreground/85 leading-relaxed">
+                  {service.guesstimatorSubhead}
+                </p>
+              </div>
+              <div className="-mt-2">
+                <EstimateCalculator />
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* WHY CHOOSE US BAND */}
-        <section className="py-20 bg-secondary">
-          <div className="container mx-auto px-4">
-            <h2 className="font-heading font-bold text-secondary-foreground text-center mb-12 max-w-3xl mx-auto">
-              {service.whyChoose.headline}
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="text-center mb-12">
+              <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
+                What Sets Us Apart
+              </p>
+              <h2 className="font-heading font-bold text-foreground mb-6">
+                {service.whyChoose.headline}
+              </h2>
+              <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto" style={{ fontSize: "var(--text-md)" }}>
+                {service.whyChoose.intro}
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
               {service.whyChoose.points.map((point) => (
-                <div key={point.title}>
+                <div key={point.title} className="bg-card border border-border rounded-2xl p-6">
                   <h3
-                    className="font-heading font-bold text-accent mb-2"
+                    className="font-heading font-bold text-primary mb-2"
                     style={{ fontSize: "var(--text-lg)" }}
                   >
                     {point.title}
                   </h3>
-                  <p className="text-secondary-foreground/85 leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     {point.body}
                   </p>
                 </div>
               ))}
             </div>
-            <div className="text-center mt-12">
-              <Button variant="cta" size="xl" asChild>
-                <a href="/#estimate">Get a Free Quote</a>
-              </Button>
-            </div>
           </div>
         </section>
 
         {/* INCLUDED WITH EVERY */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-muted">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="rounded-2xl overflow-hidden aspect-[4/3] shadow-lg">
@@ -201,7 +228,7 @@ const ServicePage = () => {
         </section>
 
         {/* RELATED SERVICES */}
-        <section className="py-20 bg-muted">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
@@ -242,11 +269,11 @@ const ServicePage = () => {
         </section>
 
         {/* FAQ */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-muted">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="text-center mb-10">
               <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
-                Common Questions
+                Frequently Asked Questions
               </p>
               <h2 className="font-heading font-bold text-foreground mb-4">
                 {service.title} FAQs
@@ -267,7 +294,7 @@ const ServicePage = () => {
                 <AccordionItem
                   key={idx}
                   value={`faq-${idx}`}
-                  className="bg-card border border-border rounded-xl px-6"
+                  className="bg-background border border-border rounded-xl px-6"
                 >
                   <AccordionTrigger className="text-foreground font-bold text-left text-base hover:no-underline">
                     {faq.q}
