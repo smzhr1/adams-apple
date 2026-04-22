@@ -45,7 +45,7 @@ const ServicePage = () => {
       <Header />
       <main>
         {/* HERO — split: mid forest left, photo right, gradient transition */}
-        <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-[hsl(110,44%,60%)]">
+        <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-[hsl(105,22%,30%)]">
           {/* Right side photo */}
           <div className="absolute inset-y-0 right-0 w-full lg:w-[58%]">
             <HeroPhotoCarousel
@@ -54,17 +54,17 @@ const ServicePage = () => {
               variant="background"
             />
             {/* Gradient transition from panel into photo */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[hsl(110,44%,60%)] via-[hsl(110,44%,60%)]/70 to-transparent lg:via-[hsl(110,44%,60%)]/40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[hsl(105,22%,30%)] via-[hsl(105,22%,30%)]/70 to-transparent lg:via-[hsl(105,22%,30%)]/40" />
             {/* Mobile: extra overlay so text remains readable */}
-            <div className="absolute inset-0 bg-[hsl(110,44%,60%)]/60 lg:hidden" />
+            <div className="absolute inset-0 bg-[hsl(105,22%,30%)]/60 lg:hidden" />
             {/* Soft bottom fade into page background */}
             <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
           </div>
 
           {/* Left panel — extends edge-to-edge on small screens; ~50% on large */}
-          <div className="absolute inset-y-0 left-0 w-full lg:w-1/2 bg-[hsl(110,44%,60%)]" aria-hidden="true" />
+          <div className="absolute inset-y-0 left-0 w-full lg:w-1/2 bg-[hsl(105,22%,30%)]" aria-hidden="true" />
           {/* Gradient seam between panel and photo */}
-          <div className="hidden lg:block absolute inset-y-0 left-1/2 w-[14%] bg-gradient-to-r from-[hsl(110,44%,60%)] to-transparent pointer-events-none" aria-hidden="true" />
+          <div className="hidden lg:block absolute inset-y-0 left-1/2 w-[14%] bg-gradient-to-r from-[hsl(105,22%,30%)] to-transparent pointer-events-none" aria-hidden="true" />
 
           <div className="container mx-auto px-4 relative z-10 py-20 md:py-24">
             <div className="max-w-2xl space-y-7 animate-fade-in">
