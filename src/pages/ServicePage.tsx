@@ -44,84 +44,81 @@ const ServicePage = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        {/* HERO — editorial split */}
-        <section className="relative bg-muted overflow-hidden pt-24 md:pt-28">
-          <div className="container mx-auto px-4 pt-10 md:pt-16 pb-16 md:pb-24 relative">
-            <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-              {/* LEFT — copy */}
-              <div className="lg:col-span-6">
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="block w-10 h-px bg-secondary" aria-hidden="true" />
-                  <p className="text-secondary font-bold uppercase tracking-[0.25em] text-xs">
-                    {service.heroEyebrow}
-                  </p>
-                </div>
-                <h1 className="font-heading font-bold text-foreground mb-5 leading-[1.05]">
-                  {service.heroHeadline}
-                </h1>
-                <p
-                  className="text-secondary font-semibold mb-6"
-                  style={{ fontSize: "var(--text-lg)" }}
-                >
-                  {service.heroTagline}
-                </p>
-                <p
-                  className="text-muted-foreground mb-8 leading-relaxed max-w-xl"
-                  style={{ fontSize: "var(--text-md)" }}
-                >
-                  {service.heroSubhead}
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button variant="cta" size="xl" asChild>
-                    <a href="/#estimate">Schedule an Estimate</a>
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="xl"
-                    className="border-foreground/20 text-foreground hover:bg-foreground hover:text-background"
-                    asChild
-                  >
-                    <a href="tel:5129128733" className="flex items-center gap-2">
-                      <Phone className="w-5 h-5" /> 512-912-8733
-                    </a>
-                  </Button>
-                </div>
+        {/* HERO — full-bleed (homepage style) */}
+        <section className="relative min-h-[88vh] flex items-center overflow-hidden">
+          <div className="absolute inset-0">
+            <HeroPhotoCarousel
+              images={service.heroImages?.length ? service.heroImages : [service.heroImage]}
+              alt={service.title}
+              variant="background"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[hsl(110,20%,12%)]/85 via-[hsl(110,15%,15%)]/60 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
+          </div>
 
-                {/* Inline stat row */}
-                <div className="mt-10 pt-8 border-t border-border grid grid-cols-3 gap-6 max-w-xl">
-                  <div>
-                    <p className="font-heading font-bold text-foreground text-2xl md:text-3xl leading-none">
-                      15<span className="text-secondary">+</span>
-                    </p>
-                    <p className="text-muted-foreground text-xs mt-2 uppercase tracking-wider">
-                      Years Serving Austin
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-heading font-bold text-foreground text-2xl md:text-3xl leading-none">
-                      ISA
-                    </p>
-                    <p className="text-muted-foreground text-xs mt-2 uppercase tracking-wider">
-                      Certified Arborists
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-heading font-bold text-foreground text-2xl md:text-3xl leading-none">
-                      5.0<span className="text-secondary">★</span>
-                    </p>
-                    <p className="text-muted-foreground text-xs mt-2 uppercase tracking-wider">
-                      Google Reviewed
-                    </p>
-                  </div>
-                </div>
+          <div className="container mx-auto px-4 relative z-10 py-20 md:py-24">
+            <div className="max-w-2xl space-y-7 animate-fade-in">
+              <div className="flex items-center gap-3">
+                <span className="block w-10 h-px bg-accent" aria-hidden="true" />
+                <p className="text-accent font-bold uppercase tracking-[0.25em] text-xs">
+                  {service.heroEyebrow}
+                </p>
               </div>
 
-              {/* RIGHT — photo carousel */}
-              <div className="lg:col-span-6 relative">
-                <HeroPhotoCarousel
-                  images={service.heroImages?.length ? service.heroImages : [service.heroImage]}
-                  alt={service.title}
-                />
+              <h1 className="text-primary-foreground leading-[1.05] text-[40px] md:text-5xl lg:text-[length:var(--text-hero)]">
+                {service.heroHeadline.split(" ").slice(0, -1).join(" ")}{" "}
+                <span className="text-accent">
+                  {service.heroHeadline.split(" ").slice(-1)}
+                </span>
+              </h1>
+
+              <p
+                className="text-primary-foreground/90 font-semibold"
+                style={{ fontSize: "var(--text-lg)", lineHeight: 1.5 }}
+              >
+                {service.heroTagline}
+              </p>
+
+              <p
+                className="text-primary-foreground/75 max-w-xl"
+                style={{ fontSize: "var(--text-md)", lineHeight: 1.65 }}
+              >
+                {service.heroSubhead}
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                <Button
+                  variant="cta"
+                  size="xl"
+                  className="uppercase tracking-wider text-[15px] font-bold"
+                  asChild
+                >
+                  <a href="/#estimate">Schedule an Estimate</a>
+                </Button>
+                <Button variant="heroOutline" size="xl" asChild>
+                  <a href="tel:5129128733" className="flex items-center gap-2">
+                    <Phone className="w-5 h-5" /> 512-912-8733
+                  </a>
+                </Button>
+              </div>
+
+              {/* Stats bar */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6">
+                {[
+                  { value: "15+", label: "Years in Business" },
+                  { value: "2,500+", label: "Happy Customers" },
+                  { value: "5.0★", label: "Google Rating" },
+                  { value: "ISA", label: "Certified Arborists" },
+                ].map((stat) => (
+                  <div key={stat.label}>
+                    <p className="text-xl md:text-2xl font-heading font-bold text-primary-foreground leading-none">
+                      {stat.value}
+                    </p>
+                    <p className="text-primary-foreground/65 text-xs mt-1.5">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

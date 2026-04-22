@@ -4,9 +4,15 @@ type HeroPhotoCarouselProps = {
   images: string[];
   alt: string;
   intervalMs?: number;
+  variant?: "card" | "background";
 };
 
-const HeroPhotoCarousel = ({ images, alt, intervalMs = 5000 }: HeroPhotoCarouselProps) => {
+const HeroPhotoCarousel = ({
+  images,
+  alt,
+  intervalMs = 5500,
+  variant = "card",
+}: HeroPhotoCarouselProps) => {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
@@ -16,6 +22,26 @@ const HeroPhotoCarousel = ({ images, alt, intervalMs = 5000 }: HeroPhotoCarousel
     }, intervalMs);
     return () => window.clearInterval(id);
   }, [images.length, intervalMs]);
+
+  if (variant === "background") {
+    return (
+      <div className="absolute inset-0 w-full h-full">
+        {images.map((src, i) => (
+          <img
+            key={src}
+            src={src}
+            alt={alt}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${
+              i === active ? "opacity-100 animate-hero-zoom" : "opacity-0"
+            }`}
+            width={1920}
+            height={1080}
+            loading={i === 0 ? "eager" : "lazy"}
+          />
+        ))}
+      </div>
+    );
+  }
 
   return (
     <div className="relative aspect-[4/5] md:aspect-[5/5] lg:aspect-[4/5] overflow-hidden rounded-sm shadow-[0_30px_60px_-20px_hsl(var(--foreground)/0.35)]">
@@ -33,10 +59,8 @@ const HeroPhotoCarousel = ({ images, alt, intervalMs = 5000 }: HeroPhotoCarousel
         />
       ))}
 
-      {/* Subtle bottom gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent pointer-events-none" />
 
-      {/* Caption */}
       <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 flex items-end justify-between gap-4">
         <p className="text-background/95 font-heading text-sm md:text-base leading-snug max-w-[70%]">
           Insured, certified &amp; locally trusted since 2009.
@@ -46,7 +70,6 @@ const HeroPhotoCarousel = ({ images, alt, intervalMs = 5000 }: HeroPhotoCarousel
         </span>
       </div>
 
-      {/* Indicator dots */}
       {images.length > 1 && (
         <div className="absolute top-4 right-4 flex gap-1.5">
           {images.map((_, i) => (
