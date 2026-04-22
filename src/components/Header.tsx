@@ -23,9 +23,8 @@ const Header = () => {
   const [mobileAreasOpen, setMobileAreasOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
-      <div className="absolute inset-x-0 top-0 h-24 md:h-28 bg-gradient-to-b from-black/40 via-black/15 to-transparent pointer-events-none" aria-hidden="true" />
-      <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20 relative">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[hsl(110,44%,60%)]/70 backdrop-blur-md border-b border-[hsl(110,44%,50%)]/30 shadow-sm">
+      <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         <a href="/" className="flex-shrink-0">
           <img src={logo} alt="Adam's Apple Tree Service" className="h-[108px] md:h-[126px] w-auto" />
         </a>
