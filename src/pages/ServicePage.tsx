@@ -116,27 +116,12 @@ const ServicePage = () => {
                 </div>
               </div>
 
-              {/* RIGHT — full-bleed photo */}
+              {/* RIGHT — photo carousel */}
               <div className="lg:col-span-6 relative">
-                <div className="relative aspect-[4/5] md:aspect-[5/5] lg:aspect-[4/5] overflow-hidden rounded-sm shadow-[0_30px_60px_-20px_hsl(var(--foreground)/0.35)]">
-                  <img
-                    src={service.heroImage}
-                    alt={service.title}
-                    className="w-full h-full object-cover"
-                    width={1200}
-                    height={1500}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent" />
-                  {/* Caption strip */}
-                  <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 flex items-end justify-between gap-4">
-                    <p className="text-background/95 font-heading text-sm md:text-base leading-snug max-w-[70%]">
-                      Insured, certified &amp; locally trusted since 2009.
-                    </p>
-                    <span className="text-background/80 text-xs uppercase tracking-[0.2em] font-semibold">
-                      Austin, TX
-                    </span>
-                  </div>
-                </div>
+                <HeroPhotoCarousel
+                  images={service.heroImages?.length ? service.heroImages : [service.heroImage]}
+                  alt={service.title}
+                />
               </div>
             </div>
           </div>
