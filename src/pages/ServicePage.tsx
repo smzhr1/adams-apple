@@ -43,46 +43,29 @@ const ServicePage = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        {/* HERO */}
-        <section className="relative bg-primary overflow-hidden pt-24 md:pt-28">
-          {/* Decorative organic pattern */}
-          <div
-            className="absolute inset-0 opacity-[0.12] pointer-events-none"
-            aria-hidden="true"
-            style={{
-              backgroundImage:
-                "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><g fill='none' stroke='white' stroke-width='1.2' stroke-linecap='round'><path d='M20 80 Q50 40 80 80 T140 80'/><path d='M30 110 Q60 80 90 110 T150 110'/><path d='M10 50 Q40 20 70 50 T130 50'/><circle cx='40' cy='80' r='2'/><circle cx='110' cy='80' r='2'/><circle cx='75' cy='110' r='2'/></g></svg>\")",
-              backgroundSize: "320px 320px",
-            }}
-          />
-          {/* Soft radial highlight */}
-          <div
-            className="absolute -top-32 -right-32 w-[480px] h-[480px] rounded-full pointer-events-none"
-            aria-hidden="true"
-            style={{
-              background:
-                "radial-gradient(circle, hsl(var(--accent) / 0.18) 0%, transparent 70%)",
-            }}
-          />
-          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-background/40 pointer-events-none" />
-
-          <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-              <div>
-                <p className="inline-block bg-primary-foreground/15 backdrop-blur-sm border border-primary-foreground/25 text-primary-foreground font-bold uppercase tracking-[0.2em] text-xs px-3 py-1.5 rounded-full mb-5">
-                  {service.heroEyebrow}
-                </p>
-                <h1 className="font-heading font-bold text-primary-foreground mb-4">
+        {/* HERO — editorial split */}
+        <section className="relative bg-muted overflow-hidden pt-24 md:pt-28">
+          <div className="container mx-auto px-4 pt-10 md:pt-16 pb-16 md:pb-24 relative">
+            <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+              {/* LEFT — copy */}
+              <div className="lg:col-span-6">
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="block w-10 h-px bg-secondary" aria-hidden="true" />
+                  <p className="text-secondary font-bold uppercase tracking-[0.25em] text-xs">
+                    {service.heroEyebrow}
+                  </p>
+                </div>
+                <h1 className="font-heading font-bold text-foreground mb-5 leading-[1.05]">
                   {service.heroHeadline}
                 </h1>
                 <p
-                  className="text-accent font-semibold mb-6"
+                  className="text-secondary font-semibold mb-6"
                   style={{ fontSize: "var(--text-lg)" }}
                 >
                   {service.heroTagline}
                 </p>
                 <p
-                  className="text-primary-foreground/90 mb-8 leading-relaxed"
+                  className="text-muted-foreground mb-8 leading-relaxed max-w-xl"
                   style={{ fontSize: "var(--text-md)" }}
                 >
                   {service.heroSubhead}
@@ -91,44 +74,66 @@ const ServicePage = () => {
                   <Button variant="cta" size="xl" asChild>
                     <a href="/#estimate">Schedule an Estimate</a>
                   </Button>
-                  <Button variant="heroOutline" size="xl" asChild>
+                  <Button
+                    variant="outline"
+                    size="xl"
+                    className="border-foreground/20 text-foreground hover:bg-foreground hover:text-background"
+                    asChild
+                  >
                     <a href="tel:5129128733" className="flex items-center gap-2">
                       <Phone className="w-5 h-5" /> 512-912-8733
                     </a>
                   </Button>
                 </div>
+
+                {/* Inline stat row */}
+                <div className="mt-10 pt-8 border-t border-border grid grid-cols-3 gap-6 max-w-xl">
+                  <div>
+                    <p className="font-heading font-bold text-foreground text-2xl md:text-3xl leading-none">
+                      15<span className="text-secondary">+</span>
+                    </p>
+                    <p className="text-muted-foreground text-xs mt-2 uppercase tracking-wider">
+                      Years Serving Austin
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-heading font-bold text-foreground text-2xl md:text-3xl leading-none">
+                      ISA
+                    </p>
+                    <p className="text-muted-foreground text-xs mt-2 uppercase tracking-wider">
+                      Certified Arborists
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-heading font-bold text-foreground text-2xl md:text-3xl leading-none">
+                      5.0<span className="text-secondary">★</span>
+                    </p>
+                    <p className="text-muted-foreground text-xs mt-2 uppercase tracking-wider">
+                      Google Reviewed
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="relative">
-                {/* Decorative offset frame */}
-                <div
-                  className="absolute -inset-3 md:-inset-4 rounded-3xl border-2 border-accent/60 -z-10"
-                  aria-hidden="true"
-                />
-                <div
-                  className="absolute -bottom-5 -left-5 w-24 h-24 rounded-2xl bg-accent/30 -z-10"
-                  aria-hidden="true"
-                />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[5/4]">
+
+              {/* RIGHT — full-bleed photo */}
+              <div className="lg:col-span-6 relative">
+                <div className="relative aspect-[4/5] md:aspect-[5/5] lg:aspect-[4/5] overflow-hidden rounded-sm shadow-[0_30px_60px_-20px_hsl(var(--foreground)/0.35)]">
                   <img
                     src={service.heroImage}
                     alt={service.title}
                     className="w-full h-full object-cover"
                     width={1200}
-                    height={960}
+                    height={1500}
                   />
-                </div>
-                {/* Floating trust badge */}
-                <div className="hidden md:flex absolute -bottom-6 -right-4 bg-background rounded-xl shadow-xl px-5 py-3 items-center gap-3 max-w-[220px]">
-                  <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center flex-shrink-0">
-                    <Check className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-heading font-bold text-foreground text-sm leading-tight">
-                      ISA Certified
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent" />
+                  {/* Caption strip */}
+                  <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 flex items-end justify-between gap-4">
+                    <p className="text-background/95 font-heading text-sm md:text-base leading-snug max-w-[70%]">
+                      Insured, certified &amp; locally trusted since 2009.
                     </p>
-                    <p className="text-muted-foreground text-xs leading-tight">
-                      Arborists on staff
-                    </p>
+                    <span className="text-background/80 text-xs uppercase tracking-[0.2em] font-semibold">
+                      Austin, TX
+                    </span>
                   </div>
                 </div>
               </div>
