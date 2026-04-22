@@ -16,19 +16,34 @@ export type ServiceContent = {
   heroTagline: string;
   heroSubhead: string;
   heroImage: string;
-  offerings: { title: string; body: string; image: string }[];
+  offerings: { title: string; body: string; image: string; cta?: { label: string; href: string } }[];
   showGuesstimator?: boolean;
   guesstimatorHeadline?: string;
   guesstimatorSubhead?: string;
   whyChoose: {
     headline: string;
-    intro: string;
-    points: { title: string; body: string }[];
+    paragraphs: string[];
   };
   included: {
     image: string;
     headline: string;
     items: string[];
+  };
+  partnerships?: {
+    headline: string;
+    intro?: string;
+    partners: {
+      title: string;
+      body: string;
+      contact?: { phone?: string; email?: string; website?: string };
+    }[];
+    disclaimer?: string;
+  };
+  blogCallout?: {
+    headline: string;
+    paragraphs: string[];
+    ctaLabel: string;
+    ctaHref: string;
   };
   faqs: { q: string; a: string }[];
   related: { slug: string; title: string; image: string }[];
@@ -51,23 +66,24 @@ export const services: Record<string, ServiceContent> = {
     heroHeadline: "Tree Removal",
     heroTagline: "Tree removal done right at an affordable price.",
     heroSubhead:
-      "Adam's Apple Tree Service is the best tree removal service in Austin, TX and surrounding communities. We offer a wide range of services to meet your needs. Our team is experienced and professional, and we use the latest equipment to ensure that your job is done safely and efficiently.",
+      "Adam's Apple Tree Service specializes in the removal of trees and shrubs. Whether it is a large tree removal or clearing a plot of land, our team is equipped to handle your needs. We can even remove the stump and debris.",
     heroImage: heroArborist,
     offerings: [
       {
         title: "Tree Removal",
         image: imgRemoval,
-        body: "We provide a full range of tree removal services for residential and commercial properties. We can remove trees of any size, from small saplings to large mature trees. We also offer stump grinding and debris removal services.",
+        body: "We handle large tree removals with experience and safe practices to ensure your property is protected through the entire process. Curious how much a removal of a single tree may cost? Try our Tree Removal Guesstimator below.",
+        cta: { label: "Try the Guesstimator", href: "#guesstimator" },
       },
       {
         title: "Land Clearing",
         image: imgPlanting,
-        body: "Adam's Apple Tree Service offers land clearing services for residential and commercial properties. We can clear lots of any size, from small backyards to large commercial sites. We also offer brush removal and debris hauling services.",
+        body: "We will clear a piece of land by removing any unwanted trees and shrubs. We offer pathway clearance, fence line clearance, and even full land clearance. Debris can be mulched on site or removed from the property. We are experts in understanding local ordinance requirements and will ensure all local rules and regulations are followed.",
       },
       {
         title: "Stump Grinding & Stump Removal",
         image: imgSoil,
-        body: "Stumps are an eyesore and can be a tripping hazard. We offer stump grinding and stump removal services to get rid of those unsightly stumps for good. Our stump grinders can handle stumps of any size, and we can grind them down below ground level so they're virtually invisible. If you'd rather have your stump removed completely, we can do that too — leaving your yard looking clean and ready for whatever's next.",
+        body: "Stump removal includes fully tracing the entire stump and roots out of the yard. Stump grinding is a cost-effective way to remove the unsightly stump by cutting it just below the surface, allowing the area to be covered by sod, mulch, or rocks. Stump remains can be left on site as a high-quality mulch or removed and replaced with another product.",
       },
     ],
     showGuesstimator: true,
@@ -76,25 +92,12 @@ export const services: Record<string, ServiceContent> = {
       "Curious what your removal might cost? Move the sliders for a ballpark range in seconds — then book a free on-site visit for an exact written quote.",
     whyChoose: {
       headline: "How is Adam's Apple Different From Other Tree Services?",
-      intro:
-        "At Adam's Apple, we take pride in providing top-notch tree care services to our customers. We are committed to using the highest quality materials and equipment to ensure that your trees receive the best possible care.",
-      points: [
-        {
-          title: "Certified Arborists On Every Job",
-          body: "Our team of certified arborists has years of experience in the industry. They are knowledgeable about the latest tree care techniques and are dedicated to providing exceptional customer service.",
-        },
-        {
-          title: "Tailored to Your Tree",
-          body: "We understand that every tree is unique, and we tailor our services to meet the specific needs of each tree. We assess the condition of your tree and develop a customized care plan that will help it thrive.",
-        },
-        {
-          title: "Latest Equipment, Safer Work",
-          body: "We use the latest equipment to ensure your job is done safely and efficiently — from rigging gear for tight spaces to powerful stump grinders that leave your yard clean.",
-        },
-        {
-          title: "Satisfaction Guaranteed",
-          body: "We are committed to your satisfaction and will go above and beyond to ensure that you are happy with our work. You don't pay until the job is done and you've signed off.",
-        },
+      paragraphs: [
+        "When it comes to the trees that grace your Austin property, you need more than just a chainsaw and a ladder. You need a team that understands the unique challenges and beauty of Central Texas trees, from majestic live oaks to delicate crepe myrtles. That's where Adam's Apple Tree Service comes in.",
+        "Unlike other companies, we're not just about getting the job done quickly. We're expert climbers with a passion for trees and a commitment to your property's safety and aesthetics. We know that each tree is unique, and we approach each project with a meticulous eye, utilizing our extensive knowledge of tree biology and growth patterns to provide tailored care that goes beyond the basics.",
+        "We understand that your trees are an investment in your property's value and beauty, and we take that responsibility seriously. Our approach is rooted in transparency and communication. We believe in empowering you with knowledge, which is why we provide a comprehensive scope of work before we start. This detailed plan outlines each step of the process, from initial assessment to final cleanup, complete with images that show you exactly what to expect. No surprises, just exceptional results.",
+        "We're your neighbors, deeply rooted in the Austin community and the surrounding areas. Whether you're in the heart of the city or a nearby town like Dripping Springs or Georgetown, we'll treat your trees with the same care and respect we would our own.",
+        "When you choose Adam's Apple Tree Service, you're not just hiring a tree service; you're partnering with a team that values your trees as much as you do.",
       ],
     },
     included: {
@@ -102,34 +105,61 @@ export const services: Record<string, ServiceContent> = {
       headline: "Included With Every Removal",
       items: [
         "On-site arborist assessment",
-        "Low-impact take-down process",
-        "Rope rigging for tight spaces or large trees",
+        "Comprehensive scope of work before we start",
+        "Low-impact take-down with rigging where needed",
         "Complete cleanup (limbs, logs, debris)",
         "Haul-off so wood doesn't stay behind",
         "Stump cut low (full grinding available as an add-on)",
-        "Final walk-through and sign-off",
+        "Final walk-through and sign-off before payment",
       ],
+    },
+    partnerships: {
+      headline: "Trusted Partnerships",
+      intro:
+        "We're equipped to handle most tree care needs in-house. For specialized situations, we partner with trusted local experts so you always get the right tool for the job — with no hidden costs or markups.",
+      partners: [
+        {
+          title: "Certified Arborist Consultations",
+          body: "We've cultivated relationships with ISA-Certified Consulting Arborists ready to provide high-quality assessments and consultations. This is a great resource when you want an unbiased professional opinion that isn't predicated on the potential for tree work.",
+        },
+        {
+          title: "Austin Stump Buster — Stump Grinding",
+          body: "We partner with Eric Olsen of Austin Stump Buster for top-quality stump grinding. There are never hidden costs or markups: what Austin Stump Buster charges us is what you pay.",
+          contact: {
+            phone: "512-202-5638",
+            email: "atxstumpbuster@gmail.com",
+            website: "https://www.austinstumpbuster.com",
+          },
+        },
+      ],
+      disclaimer:
+        "Although we are proud to work with our partners, please understand we do not represent or speak on behalf of these companies.",
+    },
+    blogCallout: {
+      headline: "Have More Questions?",
+      paragraphs: [
+        "With over 15 years of hands-on experience caring for Austin's trees, we've developed a deep understanding of the unique challenges and joys our local trees bring. From towering live oaks to vibrant crepe myrtles, each species plays an important role in making Austin the place we love.",
+        "Whether you're a seasoned homeowner or a new tree enthusiast, our blog has something for you — in-depth guides to the services we provide, expert answers to tricky tree-health questions specific to our Central Texas climate, and the fascinating ways trees improve our neighborhoods.",
+      ],
+      ctaLabel: "Read the Blog",
+      ctaHref: "/blog",
     },
     faqs: [
       {
-        q: "How much does tree removal cost?",
-        a: "The cost of tree removal depends on several factors, including the size of the tree, its location, and the complexity of the job. We offer free estimates, so please contact us for a quote — or try our Tree Removal Guesstimator above for a quick ballpark.",
+        q: "Should I remove a tree or just trim it?",
+        a: "Our Certified Arborists can discuss all options with you about whether a tree can be safely pruned or if removal is a prudent choice. Contact us for more details.",
       },
       {
-        q: "Do I need a permit to remove a tree?",
-        a: "In most cases, yes. The City of Austin requires permits for protected trees (generally 19\" diameter and up, with stricter rules for heritage species like live oak and pecan over 24\"). Contact your local municipality, or let us know — we'll tell you if a permit is required and can help with the application.",
+        q: "How much does removing a tree cost?",
+        a: "The cost of Adam's Apple Tree Service's tree services depends on various factors such as the type of service, the size of the tree, and the location. Please contact us for a free estimate or try our Tree Removal Guesstimator above.",
       },
       {
-        q: "What happens to the wood after the tree is removed?",
-        a: "We can haul away the wood for you, or we can leave it for you to use as firewood — your choice. Either way, your property is left clean.",
+        q: "Do I need to remove the stump?",
+        a: "Stump removal is usually a separate line item on most tree removals since it requires specialized equipment. Removing a stump should be completed if you plan to replant another tree or shrub in the area, wish to add sod or mulch, or just want to improve the aesthetics of the yard. Our Certified Arborists will be glad to discuss options with you.",
       },
       {
-        q: "Do you remove the stump too?",
-        a: "Standard removal cuts the stump as low as possible. Full stump grinding is a separate add-on — we can grind 6–12 inches below grade so the area can be re-sodded or replanted.",
-      },
-      {
-        q: "Is your crew licensed and insured?",
-        a: "Yes. We carry full general liability and workers' comp. Ask for a certificate of insurance and we'll send it before work begins.",
+        q: "Do I need a permit to remove a tree in Austin?",
+        a: "In many cases, yes. The City of Austin requires permits for protected trees (generally 19\" diameter and up, with stricter rules for heritage species like live oak and pecan over 24\"). We'll tell you if a permit is required and can help with the application.",
       },
     ],
     related: allRelated.filter((r) => r.slug !== "tree-removal").slice(0, 4),
