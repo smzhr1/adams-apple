@@ -69,6 +69,7 @@ export const services: Record<string, ServiceContent> = {
     heroSubhead:
       "Adam's Apple Tree Service specializes in the removal of trees and shrubs. Whether it is a large tree removal or clearing a plot of land, our team is equipped to handle your needs. We can even remove the stump and debris.",
     heroImage: heroArborist,
+    heroImages: [heroArborist, imgRemoval, imgEmergency],
     offerings: [
       {
         title: "Tree Removal",
