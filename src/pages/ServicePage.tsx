@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { ArrowRight, Check, Phone } from "lucide-react";
+import { ArrowRight, Check, Phone, Mail, Globe } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AccreditationStrip from "@/components/AccreditationStrip";
@@ -92,7 +92,7 @@ const ServicePage = () => {
 
         <AccreditationStrip />
 
-        {/* OFFERINGS — what's included under this service */}
+        {/* OFFERINGS */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-14 max-w-3xl mx-auto">
@@ -124,9 +124,17 @@ const ServicePage = () => {
                     >
                       {offering.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed flex-1">
                       {offering.body}
                     </p>
+                    {offering.cta && (
+                      <a
+                        href={offering.cta.href}
+                        className="inline-flex items-center gap-1.5 text-primary font-semibold mt-4 hover:underline"
+                      >
+                        {offering.cta.label} <ArrowRight className="w-4 h-4" />
+                      </a>
+                    )}
                   </div>
                 </article>
               ))}
@@ -134,9 +142,9 @@ const ServicePage = () => {
           </div>
         </section>
 
-        {/* TREE REMOVAL GUESSTIMATOR — unique to this page */}
+        {/* TREE REMOVAL GUESSTIMATOR */}
         {service.showGuesstimator && (
-          <section className="py-20 bg-secondary">
+          <section id="guesstimator" className="py-20 bg-secondary scroll-mt-24">
             <div className="container mx-auto px-4">
               <div className="text-center mb-10 max-w-2xl mx-auto">
                 <p className="text-accent font-bold uppercase tracking-[0.2em] text-sm mb-3">
@@ -156,34 +164,32 @@ const ServicePage = () => {
           </section>
         )}
 
-        {/* WHY CHOOSE US BAND */}
+        {/* WHY CHOOSE US */}
         <section className="py-20 bg-background">
-          <div className="container mx-auto px-4 max-w-5xl">
-            <div className="text-center mb-12">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <div className="text-center mb-10">
               <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
                 What Sets Us Apart
               </p>
-              <h2 className="font-heading font-bold text-foreground mb-6">
+              <h2 className="font-heading font-bold text-foreground">
                 {service.whyChoose.headline}
               </h2>
-              <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto" style={{ fontSize: "var(--text-md)" }}>
-                {service.whyChoose.intro}
-              </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              {service.whyChoose.points.map((point) => (
-                <div key={point.title} className="bg-card border border-border rounded-2xl p-6">
-                  <h3
-                    className="font-heading font-bold text-primary mb-2"
-                    style={{ fontSize: "var(--text-lg)" }}
-                  >
-                    {point.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {point.body}
-                  </p>
-                </div>
+            <div className="space-y-5">
+              {service.whyChoose.paragraphs.map((p, i) => (
+                <p
+                  key={i}
+                  className="text-muted-foreground leading-relaxed"
+                  style={{ fontSize: "var(--text-md)" }}
+                >
+                  {p}
+                </p>
               ))}
+            </div>
+            <div className="text-center mt-10">
+              <Button variant="cta" size="xl" asChild>
+                <a href="/#estimate">Get a Free Estimate</a>
+              </Button>
             </div>
           </div>
         </section>
@@ -227,8 +233,86 @@ const ServicePage = () => {
           </div>
         </section>
 
+        {/* PARTNERSHIPS */}
+        {service.partnerships && (
+          <section className="py-20 bg-background">
+            <div className="container mx-auto px-4 max-w-5xl">
+              <div className="text-center mb-12">
+                <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
+                  Partnerships
+                </p>
+                <h2 className="font-heading font-bold text-foreground mb-4">
+                  {service.partnerships.headline}
+                </h2>
+                {service.partnerships.intro && (
+                  <p
+                    className="text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+                    style={{ fontSize: "var(--text-md)" }}
+                  >
+                    {service.partnerships.intro}
+                  </p>
+                )}
+              </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                {service.partnerships.partners.map((p) => (
+                  <div
+                    key={p.title}
+                    className="bg-card border border-border rounded-2xl p-6 flex flex-col"
+                  >
+                    <h3
+                      className="font-heading font-bold text-primary mb-3"
+                      style={{ fontSize: "var(--text-lg)" }}
+                    >
+                      {p.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed flex-1">
+                      {p.body}
+                    </p>
+                    {p.contact && (
+                      <div className="mt-5 pt-5 border-t border-border space-y-2 text-sm">
+                        {p.contact.phone && (
+                          <a
+                            href={`tel:${p.contact.phone.replace(/[^0-9]/g, "")}`}
+                            className="flex items-center gap-2 text-foreground hover:text-primary"
+                          >
+                            <Phone className="w-4 h-4" /> {p.contact.phone}
+                          </a>
+                        )}
+                        {p.contact.email && (
+                          <a
+                            href={`mailto:${p.contact.email}`}
+                            className="flex items-center gap-2 text-foreground hover:text-primary break-all"
+                          >
+                            <Mail className="w-4 h-4 flex-shrink-0" /> {p.contact.email}
+                          </a>
+                        )}
+                        {p.contact.website && (
+                          <a
+                            href={p.contact.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-foreground hover:text-primary break-all"
+                          >
+                            <Globe className="w-4 h-4 flex-shrink-0" />
+                            {p.contact.website.replace(/^https?:\/\//, "")}
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+              {service.partnerships.disclaimer && (
+                <p className="text-center text-muted-foreground text-sm mt-10 max-w-2xl mx-auto italic">
+                  {service.partnerships.disclaimer}
+                </p>
+              )}
+            </div>
+          </section>
+        )}
+
         {/* RELATED SERVICES */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-muted">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
@@ -269,7 +353,7 @@ const ServicePage = () => {
         </section>
 
         {/* FAQ */}
-        <section className="py-20 bg-muted">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="text-center mb-10">
               <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
@@ -279,14 +363,14 @@ const ServicePage = () => {
                 {service.title} FAQs
               </h2>
               <p className="text-muted-foreground text-lg">
-                Still have questions? Call or text us at{" "}
+                Please reach us at{" "}
                 <a
-                  href="tel:5129128733"
+                  href="mailto:info@adamsappletreeservice.com"
                   className="text-primary font-semibold hover:underline"
                 >
-                  512-912-8733
-                </a>
-                .
+                  info@adamsappletreeservice.com
+                </a>{" "}
+                if you cannot find an answer to your question.
               </p>
             </div>
             <Accordion type="single" collapsible className="space-y-3">
@@ -294,7 +378,7 @@ const ServicePage = () => {
                 <AccordionItem
                   key={idx}
                   value={`faq-${idx}`}
-                  className="bg-background border border-border rounded-xl px-6"
+                  className="bg-card border border-border rounded-xl px-6"
                 >
                   <AccordionTrigger className="text-foreground font-bold text-left text-base hover:no-underline">
                     {faq.q}
@@ -307,6 +391,33 @@ const ServicePage = () => {
             </Accordion>
           </div>
         </section>
+
+        {/* BLOG CALLOUT */}
+        {service.blogCallout && (
+          <section className="py-20 bg-muted">
+            <div className="container mx-auto px-4 max-w-3xl text-center">
+              <h2 className="font-heading font-bold text-foreground mb-6">
+                {service.blogCallout.headline}
+              </h2>
+              <div className="space-y-4 mb-8">
+                {service.blogCallout.paragraphs.map((p, i) => (
+                  <p
+                    key={i}
+                    className="text-muted-foreground leading-relaxed"
+                    style={{ fontSize: "var(--text-md)" }}
+                  >
+                    {p}
+                  </p>
+                ))}
+              </div>
+              <Button variant="cta" size="xl" asChild>
+                <Link to={service.blogCallout.ctaHref}>
+                  {service.blogCallout.ctaLabel}
+                </Link>
+              </Button>
+            </div>
+          </section>
+        )}
 
         <ServiceAreas />
         <CTASection />
