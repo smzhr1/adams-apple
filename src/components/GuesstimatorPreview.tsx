@@ -48,21 +48,21 @@ const GuesstimatorPreview = () => {
   return (
     <section
       id="guesstimator"
-      className="py-20 md:py-24 bg-foreground scroll-mt-24"
+      className="py-20 md:py-24 bg-muted scroll-mt-24"
     >
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* LEFT — copy + CTA */}
           <div>
-            <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4">
+            <p className="text-secondary font-bold uppercase tracking-[0.2em] text-sm mb-4">
               Instant Pricing Tool
             </p>
-            <h2 className="font-heading font-bold text-background mb-5">
+            <h2 className="font-heading font-bold text-foreground mb-5">
               Tree Removal{" "}
-              <span className="text-primary">Guesstimator</span>
+              <span className="text-secondary">Guesstimator</span>
             </h2>
             <p
-              className="text-background/80 leading-relaxed mb-8 max-w-xl"
+              className="text-foreground/75 leading-relaxed mb-8 max-w-xl"
               style={{ fontSize: "var(--text-md)" }}
             >
               Not sure what tree removal costs? Use our free online tool to get a
@@ -73,11 +73,11 @@ const GuesstimatorPreview = () => {
               <Button variant="cta" size="xl" asChild>
                 <a href="#guesstimator-form">Try the Guesstimator →</a>
               </Button>
-              <p className="text-background/70 text-sm">
+              <p className="text-foreground/70 text-sm">
                 Or call for a free estimate:{" "}
                 <a
                   href="tel:5129128733"
-                  className="text-background font-semibold hover:text-accent"
+                  className="text-secondary font-semibold hover:text-secondary/80"
                 >
                   512-912-8733
                 </a>
@@ -88,22 +88,22 @@ const GuesstimatorPreview = () => {
           {/* RIGHT — interactive preview card */}
           <div
             id="guesstimator-form"
-            className="bg-foreground/40 border border-background/15 rounded-2xl p-6 md:p-8 backdrop-blur scroll-mt-24"
+            className="bg-background border border-border rounded-2xl p-6 md:p-8 shadow-lg scroll-mt-24"
           >
             <div className="flex items-center gap-2 mb-6">
-              <TreePine className="w-5 h-5 text-primary" />
-              <p className="text-primary font-bold uppercase tracking-[0.18em] text-sm">
+              <TreePine className="w-5 h-5 text-secondary" />
+              <p className="text-secondary font-bold uppercase tracking-[0.18em] text-sm">
                 Quick Estimate Preview
               </p>
             </div>
 
             <div className="space-y-5">
               <div>
-                <label className="text-background/80 text-sm font-medium mb-2 block">
+                <label className="text-foreground/80 text-sm font-medium mb-2 block">
                   Tree Height
                 </label>
                 <Select value={h} onValueChange={setH}>
-                  <SelectTrigger className="bg-background/5 border-background/20 text-background h-12 hover:bg-background/10">
+                  <SelectTrigger className="bg-muted border-border text-foreground h-12 hover:bg-muted/70">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
@@ -117,11 +117,11 @@ const GuesstimatorPreview = () => {
               </div>
 
               <div>
-                <label className="text-background/80 text-sm font-medium mb-2 block">
+                <label className="text-foreground/80 text-sm font-medium mb-2 block">
                   Trunk Diameter
                 </label>
                 <Select value={d} onValueChange={setD}>
-                  <SelectTrigger className="bg-background/5 border-background/20 text-background h-12 hover:bg-background/10">
+                  <SelectTrigger className="bg-muted border-border text-foreground h-12 hover:bg-muted/70">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
@@ -135,11 +135,11 @@ const GuesstimatorPreview = () => {
               </div>
 
               <div>
-                <label className="text-background/80 text-sm font-medium mb-2 block">
+                <label className="text-foreground/80 text-sm font-medium mb-2 block">
                   Accessibility
                 </label>
                 <Select value={a} onValueChange={setA}>
-                  <SelectTrigger className="bg-background/5 border-background/20 text-background h-12 hover:bg-background/10">
+                  <SelectTrigger className="bg-muted border-border text-foreground h-12 hover:bg-muted/70">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
@@ -152,19 +152,19 @@ const GuesstimatorPreview = () => {
                 </Select>
               </div>
 
-              <div className="bg-primary/90 rounded-xl px-5 py-4 mt-6 flex items-center justify-between">
+              <div className="bg-secondary rounded-xl px-5 py-4 mt-6 flex items-center justify-between">
                 <div>
-                  <p className="text-primary-foreground font-heading font-bold text-2xl md:text-3xl leading-tight">
+                  <p className="text-secondary-foreground font-heading font-bold text-2xl md:text-3xl leading-tight">
                     ${estimate.low.toLocaleString()} – ${estimate.high.toLocaleString()}
                   </p>
-                  <p className="text-primary-foreground/85 text-xs">
+                  <p className="text-secondary-foreground/85 text-xs">
                     Rough estimate ·{" "}
                     <a href="/#estimate" className="underline hover:text-accent">
                       Get exact quote
                     </a>
                   </p>
                 </div>
-                <TreePine className="w-8 h-8 text-primary-foreground/70" />
+                <TreePine className="w-8 h-8 text-secondary-foreground/70" />
               </div>
             </div>
           </div>
