@@ -45,7 +45,7 @@ const ServicePage = () => {
       <Header />
       <main>
         {/* HERO — split: mid forest left, photo right, gradient transition */}
-        <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-[hsl(30,28%,18%)]">
+        <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-[hsl(110,50%,97%)]">
           {/* Right side photo */}
           <div className="absolute inset-y-0 right-0 w-full lg:w-[58%]">
             <HeroPhotoCarousel
@@ -54,43 +54,43 @@ const ServicePage = () => {
               variant="background"
             />
             {/* Gradient transition from panel into photo */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[hsl(30,28%,18%)] via-[hsl(30,28%,18%)]/70 to-transparent lg:via-[hsl(30,28%,18%)]/40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[hsl(110,50%,97%)] via-[hsl(110,50%,97%)]/70 to-transparent lg:via-[hsl(110,50%,97%)]/40" />
             {/* Mobile: extra overlay so text remains readable */}
-            <div className="absolute inset-0 bg-[hsl(30,28%,18%)]/60 lg:hidden" />
+            <div className="absolute inset-0 bg-[hsl(110,50%,97%)]/75 lg:hidden" />
             {/* Soft bottom fade into page background */}
             <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
           </div>
 
           {/* Left panel — extends edge-to-edge on small screens; ~50% on large */}
-          <div className="absolute inset-y-0 left-0 w-full lg:w-1/2 bg-[hsl(30,28%,18%)]" aria-hidden="true" />
+          <div className="absolute inset-y-0 left-0 w-full lg:w-1/2 bg-[hsl(110,50%,97%)]" aria-hidden="true" />
           {/* Gradient seam between panel and photo */}
-          <div className="hidden lg:block absolute inset-y-0 left-1/2 w-[14%] bg-gradient-to-r from-[hsl(30,28%,18%)] to-transparent pointer-events-none" aria-hidden="true" />
+          <div className="hidden lg:block absolute inset-y-0 left-1/2 w-[14%] bg-gradient-to-r from-[hsl(110,50%,97%)] to-transparent pointer-events-none" aria-hidden="true" />
 
           <div className="container mx-auto px-4 relative z-10 py-20 md:py-24">
             <div className="max-w-2xl space-y-7 animate-fade-in">
               <div className="flex items-center gap-3">
-                <span className="block w-10 h-px bg-accent" aria-hidden="true" />
-                <p className="text-accent font-bold uppercase tracking-[0.25em] text-xs">
+                <span className="block w-10 h-px bg-secondary" aria-hidden="true" />
+                <p className="text-secondary font-bold uppercase tracking-[0.25em] text-xs">
                   {service.heroEyebrow}
                 </p>
               </div>
 
-              <h1 className="text-primary-foreground leading-[1.05] text-[40px] md:text-5xl lg:text-[length:var(--text-hero)]">
+              <h1 className="text-foreground leading-[1.05] text-[40px] md:text-5xl lg:text-[length:var(--text-hero)]">
                 {service.heroHeadline.split(" ").slice(0, -1).join(" ")}{" "}
-                <span className="text-accent">
+                <span className="text-secondary">
                   {service.heroHeadline.split(" ").slice(-1)}
                 </span>
               </h1>
 
               <p
-                className="text-primary-foreground/90 font-semibold"
+                className="text-foreground/85 font-semibold"
                 style={{ fontSize: "var(--text-lg)", lineHeight: 1.5 }}
               >
                 {service.heroTagline}
               </p>
 
               <p
-                className="text-primary-foreground/75 max-w-xl"
+                className="text-muted-foreground max-w-xl"
                 style={{ fontSize: "var(--text-md)", lineHeight: 1.65 }}
               >
                 {service.heroSubhead}
@@ -105,7 +105,7 @@ const ServicePage = () => {
                 >
                   <a href="/#estimate">Schedule an Estimate</a>
                 </Button>
-                <Button variant="heroOutline" size="xl" asChild>
+                <Button variant="outline" size="xl" asChild className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground">
                   <a href="tel:5129128733" className="flex items-center gap-2">
                     <Phone className="w-5 h-5" /> 512-912-8733
                   </a>
@@ -121,10 +121,10 @@ const ServicePage = () => {
                   { value: "ISA", label: "Certified Arborists" },
                 ].map((stat) => (
                   <div key={stat.label}>
-                    <p className="text-xl md:text-2xl font-heading font-bold text-primary-foreground leading-none">
+                    <p className="text-xl md:text-2xl font-heading font-bold text-secondary leading-none">
                       {stat.value}
                     </p>
-                    <p className="text-primary-foreground/65 text-xs mt-1.5">
+                    <p className="text-muted-foreground text-xs mt-1.5">
                       {stat.label}
                     </p>
                   </div>
