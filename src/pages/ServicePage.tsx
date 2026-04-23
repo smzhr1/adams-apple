@@ -61,7 +61,7 @@ const ServicePage = () => {
           <div className="hidden lg:block absolute inset-y-0 left-0 w-1/2 bg-card" aria-hidden="true" />
           <div className="hidden lg:block absolute inset-y-0 left-1/2 w-[14%] bg-gradient-to-r from-card to-transparent pointer-events-none" aria-hidden="true" />
 
-          <div className="container mx-auto px-4 relative z-10 pt-[124px] pb-12 md:pt-[140px] md:pb-14 lg:py-24">
+          <div className="container mx-auto px-4 relative z-10 pt-[96px] pb-10 md:pt-[120px] md:pb-14 lg:py-24">
             <div className="max-w-2xl space-y-6 lg:space-y-7 animate-fade-in">
               <div className="flex items-center gap-3">
                 <span className="block w-10 h-px bg-secondary" aria-hidden="true" />
