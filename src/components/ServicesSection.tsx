@@ -38,10 +38,10 @@ const services = [
     description: "Life happens — call us and we will handle fallen branches or trees as quickly as possible.",
   },
   {
-    title: "Professional Services",
-    slug: "professional-services",
+    title: "Legacy Tree Program",
+    slug: "legacy-tree-program",
     image: imgLegacy,
-    description: "Our Certified Arborists can provide professional reports for insurance companies, city requirements, or permits.",
+    description: "Celebrate life's milestones with a native Texas tree — free for existing clients to mark a birth, anniversary, memorial, or any moment worth rooting in the ground.",
   },
 ];
 
