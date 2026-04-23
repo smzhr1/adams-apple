@@ -6,6 +6,7 @@ import AccreditationStrip from "@/components/AccreditationStrip";
 import ServiceAreas from "@/components/ServiceAreas";
 import CTASection from "@/components/CTASection";
 import GuesstimatorPreview from "@/components/GuesstimatorPreview";
+import GoogleReviews from "@/components/GoogleReviews";
 import HeroPhotoCarousel from "@/components/HeroPhotoCarousel";
 import { Button } from "@/components/ui/button";
 import {
@@ -262,9 +263,12 @@ const ServicePage = () => {
           </div>
         </section>
 
+        {/* GOOGLE REVIEWS */}
+        <GoogleReviews />
+
         {/* PARTNERSHIPS */}
         {service.partnerships && (
-          <section className="py-20 bg-background">
+          <section className="py-20 bg-muted">
             <div className="container mx-auto px-4 max-w-5xl">
               <div className="text-center mb-12">
                 <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
@@ -341,7 +345,7 @@ const ServicePage = () => {
         )}
 
         {/* RELATED SERVICES */}
-        <section className="py-20 bg-muted">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
