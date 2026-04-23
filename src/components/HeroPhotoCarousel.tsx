@@ -39,28 +39,66 @@ const HeroPhotoCarousel = ({
   };
 
   if (variant === "mobile") {
+    const count = images.length;
+    const prevIdx = (active - 1 + count) % count;
+    const nextIdx = (active + 1) % count;
+
     return (
       <div
-        className="relative aspect-[4/3] w-full overflow-hidden rounded-xl shadow-[0_20px_40px_-15px_hsl(var(--foreground)/0.3)]"
+        className="relative w-full select-none"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        {images.map((src, i) => (
-          <img
-            key={src}
-            src={src}
-            alt={alt}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1200ms] ease-in-out ${
-              i === active ? "opacity-100" : "opacity-0"
-            }`}
-            width={1200}
-            height={900}
-            loading={i === 0 ? "eager" : "lazy"}
-          />
-        ))}
+        {/* Peek slider: side images poke in from left & right, center is the main image */}
+        <div className="relative aspect-[4/3] w-full overflow-hidden">
+          {images.map((src, i) => {
+            let position: "left" | "center" | "right" | "hidden" = "hidden";
+            if (i === active) position = "center";
+            else if (count > 1 && i === prevIdx) position = "left";
+            else if (count > 1 && i === nextIdx) position = "right";
 
-        {images.length > 1 && (
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+            const base =
+              "absolute top-1/2 -translate-y-1/2 transition-all duration-700 ease-out rounded-xl overflow-hidden";
+
+            const styleByPosition: Record<typeof position, string> = {
+              center:
+                "left-1/2 -translate-x-1/2 w-[78%] aspect-[4/3] z-20 opacity-100 shadow-[0_20px_40px_-15px_hsl(var(--foreground)/0.35)]",
+              left: "left-0 -translate-x-[35%] w-[40%] aspect-[4/3] z-10 opacity-70",
+              right: "right-0 translate-x-[35%] w-[40%] aspect-[4/3] z-10 opacity-70",
+              hidden:
+                "left-1/2 -translate-x-1/2 w-[78%] aspect-[4/3] opacity-0 pointer-events-none",
+            };
+
+            return (
+              <button
+                key={src}
+                type="button"
+                onClick={() => {
+                  if (position === "left") setActive(prevIdx);
+                  else if (position === "right") setActive(nextIdx);
+                }}
+                aria-label={
+                  position === "center" ? alt : `Show photo ${i + 1}`
+                }
+                tabIndex={position === "center" ? -1 : 0}
+                className={`${base} ${styleByPosition[position]}`}
+              >
+                <img
+                  src={src}
+                  alt={alt}
+                  className="w-full h-full object-cover"
+                  width={1200}
+                  height={900}
+                  loading={i === 0 ? "eager" : "lazy"}
+                  draggable={false}
+                />
+              </button>
+            );
+          })}
+        </div>
+
+        {count > 1 && (
+          <div className="mt-4 flex justify-center gap-2">
             {images.map((_, i) => (
               <button
                 key={i}
@@ -68,7 +106,9 @@ const HeroPhotoCarousel = ({
                 onClick={() => setActive(i)}
                 aria-label={`Show photo ${i + 1}`}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === active ? "w-6 bg-background" : "w-1.5 bg-background/60 hover:bg-background/80"
+                  i === active
+                    ? "w-6 bg-primary"
+                    : "w-1.5 bg-foreground/25 hover:bg-foreground/50"
                 }`}
               />
             ))}
