@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Menu, X, ChevronDown, TreePine, Scissors, Sprout, Leaf, AlertTriangle, FileText, MapPin } from "lucide-react";
+import { Phone, Menu, X, ChevronDown, TreePine, Scissors, Sprout, Leaf, AlertTriangle, Heart, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
@@ -9,7 +9,7 @@ const services = [
   { icon: Sprout, label: "Tree Planting", href: "/services/tree-planting", desc: "Species selection & professional planting" },
   { icon: Leaf, label: "Soil Amendments & Care", href: "/services/soil-amendments", desc: "Root zone treatments & fertilization" },
   { icon: AlertTriangle, label: "Emergency Services", href: "/services/emergency", desc: "24/7 storm damage response" },
-  { icon: FileText, label: "Professional Services", href: "/services/professional-services", desc: "Reports, permits & insurance docs" },
+  { icon: Heart, label: "Legacy Tree Program", href: "/services/legacy-tree-program", desc: "Plant a native tree to mark life's milestones" },
 ];
 
 const serviceAreas = [
