@@ -88,6 +88,10 @@ export default {
           "0%": { transform: "scale(1)" },
           "100%": { transform: "scale(1.06)" },
         },
+        "hero-progress": {
+          "0%": { transform: "scaleX(0)" },
+          "100%": { transform: "scaleX(1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -95,6 +99,7 @@ export default {
         "fade-in": "fade-in 0.6s ease-out forwards",
         "count-up": "count-up 0.4s ease-out forwards",
         "hero-zoom": "hero-zoom 20s ease-in-out infinite alternate",
+        "hero-progress": "hero-progress linear forwards",
       },
     },
   },
