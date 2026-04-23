@@ -7,6 +7,7 @@ import ServiceAreas from "@/components/ServiceAreas";
 import CTASection from "@/components/CTASection";
 import GuesstimatorPreview from "@/components/GuesstimatorPreview";
 import HeroPhotoCarousel from "@/components/HeroPhotoCarousel";
+import heroLeafPattern from "@/assets/hero-leaf-pattern.png";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
