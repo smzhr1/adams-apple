@@ -152,50 +152,86 @@ const ServicePage = () => {
                 {service.title} Services for Your Property
               </h2>
             </div>
-            <div
-              className={`grid gap-6 ${
-                service.offerings.length === 2
-                  ? "md:grid-cols-2"
-                  : service.offerings.length === 4
-                  ? "md:grid-cols-2 lg:grid-cols-4"
-                  : "md:grid-cols-2 lg:grid-cols-3"
-              }`}
-            >
-              {service.offerings.map((offering) => (
-                <article
-                  key={offering.title}
-                  className="bg-card border border-border rounded-2xl overflow-hidden flex flex-col"
-                >
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={offering.image}
-                      alt={offering.title}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <h3
-                      className="font-heading font-bold text-foreground mb-3"
-                      style={{ fontSize: "var(--text-lg)" }}
+            {service.offerings.length === 1 ? (
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h3
+                    className="font-heading font-bold text-foreground mb-4"
+                    style={{ fontSize: "var(--text-xl)" }}
+                  >
+                    {service.offerings[0].title}
+                  </h3>
+                  <p
+                    className="text-muted-foreground leading-relaxed mb-6"
+                    style={{ fontSize: "var(--text-md)" }}
+                  >
+                    {service.offerings[0].body}
+                  </p>
+                  {service.offerings[0].cta && (
+                    <a
+                      href={service.offerings[0].cta!.href}
+                      className="inline-flex items-center gap-1.5 text-primary font-semibold hover:underline"
                     >
-                      {offering.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed flex-1">
-                      {offering.body}
-                    </p>
-                    {offering.cta && (
-                      <a
-                        href={offering.cta.href}
-                        className="inline-flex items-center gap-1.5 text-primary font-semibold mt-4 hover:underline"
+                      {service.offerings[0].cta!.label}{" "}
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                  )}
+                </div>
+                <div className="rounded-2xl overflow-hidden aspect-[4/3] shadow-lg order-first lg:order-last">
+                  <img
+                    src={service.offerings[0].image}
+                    alt={service.offerings[0].title}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            ) : (
+              <div
+                className={`grid gap-6 ${
+                  service.offerings.length === 2
+                    ? "md:grid-cols-2"
+                    : service.offerings.length === 4
+                    ? "md:grid-cols-2 lg:grid-cols-4"
+                    : "md:grid-cols-2 lg:grid-cols-3"
+                }`}
+              >
+                {service.offerings.map((offering) => (
+                  <article
+                    key={offering.title}
+                    className="bg-card border border-border rounded-2xl overflow-hidden flex flex-col"
+                  >
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img
+                        src={offering.image}
+                        alt={offering.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="p-6 flex flex-col flex-1">
+                      <h3
+                        className="font-heading font-bold text-foreground mb-3"
+                        style={{ fontSize: "var(--text-lg)" }}
                       >
-                        {offering.cta.label} <ArrowRight className="w-4 h-4" />
-                      </a>
-                    )}
-                  </div>
-                </article>
-              ))}
-            </div>
+                        {offering.title}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed flex-1">
+                        {offering.body}
+                      </p>
+                      {offering.cta && (
+                        <a
+                          href={offering.cta.href}
+                          className="inline-flex items-center gap-1.5 text-primary font-semibold mt-4 hover:underline"
+                        >
+                          {offering.cta.label} <ArrowRight className="w-4 h-4" />
+                        </a>
+                      )}
+                    </div>
+                  </article>
+                ))}
+              </div>
+            )}
           </div>
         </section>
 
