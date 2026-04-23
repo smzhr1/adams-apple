@@ -131,3 +131,8 @@
     font-size: var(--text-xl);
   }
 }
+
+@keyframes hero-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
