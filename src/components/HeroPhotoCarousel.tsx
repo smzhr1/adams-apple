@@ -31,7 +31,7 @@ const HeroPhotoCarousel = ({
             key={src}
             src={src}
             alt={alt}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[2500ms] ease-in-out ${
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[4000ms] ease-in-out ${
               i === active ? "opacity-100 animate-hero-zoom" : "opacity-0"
             }`}
             width={1920}
