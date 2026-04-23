@@ -298,7 +298,7 @@ const ServicePage = () => {
                 {service.partnerships.partners.map((p) => (
                   <div
                     key={p.title}
-                    className="bg-card border border-border rounded-2xl p-6 flex flex-col"
+                    className="bg-background border border-border rounded-2xl p-6 flex flex-col"
                   >
                     <h3
                       className="font-heading font-bold text-primary mb-3"
