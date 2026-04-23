@@ -154,7 +154,11 @@ const GoogleReviews = () => {
               <div className="flex items-start justify-between gap-3 mb-3">
                 <div className="flex items-center gap-3">
                   <Avatar className="h-11 w-11">
-                    <AvatarFallback className={`${review.avatarColor} text-primary-foreground font-semibold text-sm`}>
+                    <AvatarFallback
+                      className={`${review.avatarColor} ${
+                        review.avatarColor === "bg-accent" ? "text-accent-foreground" : "text-primary-foreground"
+                      } font-semibold text-sm`}
+                    >
                       {review.initials}
                     </AvatarFallback>
                   </Avatar>
