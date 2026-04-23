@@ -152,7 +152,15 @@ const ServicePage = () => {
                 {service.title} Services for Your Property
               </h2>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
+              className={`grid gap-6 ${
+                service.offerings.length === 2
+                  ? "md:grid-cols-2 max-w-5xl mx-auto"
+                  : service.offerings.length === 4
+                  ? "md:grid-cols-2 lg:grid-cols-4"
+                  : "md:grid-cols-2 lg:grid-cols-3"
+              }`}
+            >
               {service.offerings.map((offering) => (
                 <article
                   key={offering.title}
