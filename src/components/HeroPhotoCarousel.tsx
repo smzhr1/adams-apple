@@ -24,7 +24,6 @@ const HeroPhotoCarousel = ({
   }, [images.length, intervalMs]);
 
   if (variant === "background") {
-    const showProgress = images.length > 1;
     return (
       <div className="absolute inset-0 w-full h-full">
         {images.map((src, i) => (
@@ -40,17 +39,6 @@ const HeroPhotoCarousel = ({
             loading={i === 0 ? "eager" : "lazy"}
           />
         ))}
-        {showProgress && (
-          <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-foreground/10 z-20 pointer-events-none">
-            <div
-              key={active}
-              className="h-full bg-secondary origin-left"
-              style={{
-                animation: `hero-progress ${intervalMs}ms linear forwards`,
-              }}
-            />
-          </div>
-        )}
       </div>
     );
   }
