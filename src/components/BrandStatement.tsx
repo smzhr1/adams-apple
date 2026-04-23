@@ -5,11 +5,7 @@ const BrandStatement = () => {
     <section className="py-16 bg-muted">
       <div className="container mx-auto px-4 max-w-3xl text-center">
         <p className="text-foreground leading-relaxed mb-8" style={{ fontSize: 'var(--text-md)' }}>
-          Adam's Apple Tree Service is your trusted local source for expert tree care in the Austin area. 
-          With over 15 years of experience serving the diverse landscapes of Central Texas, we understand 
-          the unique needs of our region's trees. From the iconic live oaks that shade our streets to the 
-          delicate crepe myrtles that add a burst of color, we're passionate about preserving the health 
-          and beauty of every tree we touch.
+          Serving Austin homeowners and property managers since 2008, Adam's Apple Tree Service is a locally owned, fully insured tree care company with ISA certified arborists on staff. We hold certifications in arboriculture, tree risk assessment, urban forestry, and pesticide application — the credentials that matter for Austin's Heritage Trees, oak wilt zones, and city permit requirements.
         </p>
         <Button variant="cta" size="lg" className="uppercase tracking-wider text-[15px] font-bold" asChild>
           <a href="#estimate">Schedule an Estimate</a>

@@ -24,15 +24,7 @@ const MeetTheTeam = () => {
               Meet the Crew
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: 'var(--text-md)' }}>
-              At Adam's Apple Tree Service, we are more than just tree care professionals; we are dedicated 
-              partners in your journey to create and maintain a beautiful, safe, and thriving landscape. With 
-              deep roots in the Austin community and over 15 years of experience, we understand the unique 
-              challenges and opportunities that our region's trees present.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: 'var(--text-md)' }}>
-              Our team includes ISA Certified Arborists Neil Myers (TX-4612A) and Geoff Oliver (TX-5212A), 
-              arborist-in-training Jon Haben, and operations manager Devin Oller — each bringing specialized 
-              skills and genuine passion for tree care to every project.
+              Adam's Apple Tree Service is a locally owned Austin company built on certified expertise and real relationships with our clients. Our team includes ISA Certified Arborists Neil Myers (TX-4612A) and Geoff Oliver (TX-5212A), arborist-in-training Jon Haben, and operations manager Devin Oller. Every project in Austin gets certified oversight from assessment through cleanup — not just a crew with a chainsaw.
             </p>
             <a
               href="/about"

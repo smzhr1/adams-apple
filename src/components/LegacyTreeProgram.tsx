@@ -25,8 +25,7 @@ const LegacyTreeProgram = () => {
               Establishing Roots for Your Memories
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6" style={{ fontSize: 'var(--text-md)' }}>
-              A simple, sustainable way to mark life's significant transitions — a new baby, a first home, 
-              honoring a loved one, or any of life's precious moments.
+              A simple, sustainable way to mark life's significant transitions — a new baby, a first home in Austin, honoring a loved one, or any moment worth remembering. Our certified arborists select and plant a native Texas tree on your property, professionally installed with a personalized aftercare guide.
             </p>
             <p className="text-foreground font-semibold mb-6" style={{ fontSize: 'var(--text-base)' }}>
               Current clients: Free · New clients: $50 + tax

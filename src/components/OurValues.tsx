@@ -8,32 +8,32 @@ import imgSatisfaction from "@/assets/value-satisfaction.jpg";
 const values = [
   {
     title: "Client-Focused Results",
-    body: "We listen first, then build a customized plan that aligns with your vision — from estimate to cleanup.",
+    body: "We listen to what you want for your property, then build a written scope with photos so you know exactly what happens before we touch a single branch.",
     image: imgClient,
   },
   {
     title: "Unmatched Expertise",
-    body: "15+ years tending Austin's urban forest. Passionate tree advocates, not just skilled technicians.",
+    body: "Fifteen years caring for Austin's urban forest. We have seen every storm season, every drought cycle, and every oak wilt outbreak. We know these trees.",
     image: imgExpertise,
   },
   {
     title: "Safety First",
-    body: "Every project follows ANSI A300 standards. Fully insured. Your property and our crew, always protected.",
+    body: "Every job follows ANSI A300 industry standards. Fully insured with liability and workers' compensation coverage. Your property and our crew are always protected.",
     image: imgSafety,
   },
   {
     title: "Affordability and Quality",
-    body: "Quality work that doesn't break the bank. Free estimates and 30-minute site visits, always.",
+    body: "Competitive pricing without cutting corners. Free estimates and free 30-minute site visits on every job. We will tell you what it actually costs before you commit.",
     image: imgAffordable,
   },
   {
     title: "Immaculate Job Sites",
-    body: "We don't leave until your landscape is in pristine condition. Clean site, every time.",
+    body: "We do not leave until every branch, log, and piece of debris is cleared from your property. Clean site, every single time.",
     image: imgClean,
   },
   {
     title: "Satisfaction Guarantee",
-    body: "We stand behind every job. Not fully satisfied? We'll make it right.",
+    body: "We stand behind every job we do in Austin. Not fully satisfied with the result? We come back and make it right. No argument, no runaround.",
     image: imgSatisfaction,
   },
 ];
