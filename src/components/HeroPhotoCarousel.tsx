@@ -4,7 +4,7 @@ type HeroPhotoCarouselProps = {
   images: string[];
   alt: string;
   intervalMs?: number;
-  variant?: "card" | "background" | "mobile";
+  variant?: "card" | "background" | "mobile" | "mobile-peek";
 };
 
 const HeroPhotoCarousel = ({
