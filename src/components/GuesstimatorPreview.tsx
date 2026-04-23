@@ -69,15 +69,13 @@ const GuesstimatorPreview = () => {
               rough estimate based on your tree's size — no personal info
               required.
             </p>
-            <p className="text-foreground/70 text-sm">
-              Or call for a free estimate:{" "}
-              <a
-                href="tel:5129128733"
-                className="text-secondary font-semibold hover:text-secondary/80"
-              >
-                512-912-8733
-              </a>
-            </p>
+            <a
+              href="tel:5129128733"
+              className="inline-flex items-center gap-3 border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground font-bold rounded-xl px-6 py-3 transition-colors"
+            >
+              <span className="uppercase tracking-wider text-xs">Or call for a free estimate</span>
+              <span className="text-base">512-912-8733</span>
+            </a>
           </div>
 
           {/* RIGHT — interactive preview card */}
