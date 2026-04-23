@@ -102,11 +102,11 @@ const HeroPhotoCarousel = ({
 
             const styleByPosition: Record<typeof position, string> = {
               center:
-                "left-1/2 -translate-x-1/2 w-[78%] aspect-[4/3] z-20 opacity-100 shadow-[0_20px_40px_-15px_hsl(var(--foreground)/0.35)]",
-              left: "left-0 -translate-x-[35%] w-[40%] aspect-[4/3] z-10 opacity-70",
-              right: "right-0 translate-x-[35%] w-[40%] aspect-[4/3] z-10 opacity-70",
+                "left-1/2 -translate-x-1/2 w-[92%] aspect-[4/3] z-20 opacity-100 shadow-[0_20px_40px_-15px_hsl(var(--foreground)/0.35)]",
+              left: "left-0 -translate-x-[78%] w-[42%] aspect-[4/3] z-10 opacity-70",
+              right: "right-0 translate-x-[78%] w-[42%] aspect-[4/3] z-10 opacity-70",
               hidden:
-                "left-1/2 -translate-x-1/2 w-[78%] aspect-[4/3] opacity-0 pointer-events-none",
+                "left-1/2 -translate-x-1/2 w-[92%] aspect-[4/3] opacity-0 pointer-events-none",
             };
 
             return (
