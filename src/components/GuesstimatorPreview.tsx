@@ -71,7 +71,7 @@ const GuesstimatorPreview = () => {
             </p>
             <a
               href="tel:5129128733"
-              className="inline-flex flex-col items-center text-center border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground rounded-xl px-6 py-3 transition-colors leading-tight"
+              className="mx-auto sm:mx-0 flex flex-col items-center text-center w-fit border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground rounded-xl px-6 py-3 transition-colors leading-tight"
             >
               <span className="uppercase tracking-wider text-[11px] font-semibold opacity-80">
                 Or call for a free estimate
