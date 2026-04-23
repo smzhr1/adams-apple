@@ -24,6 +24,60 @@ const HeroPhotoCarousel = ({
     return () => window.clearInterval(id);
   }, [images.length, intervalMs]);
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX.current;
+    if (Math.abs(dx) > 40) {
+      setActive((i) =>
+        dx < 0 ? (i + 1) % images.length : (i - 1 + images.length) % images.length,
+      );
+    }
+    touchStartX.current = null;
+  };
+
+  if (variant === "mobile") {
+    return (
+      <div
+        className="relative aspect-[4/3] w-full overflow-hidden rounded-xl shadow-[0_20px_40px_-15px_hsl(var(--foreground)/0.3)]"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        {images.map((src, i) => (
+          <img
+            key={src}
+            src={src}
+            alt={alt}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1200ms] ease-in-out ${
+              i === active ? "opacity-100" : "opacity-0"
+            }`}
+            width={1200}
+            height={900}
+            loading={i === 0 ? "eager" : "lazy"}
+          />
+        ))}
+
+        {images.length > 1 && (
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => setActive(i)}
+                aria-label={`Show photo ${i + 1}`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  i === active ? "w-6 bg-background" : "w-1.5 bg-background/60 hover:bg-background/80"
+                }`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
+
   if (variant === "background") {
     return (
       <div className="absolute inset-0 w-full h-full">
