@@ -263,9 +263,12 @@ const ServicePage = () => {
           </div>
         </section>
 
+        {/* GOOGLE REVIEWS */}
+        <GoogleReviews />
+
         {/* PARTNERSHIPS */}
         {service.partnerships && (
-          <section className="py-20 bg-background">
+          <section className="py-20 bg-muted">
             <div className="container mx-auto px-4 max-w-5xl">
               <div className="text-center mb-12">
                 <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
