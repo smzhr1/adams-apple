@@ -17,7 +17,7 @@ const reviews: Review[] = [
     timeAgo: "2 weeks ago",
     rating: 5,
     text: "I took bids from more than 10 tree service firms and not only was yours among the lowest, but you did exactly what I wanted and didn't try to upsell me on anything. Highly recommend Adam's Apple to anyone in Austin.",
-    avatarColor: "bg-primary",
+    avatarColor: "bg-clay",
   },
   {
     name: "Shelby T.",
@@ -25,7 +25,7 @@ const reviews: Review[] = [
     timeAgo: "1 month ago",
     rating: 5,
     text: "They did such a great job that my neighbor ended up hiring them to trim her tree as well. Adam's Apple is by far the best tree service I've worked with.",
-    avatarColor: "bg-secondary",
+    avatarColor: "bg-bark",
   },
   {
     name: "Robert M.",
@@ -41,7 +41,7 @@ const reviews: Review[] = [
     timeAgo: "2 months ago",
     rating: 5,
     text: "At no point along the way did I feel like they were pressuring me to expand my scope beyond what I asked them to do. Honest pricing and quality work.",
-    avatarColor: "bg-primary",
+    avatarColor: "bg-secondary",
   },
   {
     name: "Alex P.",
@@ -49,7 +49,7 @@ const reviews: Review[] = [
     timeAgo: "3 months ago",
     rating: 5,
     text: "I used them to manage all tree related work on our 200+ homes under my portfolio. Could not be happier with the service they provide. Truly a top-tier crew.",
-    avatarColor: "bg-secondary",
+    avatarColor: "bg-clay",
   },
   {
     name: "Jennifer K.",
@@ -57,7 +57,7 @@ const reviews: Review[] = [
     timeAgo: "3 months ago",
     rating: 5,
     text: "ISA Certified Arborist took the time to walk our property and explain exactly what each tree needed. No pressure, just expert advice. Booked them on the spot.",
-    avatarColor: "bg-accent",
+    avatarColor: "bg-bark",
   },
 ];
 
