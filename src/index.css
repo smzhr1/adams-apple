@@ -77,6 +77,10 @@
     --muted-foreground: 110 10% 60%;
     --accent: 48 100% 48%;
     --accent-foreground: 30 33% 11%;
+    --bark: 30 33% 18%;
+    --bark-foreground: 0 0% 100%;
+    --clay: 18 55% 48%;
+    --clay-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
     --border: 30 15% 20%;
