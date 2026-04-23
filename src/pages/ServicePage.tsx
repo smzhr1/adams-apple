@@ -7,6 +7,7 @@ import ServiceAreas from "@/components/ServiceAreas";
 import CTASection from "@/components/CTASection";
 import GuesstimatorPreview from "@/components/GuesstimatorPreview";
 import HeroPhotoCarousel from "@/components/HeroPhotoCarousel";
+import heroLeafPattern from "@/assets/hero-leaf-pattern.png";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -62,7 +63,17 @@ const ServicePage = () => {
           </div>
 
           {/* Left panel — extends edge-to-edge on small screens; ~50% on large */}
-          <div className="absolute inset-y-0 left-0 w-full lg:w-1/2 bg-card" aria-hidden="true" />
+          <div className="absolute inset-y-0 left-0 w-full lg:w-1/2 bg-card" aria-hidden="true">
+            <div
+              className="absolute inset-0 opacity-70 mix-blend-multiply pointer-events-none"
+              style={{
+                backgroundImage: `url(${heroLeafPattern})`,
+                backgroundSize: "700px auto",
+                backgroundRepeat: "repeat",
+              }}
+              aria-hidden="true"
+            />
+          </div>
           {/* Gradient seam between panel and photo */}
           <div className="hidden lg:block absolute inset-y-0 left-1/2 w-[14%] bg-gradient-to-r from-card to-transparent pointer-events-none" aria-hidden="true" />
 
