@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type HeroPhotoCarouselProps = {
   images: string[];
   alt: string;
   intervalMs?: number;
-  variant?: "card" | "background";
+  variant?: "card" | "background" | "mobile";
 };
 
 const HeroPhotoCarousel = ({
@@ -14,6 +14,7 @@ const HeroPhotoCarousel = ({
   variant = "card",
 }: HeroPhotoCarouselProps) => {
   const [active, setActive] = useState(0);
+  const touchStartX = useRef<number | null>(null);
 
   useEffect(() => {
     if (images.length <= 1) return;
