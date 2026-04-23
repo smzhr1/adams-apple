@@ -193,38 +193,8 @@ const ServicePage = () => {
         {/* TREE REMOVAL GUESSTIMATOR */}
         {service.showGuesstimator && <GuesstimatorPreview />}
 
-        {/* WHY CHOOSE US */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <div className="text-center mb-10">
-              <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
-                What Sets Us Apart
-              </p>
-              <h2 className="font-heading font-bold text-foreground">
-                {service.whyChoose.headline}
-              </h2>
-            </div>
-            <div className="space-y-5">
-              {service.whyChoose.paragraphs.map((p, i) => (
-                <p
-                  key={i}
-                  className="text-muted-foreground leading-relaxed"
-                  style={{ fontSize: "var(--text-md)" }}
-                >
-                  {p}
-                </p>
-              ))}
-            </div>
-            <div className="text-center mt-10">
-              <Button variant="cta" size="xl" asChild>
-                <a href="/#estimate">Get a Free Estimate</a>
-              </Button>
-            </div>
-          </div>
-        </section>
-
         {/* INCLUDED WITH EVERY */}
-        <section className="py-20 bg-muted">
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="rounded-2xl overflow-hidden aspect-[4/3] shadow-lg">
@@ -258,6 +228,36 @@ const ServicePage = () => {
                   <a href="/#estimate">Schedule My Estimate</a>
                 </Button>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* WHY CHOOSE US */}
+        <section className="py-20 bg-muted">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <div className="text-center mb-10">
+              <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
+                What Sets Us Apart
+              </p>
+              <h2 className="font-heading font-bold text-foreground">
+                {service.whyChoose.headline}
+              </h2>
+            </div>
+            <div className="space-y-5">
+              {service.whyChoose.paragraphs.map((p, i) => (
+                <p
+                  key={i}
+                  className="text-muted-foreground leading-relaxed"
+                  style={{ fontSize: "var(--text-md)" }}
+                >
+                  {p}
+                </p>
+              ))}
+            </div>
+            <div className="text-center mt-10">
+              <Button variant="cta" size="xl" asChild>
+                <a href="/#estimate">Get a Free Estimate</a>
+              </Button>
             </div>
           </div>
         </section>
