@@ -149,10 +149,10 @@ const GuesstimatorPreview = () => {
 
               <a
                 href="/contact#contact-form"
-                className="group bg-secondary hover:bg-secondary/90 transition-colors rounded-xl px-5 py-4 mt-6 flex items-center justify-between gap-4 cursor-pointer"
+                className="group bg-secondary hover:bg-secondary/90 transition-colors rounded-xl px-5 py-5 mt-6 flex flex-col items-center text-center gap-3 cursor-pointer"
                 aria-label="Get an exact quote — go to contact form"
               >
-                <div className="min-w-0 leading-tight">
+                <div className="leading-tight">
                   <p className="text-secondary-foreground font-heading font-bold text-2xl md:text-3xl">
                     ${estimate.low.toLocaleString()} – ${estimate.high.toLocaleString()}
                   </p>
@@ -160,7 +160,7 @@ const GuesstimatorPreview = () => {
                     Rough estimate
                   </p>
                 </div>
-                <span className="shrink-0 inline-flex items-center justify-center bg-accent text-accent-foreground font-bold uppercase tracking-wider text-xs rounded-lg px-4 py-2.5 shadow-md group-hover:shadow-lg group-hover:bg-accent/90 transition-all whitespace-nowrap leading-none">
+                <span className="inline-flex items-center justify-center bg-accent text-accent-foreground font-bold uppercase tracking-wider text-xs rounded-lg px-5 py-2.5 shadow-md group-hover:shadow-lg group-hover:bg-accent/90 transition-all whitespace-nowrap leading-none">
                   Get Exact Quote →
                 </span>
               </a>
