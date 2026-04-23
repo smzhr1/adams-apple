@@ -57,8 +57,8 @@ const ServicePage = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-card via-card/70 to-transparent lg:via-card/40" />
             {/* Mobile: extra overlay so text remains readable */}
             <div className="absolute inset-0 bg-card/75 lg:hidden" />
-            {/* Soft bottom fade into page background */}
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
+            {/* Soft bottom fade matching left panel tint */}
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-card to-transparent" />
           </div>
 
           {/* Left panel — extends edge-to-edge on small screens; ~50% on large */}
