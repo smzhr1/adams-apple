@@ -49,7 +49,7 @@ const ServicePage = () => {
           {(() => {
             const heroImgs = service.heroImages?.length ? service.heroImages : [service.heroImage];
             return heroImgs.length > 1 ? (
-              <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-foreground/10 z-30 pointer-events-none">
+              <div className="absolute bottom-0 left-0 right-0 h-px bg-foreground/10 z-30 pointer-events-none">
                 <div
                   key={heroImgs.length}
                   className="h-full bg-secondary origin-left"
