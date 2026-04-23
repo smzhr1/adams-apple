@@ -12,7 +12,7 @@ const CTASection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/70 to-foreground/50" />
       <div className="relative container mx-auto px-4 text-center max-w-2xl">
         <h2 className="font-heading font-bold text-primary-foreground mb-6">
-          Get a FREE Estimate!
+          Get a Free Estimate in Austin, TX
         </h2>
         <p className="text-primary-foreground/80 max-w-xl mx-auto mb-10" style={{ fontSize: 'var(--text-md)', lineHeight: 1.65 }}>
           Contact us today by calling or texting{" "}

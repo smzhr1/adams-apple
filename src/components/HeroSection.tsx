@@ -27,13 +27,12 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10 py-20">
         <div className="max-w-2xl space-y-8 animate-fade-in">
           <h1 className="text-primary-foreground leading-[1.05] text-[38px] md:text-5xl lg:text-[length:var(--text-hero)] pt-8 md:pt-0">
-            Your Favorite Austin<br />
+            Your Local Austin<br />
             <span className="text-accent">Tree Service</span>
           </h1>
 
           <p className="text-primary-foreground/80 max-w-lg" style={{ fontSize: 'var(--text-lg)', lineHeight: 1.6 }}>
-            Adam's Apple Tree Service is your local Austin tree care experts
-            specializing in the maintenance and longevity of trees.
+            Adam's Apple Tree Service has been caring for Austin's trees since 2008. Our ISA certified arborists handle tree removal, tree trimming, emergency service, and oak wilt treatment across Austin and surrounding Central Texas communities.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-2">

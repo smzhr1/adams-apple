@@ -7,16 +7,24 @@ import {
 
 const faqs = [
   {
-    q: "How much does tree trimming or tree removal cost?",
-    a: "Pricing depends on the size, species, location, and condition of your tree. We provide free on-site estimates so you get an accurate quote — no vague ranges. Call or text 512-912-8733 to schedule yours.",
+    q: "How much does tree removal cost in Austin, TX?",
+    a: "Tree removal in Austin typically ranges from $300 to $3,000 or more depending on tree size, location, complexity, and whether a city permit is required. Use our free Tree Removal Guesstimator for an instant range on your specific tree, or call us for a free on-site estimate.",
   },
   {
-    q: "Why should I trim my trees?",
-    a: "Regular trimming removes dead or diseased branches, improves structure, reduces storm damage risk, and keeps your trees looking great. It also promotes healthy growth and can extend the life of your trees.",
+    q: "Do I need a permit to remove a tree in Austin?",
+    a: "Yes, if the tree is a Heritage Tree — meaning it is 19 inches or more in diameter measured at 4.5 feet from the ground, and is a protected species such as a live oak, cedar elm, pecan, or bald cypress. Trees over 24 inches in diameter face additional restrictions. Adam's Apple handles the permit application and arborist documentation for you.",
   },
   {
-    q: "How often should I trim my trees?",
-    a: "Most trees benefit from pruning every 2–3 years, though fast-growing species or trees near structures may need annual attention. Our arborists can recommend the right schedule during a free site visit.",
+    q: "When is it safe to trim oak trees in Austin?",
+    a: "July through January is the safe pruning window for oak trees in Austin. The city and Texas A&M Forest Service recommend against pruning oaks from February 1 through June 30 when nitidulid beetles are active and can spread oak wilt fungus through fresh cuts. Emergency storm damage is exempt but requires immediate wound sealing.",
+  },
+  {
+    q: "What is oak wilt and is it common in Austin?",
+    a: "Oak wilt is a fatal fungal disease that spreads through root grafts and sap beetles. It is extremely common in Austin, particularly in South Austin neighborhoods like Shady Hollow, Circle C, and the live oak belts throughout Travis County. Early treatment with propiconazole trunk injections can save infected trees if caught before the disease has progressed. Contact us for a free assessment if you suspect oak wilt on your property.",
+  },
+  {
+    q: "How quickly can you respond to a tree emergency in Austin?",
+    a: "For tree emergencies in Austin — fallen trees, storm damage, hazardous limbs over structures — we aim to have an arborist on-site within one to three hours. Call 512-912-8733 directly for the fastest response. We serve all Austin neighborhoods and can assist with insurance documentation and damage reports.",
   },
 ];
 
@@ -29,12 +37,12 @@ const FAQSection = () => {
             Frequently Asked Questions
           </p>
           <p className="text-muted-foreground text-lg">
-            If you have other questions or are ready to schedule, please call or text us at{" "}
+            For other questions or to schedule, call or text us at{" "}
             <a href="tel:5129128733" className="text-primary font-semibold hover:underline">512-912-8733</a>{" "}
-            or email us at{" "}
+            or email{" "}
             <a href="mailto:info@adamsappletreeservice.com" className="text-primary font-semibold hover:underline">
               info@adamsappletreeservice.com
-            </a>
+            </a>.
           </p>
         </div>
 

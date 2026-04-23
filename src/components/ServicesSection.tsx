@@ -8,40 +8,40 @@ import imgLegacy from "@/assets/service-legacy.jpg";
 
 const services = [
   {
-    title: "Tree Removal",
+    title: "Tree Removal Austin, TX",
     slug: "tree-removal",
     image: imgRemoval,
-    description: "Safe and efficient tree removals will remove hazardous, dead, or unwanted trees on your property.",
+    description: "Safe, efficient removal of hazardous, dead, or unwanted trees. We handle city permits for Heritage Trees and provide flat-rate quotes before any work begins.",
   },
   {
-    title: "Tree Pruning & Tree Trimming",
+    title: "Tree Trimming and Pruning Austin, TX",
     slug: "tree-pruning-trimming",
     image: imgPruning,
-    description: "Expert tree pruning and trimming to remove dead, diseased, and damaged branches or to enhance the structure of your trees.",
+    description: "Structural pruning, dead wood removal, and crown shaping following ANSI A300 standards. We follow Austin's oak pruning guidelines to protect your trees from oak wilt.",
   },
   {
-    title: "Tree Planting",
+    title: "Tree Planting Austin, TX",
     slug: "tree-planting",
     image: imgPlanting,
-    description: "We will select, deliver, and plant trees as large as 45-gallons with maintenance plans to ensure proper care.",
+    description: "Native species selection, delivery, and professional installation up to 45-gallon containers. Includes a personalized aftercare plan from our certified arborist.",
   },
   {
     title: "Soil Amendments and Care",
     slug: "soil-amendments",
     image: imgSoil,
-    description: "We care deeply for the soil holding your trees — improving composition and introducing additional organic matter.",
+    description: "Deep root health starts with the soil. We improve composition and introduce organic matter to support long-term tree vitality in Austin's challenging limestone and clay soils.",
   },
   {
-    title: "Emergency Services",
+    title: "Emergency Tree Service Austin, TX",
     slug: "emergency",
     image: imgEmergency,
-    description: "Life happens — call us and we will handle fallen branches or trees as quickly as possible.",
+    description: "Storm damage, fallen trees, and hazardous limbs handled fast. Our crew is available for emergency callouts across Austin. Call 512-912-8733 for same-day response.",
   },
   {
-    title: "Legacy Tree Program",
+    title: "Arborist Reports and Professional Services",
     slug: "legacy-tree-program",
     image: imgLegacy,
-    description: "Celebrate life's milestones with a native Texas tree — free for existing clients to mark a birth, anniversary, memorial, or any moment worth rooting in the ground.",
+    description: "ISA certified arborist reports for insurance claims, city permit applications, Heritage Tree assessments, and construction protection plans.",
   },
 ];
 
@@ -57,9 +57,8 @@ const ServicesSection = () => {
             Austin Tree Service Designed for You
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto" style={{ fontSize: 'var(--text-md)' }}>
-            For more details about a specific service, please visit one of the many service pages available. 
-            If you would like a quick response, please call or text us at{" "}
-            <a href="tel:5129128733" className="text-primary font-semibold hover:underline">512-912-8733</a>.
+            From routine trimming to emergency storm cleanup, our certified arborists handle every aspect of tree care across Austin, TX. Visit a service page for full details or call us at{" "}
+            <a href="tel:5129128733" className="text-primary font-semibold hover:underline">512-912-8733</a> for a fast response.
           </p>
         </div>
 

@@ -4,17 +4,17 @@ const items = [
   {
     icon: Clock,
     title: "Free 30-Min Site Visit",
-    desc: "Every estimate includes an on-site assessment. No guessing, no vague ranges. We align before any work is started.",
+    desc: "Every Austin estimate includes an on-site assessment with your certified arborist. No guessing, no vague ranges. We align on scope before any work is started.",
   },
   {
     icon: DollarSign,
     title: "No Deposit Required",
-    desc: "Work starts, you pay when it's done. Zero upfront commitment required on any job.",
+    desc: "Work starts when you are ready. You pay when the job is done and you are satisfied. Zero upfront commitment on any Austin tree service job.",
   },
   {
     icon: Award,
     title: "ISA Certified Arborists on Staff",
-    desc: "Neil (TX-4612A) and Geoff (TX-5212A) on staff. Not just a crew — certified expertise on every project.",
+    desc: "Neil Myers (TX-4612A) and Geoff Oliver (TX-5212A) are on staff for every project. Not a crew that shows up and figures it out — certified expertise from assessment to cleanup.",
   },
 ];
 
