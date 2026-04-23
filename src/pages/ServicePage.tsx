@@ -6,6 +6,7 @@ import AccreditationStrip from "@/components/AccreditationStrip";
 import ServiceAreas from "@/components/ServiceAreas";
 import CTASection from "@/components/CTASection";
 import GuesstimatorPreview from "@/components/GuesstimatorPreview";
+import GoogleReviews from "@/components/GoogleReviews";
 import HeroPhotoCarousel from "@/components/HeroPhotoCarousel";
 import { Button } from "@/components/ui/button";
 import {
