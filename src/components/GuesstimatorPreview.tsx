@@ -71,10 +71,12 @@ const GuesstimatorPreview = () => {
             </p>
             <a
               href="tel:5129128733"
-              className="inline-flex items-center gap-3 border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground font-bold rounded-xl px-6 py-3 transition-colors"
+              className="inline-flex flex-col items-start border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground rounded-xl px-6 py-3 transition-colors leading-tight"
             >
-              <span className="uppercase tracking-wider text-xs">Or call for a free estimate</span>
-              <span className="text-base">512-912-8733</span>
+              <span className="uppercase tracking-wider text-[11px] font-semibold opacity-80">
+                Or call for a free estimate
+              </span>
+              <span className="text-lg font-bold mt-0.5">512-912-8733</span>
             </a>
           </div>
 
@@ -150,15 +152,15 @@ const GuesstimatorPreview = () => {
                 className="group bg-secondary hover:bg-secondary/90 transition-colors rounded-xl px-5 py-4 mt-6 flex items-center justify-between gap-4 cursor-pointer"
                 aria-label="Get an exact quote — go to contact form"
               >
-                <div className="min-w-0">
-                  <p className="text-secondary-foreground font-heading font-bold text-2xl md:text-3xl leading-tight">
+                <div className="min-w-0 leading-tight">
+                  <p className="text-secondary-foreground font-heading font-bold text-2xl md:text-3xl">
                     ${estimate.low.toLocaleString()} – ${estimate.high.toLocaleString()}
                   </p>
-                  <p className="text-secondary-foreground/85 text-xs">
+                  <p className="text-secondary-foreground/85 text-xs mt-1">
                     Rough estimate
                   </p>
                 </div>
-                <span className="shrink-0 inline-flex items-center gap-2 bg-accent text-accent-foreground font-bold uppercase tracking-wider text-xs md:text-sm rounded-lg px-4 py-2.5 shadow-md group-hover:shadow-lg group-hover:bg-accent/90 transition-all">
+                <span className="shrink-0 inline-flex items-center justify-center bg-accent text-accent-foreground font-bold uppercase tracking-wider text-xs rounded-lg px-4 py-2.5 shadow-md group-hover:shadow-lg group-hover:bg-accent/90 transition-all whitespace-nowrap leading-none">
                   Get Exact Quote →
                 </span>
               </a>
