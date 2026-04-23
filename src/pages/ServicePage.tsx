@@ -90,7 +90,7 @@ const ServicePage = () => {
                 <HeroPhotoCarousel
                   images={service.heroImages?.length ? service.heroImages : [service.heroImage]}
                   alt={service.title}
-                  variant={slug === "tree-removal" ? "mobile-peek" : "mobile"}
+                  variant="mobile-peek"
                 />
               </div>
 
