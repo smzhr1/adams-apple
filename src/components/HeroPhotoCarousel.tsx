@@ -38,7 +38,7 @@ const HeroPhotoCarousel = ({
     touchStartX.current = null;
   };
 
-  if (variant === "mobile") {
+  if (variant === "mobile-peek") {
     const count = images.length;
     const prevIdx = (active - 1 + count) % count;
     const nextIdx = (active + 1) % count;
