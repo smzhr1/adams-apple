@@ -27,7 +27,6 @@ const Index = () => {
       <DifferentiatorStrip />
       <OurValues />
       <MeetTheTeam />
-      <ReviewsSection />
       <GoogleReviews />
       <LegacyTreeProgram />
       <ServiceAreas />
