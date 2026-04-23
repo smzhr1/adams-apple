@@ -39,6 +39,24 @@ const HeroPhotoCarousel = ({
             loading={i === 0 ? "eager" : "lazy"}
           />
         ))}
+
+        {images.length > 1 && (
+          <div className="absolute right-5 md:right-8 top-1/2 -translate-y-1/2 flex flex-col gap-2 z-10">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => setActive(i)}
+                aria-label={`Show photo ${i + 1}`}
+                className={`w-1.5 rounded-full transition-all duration-300 ${
+                  i === active
+                    ? "h-8 bg-background"
+                    : "h-1.5 bg-background/50 hover:bg-background/80"
+                }`}
+              />
+            ))}
+          </div>
+        )}
       </div>
     );
   }
