@@ -28,6 +28,7 @@ const Index = () => {
       <OurValues />
       <MeetTheTeam />
       <ReviewsSection />
+      <GoogleReviews />
       <LegacyTreeProgram />
       <ServiceAreas />
       <FAQSection />
