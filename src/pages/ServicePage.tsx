@@ -46,6 +46,18 @@ const ServicePage = () => {
       <main>
         {/* HERO — split: mid forest left, photo right, gradient transition */}
         <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-[hsl(110,50%,97%)]">
+          {(() => {
+            const heroImgs = service.heroImages?.length ? service.heroImages : [service.heroImage];
+            return heroImgs.length > 1 ? (
+              <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-foreground/10 z-30 pointer-events-none">
+                <div
+                  key={heroImgs.length}
+                  className="h-full bg-secondary origin-left"
+                  style={{ animation: `hero-progress 5500ms linear infinite` }}
+                />
+              </div>
+            ) : null;
+          })()}
           {/* Right side photo */}
           <div className="absolute inset-y-0 right-0 w-full lg:w-[58%]">
             <HeroPhotoCarousel
