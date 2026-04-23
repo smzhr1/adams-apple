@@ -8,6 +8,7 @@ import DifferentiatorStrip from "@/components/DifferentiatorStrip";
 import OurValues from "@/components/OurValues";
 import MeetTheTeam from "@/components/MeetTheTeam";
 import ReviewsSection from "@/components/ReviewsSection";
+import GoogleReviews from "@/components/GoogleReviews";
 import LegacyTreeProgram from "@/components/LegacyTreeProgram";
 import ServiceAreas from "@/components/ServiceAreas";
 import FAQSection from "@/components/FAQSection";
