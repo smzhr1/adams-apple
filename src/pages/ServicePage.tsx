@@ -239,7 +239,7 @@ const ServicePage = () => {
         {service.showGuesstimator && <GuesstimatorPreview />}
 
         {/* INCLUDED WITH EVERY */}
-        <section className="py-20 bg-background">
+        <section className={`py-20 ${slug === "tree-pruning-trimming" ? "bg-muted" : "bg-background"}`}>
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="rounded-2xl overflow-hidden aspect-[4/3] shadow-lg">
