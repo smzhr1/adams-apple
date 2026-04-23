@@ -38,6 +38,46 @@ const HeroPhotoCarousel = ({
     touchStartX.current = null;
   };
 
+  if (variant === "mobile") {
+    return (
+      <div
+        className="relative aspect-[4/3] w-full overflow-hidden rounded-xl shadow-[0_20px_40px_-15px_hsl(var(--foreground)/0.3)]"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        {images.map((src, i) => (
+          <img
+            key={src}
+            src={src}
+            alt={alt}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1200ms] ease-in-out ${
+              i === active ? "opacity-100" : "opacity-0"
+            }`}
+            width={1200}
+            height={900}
+            loading={i === 0 ? "eager" : "lazy"}
+          />
+        ))}
+
+        {images.length > 1 && (
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => setActive(i)}
+                aria-label={`Show photo ${i + 1}`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  i === active ? "w-6 bg-background" : "w-1.5 bg-background/60 hover:bg-background/80"
+                }`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
+
   if (variant === "mobile-peek") {
     const count = images.length;
     const prevIdx = (active - 1 + count) % count;
