@@ -44,29 +44,24 @@ const ServicePage = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        {/* HERO — split: mid forest left, photo right, gradient transition */}
-        <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-card">
-          {/* Right side photo */}
-          <div className="absolute inset-y-0 right-0 w-full lg:w-[58%]">
+        {/* HERO — desktop: split panel + photo. Mobile: stacked text, then photo */}
+        <section className="relative overflow-hidden bg-card lg:min-h-[88vh] lg:flex lg:items-center">
+          {/* DESKTOP photo (right side, absolute) */}
+          <div className="hidden lg:block absolute inset-y-0 right-0 w-[58%]">
             <HeroPhotoCarousel
               images={service.heroImages?.length ? service.heroImages : [service.heroImage]}
               alt={service.title}
               variant="background"
             />
-            {/* Gradient transition from panel into photo */}
-            <div className="absolute inset-0 bg-gradient-to-r from-card via-card/70 to-transparent lg:via-card/40" />
-            {/* Mobile: extra overlay so text remains readable */}
-            <div className="absolute inset-0 bg-card/75 lg:hidden" />
-            {/* Soft bottom fade matching left panel tint */}
+            <div className="absolute inset-0 bg-gradient-to-r from-card via-card/40 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-card to-transparent" />
           </div>
 
-          {/* Left panel — extends edge-to-edge on small screens; ~50% on large */}
-          <div className="absolute inset-y-0 left-0 w-full lg:w-1/2 bg-card" aria-hidden="true" />
-          {/* Gradient seam between panel and photo */}
+          {/* DESKTOP left panel */}
+          <div className="hidden lg:block absolute inset-y-0 left-0 w-1/2 bg-card" aria-hidden="true" />
           <div className="hidden lg:block absolute inset-y-0 left-1/2 w-[14%] bg-gradient-to-r from-card to-transparent pointer-events-none" aria-hidden="true" />
 
-          <div className="container mx-auto px-4 relative z-10 py-20 md:py-24">
+          <div className="container mx-auto px-4 relative z-10 pt-14 pb-10 md:pt-20 md:pb-14 lg:py-24">
             <div className="max-w-2xl space-y-7 animate-fade-in">
               <div className="flex items-center gap-3">
                 <span className="block w-10 h-px bg-secondary" aria-hidden="true" />
@@ -110,6 +105,15 @@ const ServicePage = () => {
                     <Phone className="w-5 h-5" /> 512-912-8733
                   </a>
                 </Button>
+              </div>
+
+              {/* MOBILE-only photo carousel block (visible, swipeable) */}
+              <div className="lg:hidden pt-4">
+                <HeroPhotoCarousel
+                  images={service.heroImages?.length ? service.heroImages : [service.heroImage]}
+                  alt={service.title}
+                  variant="mobile"
+                />
               </div>
 
               {/* Stats bar */}
