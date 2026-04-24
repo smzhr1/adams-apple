@@ -168,13 +168,11 @@ const ServicePage = () => {
                     {service.offerings[0].body}
                   </p>
                   {service.offerings[0].cta && (
-                    <a
-                      href={service.offerings[0].cta!.href}
-                      className="inline-flex items-center gap-1.5 text-primary font-semibold hover:underline"
-                    >
-                      {service.offerings[0].cta!.label}{" "}
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
+                    <Button variant="cta" size="lg" className="uppercase tracking-wider text-[15px] font-bold" asChild>
+                      <a href={service.offerings[0].cta!.href}>
+                        {service.offerings[0].cta!.label}
+                      </a>
+                    </Button>
                   )}
                 </div>
                 <div className="rounded-2xl overflow-hidden aspect-[4/3] shadow-lg order-first lg:order-last">
