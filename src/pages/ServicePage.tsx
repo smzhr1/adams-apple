@@ -496,7 +496,7 @@ const ServicePage = () => {
           </section>
         )}
 
-        <ServiceAreas bgClassName={service.showGuesstimator ? "bg-background" : "bg-muted"} />
+        <ServiceAreas />
         <CTASection />
       </main>
       <Footer />
