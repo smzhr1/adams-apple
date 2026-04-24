@@ -170,30 +170,39 @@ const LocationPage = () => {
                   <CardWrapper
                     key={service.title}
                     {...wrapperProps}
-                    className="group flex flex-col bg-[hsl(110,41%,42%)] rounded-2xl overflow-hidden border border-[hsl(110,41%,38%)] hover:shadow-lg transition-all duration-300 p-6"
+                    className="group flex flex-col bg-[hsl(110,41%,42%)] rounded-2xl overflow-hidden border border-[hsl(110,41%,38%)] hover:shadow-lg transition-all duration-300"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-primary-foreground/15 flex items-center justify-center mb-4">
-                      <service.icon className="w-6 h-6 text-primary-foreground" />
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                        width={800}
+                        height={600}
+                      />
                     </div>
-                    <h3
-                      className="font-heading font-semibold text-primary-foreground mb-2"
-                      style={{ fontSize: "var(--text-lg)" }}
-                    >
-                      {service.title}
-                    </h3>
-                    <p
-                      className="text-primary-foreground/80 mb-4 leading-relaxed flex-1"
-                      style={{ fontSize: "var(--text-base)" }}
-                    >
-                      {service.body}
-                    </p>
-                    {service.href && (
-                      <div className="flex mt-auto justify-end">
-                        <span className="inline-flex items-center justify-center gap-1.5 bg-accent text-accent-foreground font-semibold rounded-full px-4 py-1.5 text-[13px] group-hover:bg-accent/90 transition-colors">
-                          Learn More <ArrowRight className="w-3.5 h-3.5" />
-                        </span>
-                      </div>
-                    )}
+                    <div className="p-6 flex flex-col flex-1">
+                      <h3
+                        className="font-heading font-semibold text-primary-foreground mb-2"
+                        style={{ fontSize: "var(--text-lg)" }}
+                      >
+                        {service.title}
+                      </h3>
+                      <p
+                        className="text-primary-foreground/80 mb-4 leading-relaxed flex-1"
+                        style={{ fontSize: "var(--text-base)" }}
+                      >
+                        {service.body}
+                      </p>
+                      {service.href && (
+                        <div className="flex mt-auto justify-end">
+                          <span className="inline-flex items-center justify-center gap-1.5 bg-accent text-accent-foreground font-semibold rounded-full px-4 py-1.5 text-[13px] group-hover:bg-accent/90 transition-colors">
+                            Learn More <ArrowRight className="w-3.5 h-3.5" />
+                          </span>
+                        </div>
+                      )}
+                    </div>
                   </CardWrapper>
                 );
               })}

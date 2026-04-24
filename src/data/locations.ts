@@ -1,9 +1,16 @@
 import { TreePine, Scissors, AlertTriangle, Trees, Sprout, FileText, type LucideIcon } from "lucide-react";
+import imgRemoval from "@/assets/service-tree-removal.jpg";
+import imgPruning from "@/assets/service-pruning.jpg";
+import imgEmergency from "@/assets/service-emergency.jpg";
+import imgSoil from "@/assets/service-soil.jpg";
+import imgPlanting from "@/assets/service-planting.jpg";
+import imgLegacy from "@/assets/service-legacy.jpg";
 
 export type LocationService = {
   title: string;
   body: string;
   icon: LucideIcon;
+  image: string;
   href?: string;
 };
 
@@ -56,34 +63,40 @@ export const locations: Record<string, LocationContent> = {
         title: "Tree Removal Round Rock, TX",
         body: "Round Rock's older established neighborhoods have large live oaks and pecans that have been growing for 30 or more years. Big trees near fences, driveways, and structures require careful rigging and sectional removal. We assess access and overhead obstructions before quoting any job.",
         icon: TreePine,
+        image: imgRemoval,
         href: "/services/tree-removal",
       },
       {
         title: "Tree Trimming and Pruning Round Rock, TX",
         body: "The live oaks, cedar elms, and pecans in Round Rock neighborhoods like Forest Creek and Downtown Round Rock need structural pruning as they mature. Dead wood accumulation and crossing branches become a liability issue after major storm seasons. We work to the ANSI A300 standard on every job.",
         icon: Scissors,
+        image: imgPruning,
         href: "/services/tree-pruning-trimming",
       },
       {
         title: "Emergency Tree Service Round Rock, TX",
         body: "Round Rock sits in a storm corridor that sees regular high wind and hail events. When a tree comes down on a structure or blocks access, call 512-912-8733. We cover all Round Rock neighborhoods for same-day emergency response.",
         icon: AlertTriangle,
+        image: imgEmergency,
         href: "/services/emergency",
       },
       {
         title: "Stump Grinding Round Rock, TX",
         body: "Stumps from Round Rock's clay and limestone mixed soils can be stubborn to grind depending on root spread and soil depth. We bring equipment sized to the job and clear the site completely so you can sod, replant, or build over the area.",
         icon: Trees,
+        image: imgSoil,
       },
       {
         title: "Oak Wilt Treatment Round Rock, TX",
         body: "The live oaks in Teravista, Forest Creek, and the Brushy Creek corridor are connected through root systems that let oak wilt spread from one tree to multiple neighbors within a single growing season. Early treatment with propiconazole injections stops the spread before it jumps property lines.",
         icon: Sprout,
+        image: imgPlanting,
       },
       {
         title: "Arborist Reports and Professional Services",
         body: "Round Rock homeowners dealing with insurance claims after storm damage, disputes with neighbors over shared trees, or questions about city protected species need a written arborist report. We prepare documentation that meets the requirements of insurance adjusters and city building departments.",
         icon: FileText,
+        image: imgLegacy,
       },
     ],
     whyHeadline: "Why Round Rock Homeowners Choose Adam's Apple Tree Service",
