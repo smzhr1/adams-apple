@@ -64,7 +64,7 @@ const Header = () => {
                 <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-4">Areas We Serve</p>
                 <div className="grid grid-cols-2 gap-x-6 gap-y-1.5">
                   {serviceAreas.map((area) => (
-                    <a key={area} href={`/areas/${area.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors py-1">
+                    <a key={area} href={`/locations/${area.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors py-1">
                       <MapPin className="w-3.5 h-3.5 text-primary" /> {area}
                     </a>
                   ))}
