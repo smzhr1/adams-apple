@@ -201,7 +201,7 @@ const ServicePage = () => {
                     key={offering.title}
                     className="bg-card border border-border rounded-2xl overflow-hidden flex flex-col"
                   >
-                    <div className="aspect-[4/3] overflow-hidden">
+                    <div className={`overflow-hidden ${service.offerings.length === 2 ? "aspect-[16/9]" : "aspect-[4/3]"}`}>
                       <img
                         src={offering.image}
                         alt={offering.title}
