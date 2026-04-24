@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
 import Blog from "./pages/Blog.tsx";
+import FAQs from "./pages/FAQs.tsx";
 import ServicePage from "./pages/ServicePage.tsx";
 import AreaPage from "./pages/AreaPage.tsx";
 import LocationPage from "./pages/LocationPage.tsx";
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/faqs" element={<FAQs />} />
           <Route path="/services/:slug" element={<ServicePage />} />
           <Route path="/areas/:slug" element={<AreaPage />} />
           <Route path="/locations/:slug" element={<LocationPage />} />
