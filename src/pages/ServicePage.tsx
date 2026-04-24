@@ -389,7 +389,7 @@ const ServicePage = () => {
         )}
 
         {/* RELATED SERVICES */}
-        <section className={`py-20 ${service.showGuesstimator ? "bg-background" : "bg-muted"}`}>
+        <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
@@ -430,7 +430,7 @@ const ServicePage = () => {
         </section>
 
         {/* FAQ */}
-        <section className={`py-20 ${service.showGuesstimator ? "bg-background" : "bg-muted"}`}>
+        <section className="py-20 bg-muted">
           <div className="container mx-auto px-4 max-w-3xl">
             <div className="text-center mb-10">
               <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
@@ -496,7 +496,7 @@ const ServicePage = () => {
           </section>
         )}
 
-        <ServiceAreas bgClassName={service.showGuesstimator ? "bg-background" : "bg-muted"} />
+        <ServiceAreas />
         <CTASection />
       </main>
       <Footer />
