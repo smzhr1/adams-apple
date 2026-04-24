@@ -13,8 +13,8 @@ const services = [
 ];
 
 const serviceAreas = [
-  "Austin", "Westlake", "Cedar Park", "Round Rock", "Pflugerville",
-  "Bee Cave", "Lakeway", "Dripping Springs", "Leander", "Tarrytown",
+  "Georgetown", "Round Rock", "Cedar Park", "Leander", "Shady Hollow",
+  "Buda", "Bee Cave", "Rollingwood", "Manor",
 ];
 
 const Header = () => {
