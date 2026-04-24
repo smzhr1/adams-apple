@@ -21,6 +21,7 @@ export type LocationContent = {
   metaTitle: string;
   metaDescription: string;
   heroEyebrow: string;
+  geoRegion?: string;
   heroHeadline: string;
   heroSubhead: string;
   servicesHeadline: string;
