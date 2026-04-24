@@ -455,7 +455,7 @@ const ServicePage = () => {
                 <AccordionItem
                   key={idx}
                   value={`faq-${idx}`}
-                  className="bg-card border border-border rounded-xl px-6"
+                  className="bg-background border border-border rounded-xl px-6"
                 >
                   <AccordionTrigger className="text-foreground font-bold text-left text-base hover:no-underline">
                     {faq.q}
