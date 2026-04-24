@@ -21,6 +21,7 @@ export type LocationContent = {
   metaTitle: string;
   metaDescription: string;
   heroEyebrow: string;
+  geoRegion?: string;
   heroHeadline: string;
   heroSubhead: string;
   servicesHeadline: string;
@@ -47,6 +48,7 @@ export const locations: Record<string, LocationContent> = {
     metaDescription:
       "Local tree service in Round Rock, TX. Tree removal, trimming, stump grinding, emergency service and oak wilt treatment. Free estimates. Call 512-912-8733.",
     heroEyebrow: "Round Rock, TX Tree Service",
+    geoRegion: "Serving Round Rock & Williamson County",
     heroHeadline: "Tree Service in Round Rock, TX | Removal, Trimming and Emergency Care Since 2008",
     heroSubhead:
       "ISA certified arborists serving Round Rock and Williamson County since 2008. Tree removal, trimming, emergency response, stump grinding and oak wilt treatment with flat-rate pricing and free on-site estimates.",
