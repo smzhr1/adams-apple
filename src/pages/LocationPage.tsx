@@ -163,33 +163,40 @@ const LocationPage = () => {
               </h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {location.services.map((service) => (
-                <article
-                  key={service.title}
-                  className="bg-card border border-border rounded-2xl p-6 flex flex-col"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3
-                    className="font-heading font-bold text-foreground mb-3"
-                    style={{ fontSize: "var(--text-lg)" }}
+              {location.services.map((service) => {
+                const CardWrapper: any = service.href ? "a" : "article";
+                const wrapperProps = service.href ? { href: service.href } : {};
+                return (
+                  <CardWrapper
+                    key={service.title}
+                    {...wrapperProps}
+                    className="group flex flex-col bg-[hsl(110,41%,42%)] rounded-2xl overflow-hidden border border-[hsl(110,41%,38%)] hover:shadow-lg transition-all duration-300 p-6"
                   >
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed flex-1">
-                    {service.body}
-                  </p>
-                  {service.href && (
-                    <a
-                      href={service.href}
-                      className="inline-flex items-center gap-1.5 text-primary font-semibold mt-4 hover:underline"
+                    <div className="w-12 h-12 rounded-xl bg-primary-foreground/15 flex items-center justify-center mb-4">
+                      <service.icon className="w-6 h-6 text-primary-foreground" />
+                    </div>
+                    <h3
+                      className="font-heading font-semibold text-primary-foreground mb-2"
+                      style={{ fontSize: "var(--text-lg)" }}
                     >
-                      Learn more <ArrowRight className="w-4 h-4" />
-                    </a>
-                  )}
-                </article>
-              ))}
+                      {service.title}
+                    </h3>
+                    <p
+                      className="text-primary-foreground/80 mb-4 leading-relaxed flex-1"
+                      style={{ fontSize: "var(--text-base)" }}
+                    >
+                      {service.body}
+                    </p>
+                    {service.href && (
+                      <div className="flex mt-auto justify-end">
+                        <span className="inline-flex items-center justify-center gap-1.5 bg-accent text-accent-foreground font-semibold rounded-full px-4 py-1.5 text-[13px] group-hover:bg-accent/90 transition-colors">
+                          Learn More <ArrowRight className="w-3.5 h-3.5" />
+                        </span>
+                      </div>
+                    )}
+                  </CardWrapper>
+                );
+              })}
             </div>
           </div>
         </section>
