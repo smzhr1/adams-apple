@@ -114,7 +114,7 @@ const Header = () => {
             {mobileAreasOpen && (
               <div className="pl-4 space-y-1 pb-2">
                 {serviceAreas.map((area) => (
-                  <a key={area} href={`/areas/${area.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center gap-2 py-1.5 text-white/80 text-base font-bold">
+                  <a key={area} href={`/locations/${area.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center gap-2 py-1.5 text-white/80 text-base font-bold">
                     <MapPin className="w-3.5 h-3.5 text-white/70" /> {area}
                   </a>
                 ))}

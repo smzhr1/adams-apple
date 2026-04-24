@@ -53,17 +53,15 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-xl mb-4 text-accent">Service Areas</h4>
             <ul className="space-y-3 text-primary-foreground/80 text-base">
-              <li><a href="/areas/georgetown" className="hover:text-accent transition-colors">Georgetown</a></li>
-              <li><a href="/areas/round-rock" className="hover:text-accent transition-colors">Round Rock</a></li>
-              <li><a href="/areas/cedar-park" className="hover:text-accent transition-colors">Cedar Park</a></li>
-              <li><a href="/areas/leander" className="hover:text-accent transition-colors">Leander</a></li>
-              <li><a href="/areas/shady-hollow" className="hover:text-accent transition-colors">Shady Hollow</a></li>
-              <li><a href="/areas/buda" className="hover:text-accent transition-colors">Buda</a></li>
-              <li><a href="/areas/bee-cave" className="hover:text-accent transition-colors">Bee Cave</a></li>
-              <li><a href="/areas/rollingwood" className="hover:text-accent transition-colors">Rollingwood</a></li>
-              <li><a href="/areas/manor" className="hover:text-accent transition-colors">Manor</a></li>
-              <li><a href="/areas/leander" className="hover:text-accent transition-colors">Leander</a></li>
-              <li><a href="/areas/tarrytown" className="hover:text-accent transition-colors">Tarrytown</a></li>
+              <li><a href="/locations/georgetown" className="hover:text-accent transition-colors">Georgetown</a></li>
+              <li><a href="/locations/round-rock" className="hover:text-accent transition-colors">Round Rock</a></li>
+              <li><a href="/locations/cedar-park" className="hover:text-accent transition-colors">Cedar Park</a></li>
+              <li><a href="/locations/leander" className="hover:text-accent transition-colors">Leander</a></li>
+              <li><a href="/locations/shady-hollow" className="hover:text-accent transition-colors">Shady Hollow</a></li>
+              <li><a href="/locations/buda" className="hover:text-accent transition-colors">Buda</a></li>
+              <li><a href="/locations/bee-cave" className="hover:text-accent transition-colors">Bee Cave</a></li>
+              <li><a href="/locations/rollingwood" className="hover:text-accent transition-colors">Rollingwood</a></li>
+              <li><a href="/locations/manor" className="hover:text-accent transition-colors">Manor</a></li>
             </ul>
           </div>
         </div>
