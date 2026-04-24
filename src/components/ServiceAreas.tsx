@@ -8,9 +8,9 @@ const greaterAustin = [
   "Lakeway", "Dripping Springs", "Bastrop", "Manor", "And More",
 ];
 
-const ServiceAreas = () => {
+const ServiceAreas = ({ bgClassName = "bg-background" }: { bgClassName?: string }) => {
   return (
-    <section id="service-areas" className="py-20 bg-background">
+    <section id="service-areas" className={`py-20 ${bgClassName}`}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">Where We Work</p>
