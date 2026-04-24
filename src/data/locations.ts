@@ -1,9 +1,16 @@
 import { TreePine, Scissors, AlertTriangle, Trees, Sprout, FileText, type LucideIcon } from "lucide-react";
+import imgRemoval from "@/assets/service-tree-removal.jpg";
+import imgPruning from "@/assets/service-pruning.jpg";
+import imgEmergency from "@/assets/service-emergency.jpg";
+import imgSoil from "@/assets/service-soil.jpg";
+import imgPlanting from "@/assets/service-planting.jpg";
+import imgLegacy from "@/assets/service-legacy.jpg";
 
 export type LocationService = {
   title: string;
   body: string;
   icon: LucideIcon;
+  image: string;
   href?: string;
 };
 
