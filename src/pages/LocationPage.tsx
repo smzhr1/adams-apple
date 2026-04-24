@@ -84,13 +84,6 @@ const LocationPage = () => {
                 </p>
               </div>
 
-              {location.geoRegion && (
-                <div className="flex items-center gap-2 text-muted-foreground text-sm -mt-3">
-                  <MapPin className="w-4 h-4 text-secondary" />
-                  <span>{location.geoRegion}</span>
-                </div>
-              )}
-
               <h1 className="text-foreground leading-[1.1] text-[30px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-heading font-bold">
                 Tree Service in <span className="text-secondary">{location.name}, {location.state}</span>
                 <span className="block mt-2 text-foreground/85 text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] font-semibold leading-snug">
