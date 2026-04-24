@@ -389,7 +389,7 @@ const ServicePage = () => {
         )}
 
         {/* RELATED SERVICES */}
-        <section className="py-20 bg-background">
+        <section className={`py-20 ${service.showGuesstimator ? "bg-background" : "bg-muted"}`}>
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <p className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-3">
