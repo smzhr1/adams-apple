@@ -4,10 +4,6 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
 const areaData: Record<string, { name: string; description: string }> = {
-  austin: {
-    name: "Austin",
-    description: "Adam's Apple Tree Service is Austin's trusted choice for professional tree care. From tree removal to pruning and emergency services, our ISA-certified arborists serve residential and commercial properties across the Austin metro.",
-  },
   georgetown: {
     name: "Georgetown",
     description: "Serving Georgetown's historic neighborhoods and new developments with expert tree trimming, removal, and planting. Trust our certified arborists to care for your Georgetown property's trees.",
@@ -20,9 +16,29 @@ const areaData: Record<string, { name: string; description: string }> = {
     name: "Cedar Park",
     description: "Expert tree care for Cedar Park and the surrounding Leander area. Our arborists provide safe removals, precision trimming, and tree health assessments.",
   },
-  bastrop: {
-    name: "Bastrop",
-    description: "Serving Bastrop County with reliable tree removal, trimming, and emergency services. We understand the unique tree species and challenges of the Bastrop area.",
+  leander: {
+    name: "Leander",
+    description: "Reliable tree care for Leander homeowners — from young tree planting and structural pruning to safe removals and storm cleanup across the growing Leander area.",
+  },
+  "shady-hollow": {
+    name: "Shady Hollow",
+    description: "Specialized tree care for Shady Hollow's mature live oak canopy. Our certified arborists are experienced with oak wilt prevention, pruning, and Heritage Tree management.",
+  },
+  buda: {
+    name: "Buda",
+    description: "Trusted tree services for Buda properties — covering tree removal, trimming, planting, and emergency response across Hays County and the surrounding area.",
+  },
+  "bee-cave": {
+    name: "Bee Cave",
+    description: "Expert tree care for Bee Cave's hill country properties. We handle live oak pruning, cedar elm care, and large tree removals with full-service cleanup.",
+  },
+  rollingwood: {
+    name: "Rollingwood",
+    description: "Premium tree care for Rollingwood's established neighborhoods and Heritage Trees. Certified arborists, city permit handling, and meticulous craftsmanship every time.",
+  },
+  manor: {
+    name: "Manor",
+    description: "Dependable tree services for Manor homeowners and acreage properties — tree removal, trimming, planting, and storm cleanup throughout eastern Travis County.",
   },
 };
 
