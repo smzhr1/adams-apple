@@ -38,10 +38,10 @@ const services = [
     description: "Storm damage, fallen trees, and hazardous limbs handled fast. Our crew is available for emergency callouts across Austin. Call 512-912-8733 for same-day response.",
   },
   {
-    title: "Arborist Reports and Professional Services",
+    title: "Legacy Tree Program",
     slug: "legacy-tree-program",
     image: imgLegacy,
-    description: "ISA certified arborist reports for insurance claims, city permit applications, Heritage Tree assessments, and construction protection plans.",
+    description: "Celebrate life's milestones with a native Texas tree — free for existing clients to mark a birth, anniversary, memorial, or any moment worth rooting in the ground.",
   },
 ];
 
