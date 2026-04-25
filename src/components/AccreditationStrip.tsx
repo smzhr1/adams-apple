@@ -26,21 +26,34 @@ const AccreditationStrip = () => {
           Trusted & Accredited
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 justify-items-center items-start gap-y-6 gap-x-4 md:gap-6">
-          {badges.map((badge) => (
-            <div key={badge.alt} className="flex flex-col items-center gap-2 max-w-[140px]">
-              <img
-                src={badge.src}
-                alt={badge.alt}
-                loading="lazy"
-                width={512}
-                height={512}
-                className="h-16 w-16 md:h-20 md:w-20 object-contain"
-              />
-              <span className="text-foreground text-[11px] md:text-xs font-semibold tracking-wide text-center leading-snug">
-                {badge.label}
-              </span>
-            </div>
-          ))}
+          {badges.map((badge) => {
+            const scale =
+              badge.alt === "ISA Member"
+                ? 1.5
+                : badge.alt === "ISA Certified Arborist"
+                ? 1.1
+                : badge.alt === "Wildfire Risk Reduction Qualified"
+                ? 1.5
+                : 1;
+            return (
+              <div key={badge.alt} className="flex flex-col items-center gap-2 max-w-[140px]">
+                <div className="h-16 w-16 md:h-20 md:w-20 flex items-center justify-center">
+                  <img
+                    src={badge.src}
+                    alt={badge.alt}
+                    loading="lazy"
+                    width={512}
+                    height={512}
+                    style={{ transform: `scale(${scale})` }}
+                    className="max-h-full max-w-full object-contain origin-center"
+                  />
+                </div>
+                <span className="text-foreground text-[11px] md:text-xs font-semibold tracking-wide text-center leading-snug">
+                  {badge.label}
+                </span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
