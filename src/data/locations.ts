@@ -607,4 +607,102 @@ export const locations: Record<string, LocationContent> = {
     ],
     ctaHeadline: "Get a Free Estimate in Manor, TX",
   },
+  georgetown: {
+    slug: "georgetown",
+    name: "Georgetown",
+    state: "TX",
+    metaTitle: "Georgetown Tree Service | Removal, Trimming and Oak Wilt Care | Adam's Apple",
+    metaDescription:
+      "Tree service in Georgetown, TX. Tree removal, trimming, stump grinding, emergency service and oak wilt treatment. Free estimates. Call 512-912-8733.",
+    heroEyebrow: "Georgetown, TX Tree Service",
+    heroHeadline: "Georgetown Tree Service: Removal, Trimming and Oak Wilt Care for Williamson County Homeowners",
+    heroSubhead:
+      "ISA certified arborists serving Georgetown and Williamson County. Tree removal, trimming, emergency response, stump grinding and oak wilt treatment with flat-rate pricing and free on-site estimates.",
+    servicesHeadline: "Tree Services We Provide in Georgetown, TX",
+    services: [
+      {
+        title: "Tree Removal Georgetown, TX",
+        body: "Georgetown's Sun City and Berry Creek communities have large established trees growing near driveways, rooflines, and HOA common areas. Many require permits under Georgetown's tree preservation ordinance before removal can proceed. We research your specific address requirements before quoting and handle the documentation if a permit is needed.",
+        icon: TreePine,
+        image: imgRemoval,
+        href: "/services/tree-removal",
+      },
+      {
+        title: "Tree Trimming Service Georgetown, TX",
+        body: "The live oaks, cedar elms, and post oaks throughout Georgetown's established neighborhoods benefit from regular crown cleaning and structural pruning. Properties near the San Gabriel River corridor have trees with wider root systems that respond well to canopy reduction before high wind and ice seasons.",
+        icon: Scissors,
+        image: imgPruning,
+        href: "/services/tree-pruning-trimming",
+      },
+      {
+        title: "Emergency Tree Service Georgetown, TX",
+        body: "Georgetown sees ice storms and wind events that bring down mature trees in Sun City, Wolf Ranch, and the older downtown neighborhoods. Call 512-912-8733 for same-day emergency response across Georgetown when storm damage creates a hazard on your property.",
+        icon: AlertTriangle,
+        image: imgEmergency,
+        href: "/services/emergency",
+      },
+      {
+        title: "Stump Grinding Georgetown, TX",
+        body: "Georgetown sits on a mix of Blackland clay and limestone-based soils depending on the neighborhood. Stumps in clay-heavy areas can resprout if not ground deep enough. We clear the root crown and surrounding surface roots so the site is ready for whatever comes next.",
+        icon: Trees,
+        image: imgSoil,
+      },
+      {
+        title: "Oak Wilt Treatment Georgetown, TX",
+        body: "Georgetown's live oak populations in Cimarron Hills, Berry Creek, and the older residential areas near downtown are connected through root grafts that let oak wilt spread quickly across adjacent properties. The February through June pruning ban applies here the same as anywhere in Central Texas. Call us at the first sign of rapid leaf drop or browning from the tips inward.",
+        icon: Sprout,
+        image: imgPlanting,
+      },
+      {
+        title: "Arborist Reports and Professional Services",
+        body: "Georgetown has specific tree preservation rules that apply to residential and commercial properties, with additional HOA requirements in Sun City, Berry Creek, Teravista, and Cimarron Hills. We prepare written arborist reports for city permit applications, HOA approval processes, and insurance documentation so your project moves forward without delays.",
+        icon: FileText,
+        image: imgLegacy,
+      },
+    ],
+    whyHeadline: "Why Georgetown Homeowners Choose Adam's Apple Tree Service",
+    whyPoints: [
+      {
+        title: "Free 30-Min Site Visit",
+        body: "Every Georgetown estimate includes a free on-site assessment with your arborist. We walk the property with you, look at every tree in question, and give you a written scope before any work is scheduled. No phone guesses, no surprises on job day.",
+      },
+      {
+        title: "No Deposit Required",
+        body: "We start when you are ready and you pay when the job is done and you are satisfied. Zero upfront commitment on any Georgetown tree service job, large or small.",
+      },
+      {
+        title: "Transparent Flat-Rate Quotes",
+        body: "Georgetown homeowners get a written quote with photos before we start. The number we give you is the number you pay. No add-ons, no pressure to expand scope beyond what you asked for.",
+      },
+    ],
+    localInfoHeadline: "Tree Care in Georgetown, TX: What Homeowners Should Know",
+    localInfoParagraphs: [
+      "Georgetown sits at the northern edge of the Edwards Plateau where soil conditions shift between the limestone-based terrain of western Georgetown and the heavier Blackland clay soils in the eastern neighborhoods and around the San Gabriel River corridor. This distinction matters for tree care. Trees on limestone soils in areas like Cimarron Hills and the western Sun City sections have shallower root systems that are more exposed to drought stress, while trees in clay-heavy eastern neighborhoods near Wolf Ranch and the river corridor tend to hold water longer and face different drainage-related stress. Knowing which soil type your trees are in changes how we approach fertilization and long-term health planning.",
+      "Georgetown has specific tree preservation rules that go beyond standard Williamson County requirements. Protected trees in Georgetown include live oaks, pecans, Texas ash, and other significant species above specific size thresholds. HOA communities including Sun City, Berry Creek, Teravista, and Cimarron Hills add their own layer of requirements on top of city rules. Sun City in particular has an active architectural committee that reviews tree work requests near common areas and property lines. We are familiar with the documentation these communities require and can confirm what applies to your specific address before any work is scheduled.",
+      "Georgetown is a retirement community for a significant portion of its residents, and Geoff's experience working here reflects that. When Georgetown clients find a tree company they trust, they tend to stay. We do not recommend work your trees do not need, we do not expand scope without asking, and we provide written estimates with photos so there are no surprises. That approach has earned us repeat clients across the Austin metro for over 15 years.",
+    ],
+    neighborhoodsHeadline: "Georgetown Neighborhoods We Serve",
+    neighborhoodsIntro:
+      "Adam's Apple Tree Service covers Georgetown and surrounding Williamson County. Georgetown is roughly a 40-minute drive from our South Austin base, and we schedule Georgetown jobs in dedicated route days to keep pricing competitive for the distance.",
+    neighborhoods: [
+      { name: "Sun City", description: "Active adult community in western Georgetown with mature live oak canopies, HOA architectural committee requirements, and a high concentration of retired homeowners who prioritize trust and transparency in any contractor relationship." },
+      { name: "Berry Creek", description: "Golf course community with protected trees, landscape requirements, and regular maintenance needs across both residential lots and course-adjacent properties." },
+      { name: "Teravista", description: "Large master-planned development with mixed tree populations and HOA standards that apply to removal and trimming near easements and shared spaces." },
+      { name: "Cimarron Hills", description: "Gated golf community in western Georgetown on limestone terrain. Properties here have trees growing in shallow soils that require different pruning and health approaches than the clay-soil neighborhoods to the east." },
+      { name: "Georgetown Village", description: "Established residential area near downtown with older specimen trees and city ordinance requirements that apply to significant removals." },
+      { name: "Wolf Ranch", description: "Master-planned community near I-35 with newer tree populations entering their first major maintenance cycle." },
+      { name: "San Gabriel River corridor", description: "Properties along and near the river with native tree stands including pecan, cedar elm, and Texas ash. Flood zone considerations affect removal and grading work near the water." },
+      { name: "Old Town Georgetown", description: "Historic downtown area with heritage trees and historic preservation considerations that affect what work can be done on significant specimens." },
+    ],
+    neighborhoodsFooter:
+      "We also serve Round Rock, Cedar Park, Leander, and Austin. Not sure if we reach your street? Call or text 512-912-8733.",
+    faqsHeadline: "Frequently Asked Questions: Georgetown Tree Service",
+    faqs: [
+      { q: "How much does tree removal cost in Georgetown, TX?", a: "Tree removal in Georgetown typically ranges from $300 to $2,500 depending on tree size, species, access, and whether a permit is required. Large live oaks near structures or in HOA common areas run on the higher end. Call 512-912-8733 or use our Tree Removal Guesstimator for a free instant range before your on-site estimate." },
+      { q: "Does Georgetown require a permit to remove a tree?", a: "Georgetown has tree preservation rules that protect live oaks, pecans, Texas ash, and other significant species above certain size thresholds. HOA communities like Sun City, Berry Creek, and Cimarron Hills add their own approval requirements on top of city rules. We research the specific requirements for your address and handle the documentation before any removal work is scheduled." },
+      { q: "When is it safe to trim oak trees in Georgetown, TX?", a: "July through January is the safe pruning window for live oaks in Georgetown. Avoid cuts from February 1 through June 30 when sap beetles are active and can carry oak wilt fungus into fresh wounds. Georgetown's oak populations in Cimarron Hills and Berry Creek are particularly at risk given the density of connected root systems in those neighborhoods." },
+      { q: "Does Adam's Apple service Georgetown even though you are based in South Austin?", a: "Yes. Georgetown is a regular part of our service area and Geoff Oliver, our lead arborist, has worked in Georgetown neighborhoods for years. We schedule Georgetown jobs in dedicated route days which keeps our pricing straightforward. Call 512-912-8733 to confirm availability and scheduling for your address." },
+    ],
+    ctaHeadline: "Get a Free Estimate in Georgetown, TX",
+  },
 };
