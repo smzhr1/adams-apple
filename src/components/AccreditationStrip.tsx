@@ -33,7 +33,7 @@ const AccreditationStrip = () => {
                 : badge.alt === "ISA Certified Arborist"
                 ? 1.1
                 : badge.alt === "Wildfire Risk Reduction Qualified"
-                ? 1.5
+                ? 0.75
                 : 1;
             return (
               <div key={badge.alt} className="flex flex-col items-center gap-2 max-w-[140px]">
