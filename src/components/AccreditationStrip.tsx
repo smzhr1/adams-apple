@@ -1,6 +1,6 @@
 import trustGoogle from "@/assets/trust-google.png";
-import trustIsaTexas from "@/assets/trust-isa-texas.png";
-import trustCertifiedArborist from "@/assets/trust-certified-arborist.png";
+import trustIsaMember from "@/assets/trust-isa-member.png";
+import trustIsaCertified from "@/assets/trust-isa-certified.png";
 import trustTraq from "@/assets/trust-traq.png";
 import trustOakWilt from "@/assets/trust-oak-wilt.png";
 import trustWildfire from "@/assets/trust-wildfire.png";
@@ -9,8 +9,8 @@ import trustBbb from "@/assets/trust-bbb.png";
 
 const badges = [
   { src: trustGoogle, alt: "5 Stars Google", label: "5★ Google" },
-  { src: trustIsaTexas, alt: "ISA Member", label: "ISA Member" },
-  { src: trustCertifiedArborist, alt: "ISA Certified Arborist", label: "ISA Certified" },
+  { src: trustIsaMember, alt: "ISA Member", label: "ISA Member" },
+  { src: trustIsaCertified, alt: "ISA Certified Arborist", label: "ISA Certified" },
   { src: trustTraq, alt: "Tree Risk Assessment Qualified", label: "Tree Risk Assessment Qualified (TRAQ)" },
   { src: trustOakWilt, alt: "Texas Oak Wilt Qualified", label: "Texas Oak Wilt Qualified" },
   { src: trustWildfire, alt: "Wildfire Risk Reduction Qualified", label: "Wildfire Risk Reduction Qualified" },
