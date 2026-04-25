@@ -34,6 +34,8 @@ const AccreditationStrip = () => {
                 ? 1.1
                 : badge.alt === "Wildfire Risk Reduction Qualified"
                 ? 1.125
+                : badge.alt === "Insured"
+                ? 1.2
                 : 1;
             return (
               <div key={badge.alt} className="flex flex-col items-center gap-2 max-w-[140px]">
