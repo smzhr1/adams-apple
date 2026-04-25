@@ -553,4 +553,58 @@ export const locations: Record<string, LocationContent> = {
     ],
     ctaHeadline: "Get a Free Estimate in Rollingwood, TX",
   },
+  manor: {
+    slug: "manor",
+    name: "Manor",
+    state: "TX",
+    metaTitle: "Tree Service Manor, TX | Removal, Trimming and Emergency Care | Adam's Apple",
+    metaDescription:
+      "Local tree service in Manor, TX. Tree removal, trimming, stump grinding, emergency service and oak wilt treatment. Free estimates. Call 512-912-8733.",
+    heroEyebrow: "Manor, TX Tree Service",
+    heroHeadline: "Tree Service Manor, TX: Removal, Trimming and Emergency Care for East Travis County",
+    heroSubhead:
+      "ISA certified arborists serving Manor and eastern Travis County. Tree removal, trimming, emergency response, stump grinding and oak wilt treatment with flat-rate pricing and free on-site estimates.",
+    servicesHeadline: "Tree Services We Provide in Manor, TX",
+    services: [
+      { title: "Tree Removal Manor, TX", body: "Manor sits on deep blackland clay where large pecans and hackberries develop wide surface root systems that require careful planning before removal. We assess root zone, access, and proximity to structures on-site before quoting every job.", icon: TreePine, image: imgRemoval, href: "/services/tree-removal" },
+      { title: "Tree Trimming and Pruning Manor, TX", body: "The pecans, hackberries, cedar elms, and live oaks common across Manor's residential and rural properties need different pruning approaches depending on species and age. We schedule all oak trimming outside the February through June beetle pressure window and follow ANSI A300 standards on every job.", icon: Scissors, image: imgPruning, href: "/services/tree-pruning-trimming" },
+      { title: "Emergency Tree Service Manor, TX", body: "Manor's position on the eastern Travis County plain means it sits in the direct path of fast-moving thunderstorms that push through from the southwest. Call 512-912-8733 for same-day emergency response when storm damage creates a hazard on your property.", icon: AlertTriangle, image: imgEmergency, href: "/services/emergency" },
+      { title: "Stump Grinding Manor, TX", body: "Deep blackland clay in Manor holds stump root systems tight below the surface. We grind the root crown and main laterals so the area is clear for replanting, sod work, or construction without resprouting over time.", icon: Trees, image: imgSoil },
+      { title: "Oak Wilt Treatment Manor, TX", body: "Manor has live oak populations across its older neighborhoods and rural acreage properties that are connected through root grafts. Oak wilt spreads fast in live oak clusters. If you are seeing rapid browning from the tips inward, contact us before the disease jumps to neighboring trees.", icon: Sprout, image: imgPlanting },
+      { title: "Arborist Reports and Professional Services", body: "Written arborist reports for insurance claims, HOA documentation in newer Manor developments, and property transactions. We handle the documentation so your project does not stall waiting on paperwork.", icon: FileText, image: imgLegacy },
+    ],
+    whyHeadline: "Why Manor Homeowners Choose Adam's Apple Tree Service",
+    whyPoints: [
+      { title: "Free 30-Min Site Visit", body: "Every Manor estimate includes a free on-site assessment. We walk the property with you, look at every tree in question, and give you a written scope before any work is scheduled. No phone guesses, no surprises on job day." },
+      { title: "No Deposit Required", body: "We start when you are ready and you pay when the job is done and you are satisfied. Zero upfront commitment on any Manor tree service job." },
+      { title: "Transparent Flat-Rate Quotes", body: "Manor homeowners get a written quote with photos before we start. The number we give you is the number you pay. No add-ons at the end of the job." },
+    ],
+    localInfoHeadline: "Tree Care in Manor, TX — What Homeowners Should Know",
+    localInfoParagraphs: [
+      "Manor sits on the eastern edge of Travis County where deep blackland prairie soils dominate most of the land. These heavy clay soils shrink during drought and swell after rain, which puts constant stress on tree root systems regardless of species. Pecans and hackberries are the dominant large trees in older Manor properties and along the creek corridors, and both species respond poorly to extended drought periods without supplemental water. If your pecan is dropping leaves early or showing dieback in the upper canopy, clay soil stress during the previous summer is often the contributing factor rather than disease.",
+      "The SH-130 toll road and the growth it has brought to the Manor area over the past decade has resulted in a significant number of new subdivisions with younger tree populations. Neighborhoods like Whisper Valley, Shadowglen, and Briarcreek all have HOA requirements and development codes that affect tree removal and trimming near easements, drainage features, and shared green space. Trees planted during the construction phase of these developments are now entering a period where first structural pruning and assessment is worthwhile before they become large enough to create liability issues.",
+      "If you are proactive about maintenance and assessment, you are already ahead of most of your neighbors and less likely to face an emergency removal at peak demand times after a storm.",
+    ],
+    neighborhoodsHeadline: "Manor Neighborhoods We Serve",
+    neighborhoodsIntro:
+      "Adam's Apple Tree Service covers Manor and eastern Travis County. Our South Austin base puts us roughly 20 miles from central Manor, and we run regular routes east through this corridor.",
+    neighborhoods: [
+      { name: "Shadowglen", description: "Large master-planned community in south Manor with HOA property standards, newer tree populations, and drainage green belts with tree preservation requirements." },
+      { name: "Whisper Valley", description: "Newer eco-focused development with native plantings and specific landscape requirements tied to the community's sustainability standards." },
+      { name: "Briarcreek", description: "Established residential neighborhood with a mix of older native trees and newer plantings on standard lots." },
+      { name: "Manor town center area", description: "Older residential core with mature pecan and hackberry trees on larger lots. Trees in this area are often the largest on the property and benefit from regular structural assessment." },
+      { name: "Hornsby Bend area", description: "Rural and semi-rural acreage properties along the Colorado River corridor with large native tree stands including pecan, cottonwood, and cedar elm." },
+      { name: "Webberville road corridor", description: "Mixed residential and rural properties with varied tree populations and acreage lots that require different equipment than standard suburban work." },
+    ],
+    neighborhoodsFooter:
+      "We also serve Pflugerville, Austin, Bastrop, and Round Rock. Not sure if we reach your address? Call or text 512-912-8733.",
+    faqsHeadline: "Frequently Asked Questions — Manor Tree Service",
+    faqs: [
+      { q: "How much does tree removal cost in Manor, TX?", a: "Tree removal in Manor typically ranges from $300 to $2,000 depending on tree size, species, and access. Large pecans with wide surface root systems in clay soil run on the higher end. Call 512-912-8733 or use our Tree Removal Guesstimator for a free instant range before your on-site estimate." },
+      { q: "What are the most common tree problems in Manor, TX?", a: "The most common issues we see in Manor are storm damage from high wind events, pecan and hackberry deadwood accumulation from drought stress, and oak wilt in live oak clusters on older properties and acreage land. Hackberry trees in particular tend to develop structural issues as they age in clay soils and are frequently the trees that come down in wind events." },
+      { q: "When is it safe to trim oak trees in Manor, TX?", a: "July through January is the safe pruning window for live oaks in Manor. Avoid cuts from February 1 through June 30 when sap beetles are active across Travis County and can spread oak wilt through fresh cuts. Any emergency cuts during that window need to be sealed with wound sealant immediately." },
+      { q: "Do you service rural and acreage properties in Manor?", a: "Yes. Several of our crew members work the east Austin and Manor corridor regularly. We service acreage properties along the Hornsby Bend area, Webberville road, and rural Travis County land east of Manor. Call us to confirm coverage and discuss equipment access for larger lot work." },
+    ],
+    ctaHeadline: "Get a Free Estimate in Manor, TX",
+  },
 };
