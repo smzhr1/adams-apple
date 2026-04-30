@@ -39,6 +39,7 @@ const GuesstimatorForm = ({ onCtaClick }: Props) => {
   const [h, setH] = useState("medium");
   const [d, setD] = useState("med");
   const [a, setA] = useState("standard");
+  const [showResult, setShowResult] = useState(false);
 
   const estimate = useMemo(() => {
     const hh = heights.find((x) => x.value === h)!;
@@ -47,6 +48,12 @@ const GuesstimatorForm = ({ onCtaClick }: Props) => {
     const base = hh.base * dd.mult * aa.mult;
     return { low: round(base * 0.85), high: round(base * 1.25) };
   }, [h, d, a]);
+
+  // Reset result when inputs change
+  const handleChange = (setter: (v: string) => void) => (v: string) => {
+    setter(v);
+    setShowResult(false);
+  };
 
   return (
     <div className="bg-background border border-border rounded-2xl p-6 md:p-8 shadow-lg">
@@ -62,7 +69,7 @@ const GuesstimatorForm = ({ onCtaClick }: Props) => {
           <label className="text-foreground/80 text-sm font-medium mb-2 block">
             Tree Height
           </label>
-          <Select value={h} onValueChange={setH}>
+          <Select value={h} onValueChange={handleChange(setH)}>
             <SelectTrigger className="bg-muted border-border text-foreground h-12 hover:bg-muted/70">
               <SelectValue />
             </SelectTrigger>
@@ -80,7 +87,7 @@ const GuesstimatorForm = ({ onCtaClick }: Props) => {
           <label className="text-foreground/80 text-sm font-medium mb-2 block">
             Trunk Diameter
           </label>
-          <Select value={d} onValueChange={setD}>
+          <Select value={d} onValueChange={handleChange(setD)}>
             <SelectTrigger className="bg-muted border-border text-foreground h-12 hover:bg-muted/70">
               <SelectValue />
             </SelectTrigger>
@@ -98,7 +105,7 @@ const GuesstimatorForm = ({ onCtaClick }: Props) => {
           <label className="text-foreground/80 text-sm font-medium mb-2 block">
             Accessibility
           </label>
-          <Select value={a} onValueChange={setA}>
+          <Select value={a} onValueChange={handleChange(setA)}>
             <SelectTrigger className="bg-muted border-border text-foreground h-12 hover:bg-muted/70">
               <SelectValue />
             </SelectTrigger>
@@ -112,24 +119,45 @@ const GuesstimatorForm = ({ onCtaClick }: Props) => {
           </Select>
         </div>
 
-        <a
-          href="/contact#contact-form"
-          onClick={onCtaClick}
-          className="group bg-secondary hover:bg-secondary/90 transition-colors rounded-xl px-5 py-5 mt-6 flex flex-col items-center text-center gap-3 cursor-pointer"
-          aria-label="Get an exact quote — go to contact form"
-        >
-          <div className="leading-tight">
-            <p className="text-secondary-foreground font-heading font-bold text-2xl md:text-3xl">
-              ${estimate.low.toLocaleString()} – ${estimate.high.toLocaleString()}
-            </p>
-            <p className="text-secondary-foreground/85 text-xs mt-1">
-              Rough estimate
-            </p>
+        {!showResult ? (
+          <button
+            type="button"
+            onClick={() => setShowResult(true)}
+            className="w-full bg-secondary hover:bg-secondary/90 transition-colors rounded-xl px-5 py-4 mt-6 text-secondary-foreground font-bold uppercase tracking-wider text-sm shadow-md hover:shadow-lg"
+          >
+            Show My Guesstimate
+          </button>
+        ) : (
+          <div className="mt-6 space-y-4">
+            <div className="bg-muted rounded-xl p-5 border border-border">
+              <p className="font-heading font-bold text-foreground text-xl md:text-2xl leading-tight">
+                Estimated Price Range:{" "}
+                <span className="text-secondary">
+                  ${estimate.low.toLocaleString()} – ${estimate.high.toLocaleString()}
+                </span>{" "}
+                <span className="text-foreground/70 text-base font-normal">
+                  + applicable sales tax
+                </span>
+              </p>
+              <p className="text-foreground/70 text-sm italic mt-3 leading-relaxed">
+                This price is for educational purposes only and does not constitute
+                a bid or agreement of work to be performed. On-site estimates
+                required for any agreement to work. Local ordinances may require
+                additional scrutiny before a tree can be removed.
+              </p>
+            </div>
+
+            <a
+              href="/contact#contact-form"
+              onClick={onCtaClick}
+              className="group bg-accent hover:bg-accent/90 transition-colors rounded-xl px-5 py-4 flex items-center justify-center text-center gap-2 cursor-pointer shadow-md hover:shadow-lg"
+            >
+              <span className="text-accent-foreground font-bold uppercase tracking-wider text-sm">
+                Ready to schedule your free on-site estimate? →
+              </span>
+            </a>
           </div>
-          <span className="inline-flex items-center justify-center bg-accent text-accent-foreground font-bold uppercase tracking-wider text-xs rounded-lg px-5 py-2.5 shadow-md group-hover:shadow-lg group-hover:bg-accent/90 transition-all whitespace-nowrap leading-none">
-            Get Exact Quote →
-          </span>
-        </a>
+        )}
       </div>
     </div>
   );
