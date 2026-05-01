@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
 import Blog from "./pages/Blog.tsx";
+import BlogPost from "./pages/BlogPost.tsx";
 import Gallery from "./pages/Gallery.tsx";
 import FAQs from "./pages/FAQs.tsx";
 import ServicePage from "./pages/ServicePage.tsx";
