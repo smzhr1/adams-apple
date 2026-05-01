@@ -130,14 +130,14 @@ const GuesstimatorForm = ({ onCtaClick }: Props) => {
         ) : (
           <div className="mt-6 space-y-4">
             <div className="bg-muted rounded-xl p-5 border border-border">
-              <p className="font-heading font-bold text-foreground text-xl md:text-2xl leading-tight">
+              <p className="font-heading font-bold text-foreground text-lg md:text-xl leading-tight">
                 Estimated Price Range:{" "}
                 <span className="text-secondary whitespace-nowrap">
-                  ${estimate.low.toLocaleString()} – ${estimate.high.toLocaleString()}
+                  ${estimate.low.toLocaleString()}–${estimate.high.toLocaleString()}
                 </span>
-              </p>
-              <p className="text-foreground/70 text-sm font-normal mt-1">
-                + applicable sales tax
+                <span className="text-foreground/70 text-sm font-normal whitespace-nowrap">
+                  {" "}+ taxes
+                </span>
               </p>
               <p className="text-foreground/70 text-sm italic mt-3 leading-relaxed">
                 This price is for educational purposes only and does not constitute
